@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-sm-12 col-md-12 col-lg-4 animate__animated animate__backInRight animate__delay-1s"
+    class="col-sm-12 col-md-10 col-lg-4 animate__animated animate__backInRight animate__delay-1s"
   >
     <div class="d-flex justify-content-between">
       <h3>أخبار اليوم</h3>
@@ -39,7 +39,7 @@
           aria-label="Slide 4"
         ></button>
       </div>
-      <div class="carousel-inner">
+      <div class="carousel-inner mt-3">
         <div
           v-for="item in data"
           :key="item.id"
@@ -51,6 +51,7 @@
             class="d-block w-100 round"
             alt="..."
           />
+          <!-- <img :src="item.image" class="d-block w-100 round" /> -->
           <div class="carousel-caption round d-sm-block">
             <div class="divmag">
               <span>{{ item.data1 }}</span>
@@ -103,7 +104,80 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/HomeSection1");
     this.data = result.data;
-    console.log(result.data);
   },
 };
 </script>
+
+<style scoped>
+@media screen and (min-width: 992px) {
+  .container1 div.carousel-caption {
+    padding: 22px 30px 0 64px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container1 div.carousel-caption {
+    padding: 22px 30px 0 64px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container1 div.carousel-caption {
+    padding: 100px 48px 0 106px;
+  }
+}
+
+.section div .carousel-caption span svg path {
+  fill: white;
+}
+
+.container1 div.carousel-caption {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  right: 0%;
+  text-align: right;
+  background: #12100e2e;
+  z-index: 1;
+  bottom: 0rem;
+  left: 0%;
+}
+
+.container1.section div .carousel-caption p {
+  font-family: FFShamelFamily-SansOneBook;
+  font-size: 18px;
+  color: white;
+}
+
+.container1.section div .carousel-caption span {
+  font-family: "FFShamelFamily-SansOneBook";
+  font-size: 14px;
+  display: block;
+  color: white;
+}
+
+.line {
+  height: 67px;
+  width: 1px;
+  background: #ffffff;
+}
+
+.divmag {
+  margin-right: -9px;
+}
+
+.bg2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  right: 0%;
+  text-align: right;
+  z-index: 1;
+  bottom: 0rem;
+  left: 0%;
+}
+.round {
+  border-radius: 1.25rem !important;
+}
+</style>

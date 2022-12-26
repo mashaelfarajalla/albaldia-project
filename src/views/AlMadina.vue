@@ -21,7 +21,7 @@
             />
             <div class="card-body">
               <h6>{{ item.title }}</h6>
-              <small class="text-muted">{{ this.details }}</small>
+              <small class="text-muted">{{ item.details }}</small>
             </div>
           </div>
         </div>
@@ -46,31 +46,31 @@ export default {
 };
 </script>
 
-<style>
-.container6 .card:hover {
+<style scoped>
+.card:hover {
   cursor: pointer;
 }
 
-.container6 ul li a {
+ul li a {
   color: #392c23;
   font-size: 16px;
-  font-family: "FFShamelFamily-SansOneBook";
   text-decoration: none;
   margin: 0 5px;
 }
 
-.container6 .divborder {
+.divborder {
   margin-top: 40px;
   border-bottom: 1px solid #d6d6d6;
 }
 
-.container6 ul {
+ul {
   margin-top: 15px;
   padding-right: 0;
 }
 
-.container6 ul li a:hover,
-.container6 ul li a.active {
+ul li a:hover,
+ul li a.active {
+  color: #392c23;
   padding: 0 0 13px 0;
   font-weight: bold;
   border-bottom: 2px solid #cf2a45;

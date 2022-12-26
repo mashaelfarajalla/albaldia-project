@@ -38,20 +38,58 @@ export default {
   padding: 0;
   font-family: "FFShamelFamily-SansOneBook";
 }
+
 @media screen and (min-width: 992px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3ec4b4a8;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3ec4b5;
+  }
+
   .main-body {
     margin-right: 10px;
   }
   .section {
-    width: 93%;
+    width: 93.5%;
     top: 90px;
+  }
+  .padding {
+    padding: 65px 0px 32px 0;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .padding {
+    padding: 30px 0px 32px 0;
+  }
   .section {
     width: 100%;
     top: 75px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 100%;
+    top: 75px;
+  }
+  .padding {
+    padding: 30px 0px 32px 0;
   }
 }
 .all-page {
@@ -68,14 +106,6 @@ export default {
   background: transparent;
   position: relative;
   z-index: 1;
-}
-
-.padding {
-  padding: 65px 0px 32px 0;
-}
-.section {
-  align-items: center;
-  height: calc(100vh - 145px);
 }
 
 .bg2 {
@@ -97,6 +127,36 @@ export default {
   overflow-y: auto;
   position: fixed;
   left: 0;
+  align-items: center;
+  height: calc(100vh - 145px);
+}
+
+div.carousel-indicators {
+  bottom: -60px;
+}
+
+div.carousel-dark .carousel-indicators [data-bs-target].active {
+  background-color: white;
+  border: 1px solid #392c23;
+  margin: auto 1px;
+}
+
+div.carousel-dark .carousel-indicators [data-bs-target] {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #392c23;
+  opacity: 1;
+}
+
+.section .button {
+  border: 1px solid;
+  background-color: #cf2a45;
+  color: white;
+  font-size: 15px;
+  width: 124px;
+  height: 47px;
+  border-radius: 13px;
 }
 
 @media (min-width: 1400px) {

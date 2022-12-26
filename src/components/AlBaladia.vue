@@ -56,12 +56,29 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/AlBaladia");
     this.card = result.data;
-    console.log(result.data);
   },
 };
 </script>
 
 <style>
+@media screen and (min-width: 992px) {
+  .divabsolute {
+    top: 35%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .divabsolute {
+    top: 26%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .divabsolute {
+    top: 25%;
+  }
+}
+
 .card {
   padding: 15px;
 }
@@ -112,9 +129,6 @@ small {
 
 .padding2 {
   padding: 38px 0px 32px 0;
-}
-.divabsolute {
-  top: 35%;
 }
 
 .container5 .card-body {

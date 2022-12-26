@@ -1,12 +1,15 @@
 <template>
   <div
-    class="col-sm-12 col-md-12 col-lg-4 round mtcol12 animate__animated animate__backInLeft animate__delay-1s"
+    v-for="item in data"
+    :key="item.id"
+    style="position: relative"
+    class="col-sm-12 col-md-10 col-lg-4 round mtcol12 animate__animated animate__backInLeft animate__delay-1s"
   >
     <img src="../../../assets/image/Image5.png" class="w-100" />
-    <!-- <div class="bg2">
-      <h3 class="h5">في غزة</h3>
-      <p class="p paddingp">هل تبحث عن مكان (متحف, بنك, مستشفى،...) ؟</p>
-      <button type="button" class="btn">
+    <div class="box">
+      <h3 class="h5">{{ item.title }}</h3>
+      <p class="p paddingp">{{ item.body }}</p>
+      <button type="button" class="btn button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16.83"
@@ -20,13 +23,14 @@
             fill="#392c23"
           />
         </svg>
-        استكشاف
+        {{ item.titlebtn }}
       </button>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Section3",
   data() {
@@ -34,7 +38,52 @@ export default {
       data: [],
     };
   },
+  async mounted() {
+    let result = await axios.get("http://localhost:3000/HomeSection3");
+    this.data = result.data;
+  },
 };
 </script>
 
-<style></style>
+<style scoped>
+
+
+@media screen and (min-width: 992px) {
+   .mtcol12 {
+    margin-top: 38px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .mtcol12 {
+    margin-top: 70px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .mtcol12 {
+    margin-top: 70px;
+  }
+}
+.box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 30%;
+  right: 6%;
+  align-items: center;
+  justify-content: center;
+}
+
+.h5 {
+  color: #cf2a45;
+  font-family: "FFShamelFamily-SansOneBold";
+  font-size: 20px;
+}
+
+.section .p {
+  color: #392c23;
+  font-family: "FFShamelFamily-SansOneBook";
+  font-size: 18px;
+}
+</style>

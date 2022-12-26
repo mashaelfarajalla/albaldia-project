@@ -94,22 +94,17 @@ export default {
 </script>
 
 <style>
-.container7 .card-body {
+.card-body {
   padding: 1rem 0rem;
 }
-
-container7 .animate__animated .animate__zoomInRight {
-  --animate-duration: 1s;
-}
-
-.container7 .col p {
+.col p {
   padding-left: 0px;
   font-size: 16px;
   font-family: "FFShamelFamily-SansOneBook";
   color: #392c23;
 }
 
-.container7 a {
+a {
   text-decoration: none;
 }
 
@@ -150,5 +145,9 @@ small {
 
 .hoverDiv:hover .card-body small {
   color: white;
+}
+
+.card-body a {
+  text-decoration: none;
 }
 </style>

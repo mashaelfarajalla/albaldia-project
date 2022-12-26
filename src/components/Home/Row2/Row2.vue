@@ -7,6 +7,8 @@
     </div>
     <div class="row justify-content-center mt-4">
       <div
+        v-for="item in data"
+        :key="item.id"
         class="col-6 col-md-3 col-lg-2 animate__animated animate__fadeInRight animate__delay-2s"
       >
         <div class="row">
@@ -28,10 +30,11 @@
             </div>
           </div>
           <div class="col-1 divmagright">
-            <p>الشكاوى والاستفسارات</p>
+            <p>{{ item.title }}</p>
           </div>
         </div>
       </div>
+      <!-- 
       <div
         class="col-6 col-md-3 col-lg-2 animate__animated animate__fadeInRight animate__delay-2s"
       >
@@ -109,14 +112,25 @@
             <p>مشاريع البلدية</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Row2",
+  data() {
+    return {
+      data:[]
+    }
+  },
+  async mounted() {
+    let result = await axios.get("http://localhost:3000/HomeServers");
+    this.data = result.data;
+  },
 };
 </script>
 

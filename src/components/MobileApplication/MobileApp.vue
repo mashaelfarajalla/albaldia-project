@@ -176,13 +176,30 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/MobileApplication");
     this.data = result.data;
-    console.log(result.data);
   },
 };
 </script>
 
 <style>
-.container2 p.p {
+@media screen and (min-width: 992px) {
+  .circle2 {
+    width: 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .circle2 {
+    width: 88px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .circle2 {
+    width: 95px;
+  }
+}
+
+p.p {
   padding-left: 30px;
 }
 
@@ -191,7 +208,6 @@ export default {
 }
 .circle2 {
   height: 56px;
-  width: 56px;
   background-color: #ffffff;
   border-radius: 50%;
   text-align: center;

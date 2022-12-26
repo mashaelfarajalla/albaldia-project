@@ -1,6 +1,7 @@
 <template>
   <nav
     class="sidber d-lg-flex flex-shrink-0 flex-sm-row flex-lg-column justify-content-between"
+    style="z-index: var(--z-fixed)"
   >
     <ul class="nav nav-pills nav-flush flex-sm-row flex-lg-column text-center">
       <li v-for="item in sidebar" :key="item.id" class="nav-item">
@@ -12,7 +13,22 @@
           data-bs-placement="right"
           data-bs-original-title="Home"
         >
-          <img :src="item.icon" />
+          <!-- <img :src="item.icon" /> -->
+          <svg
+            id="icons8_home_1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24.926"
+            height="21.53"
+            viewBox="0 0 24.926 21.53"
+          >
+            <path
+              id="icons8_home_1-2"
+              data-name="icons8_home_1"
+              d="M13.123,1.32.66,12.888l1.154,1.247,1.121-1.041V22.85h8.49V14.36h3.4v8.49h8.49V13.094l1.121,1.041,1.154-1.247Zm0,2.308,8.49,7.893v9.631H16.519v-8.49H9.727v8.49H4.633V11.522Z"
+              transform="translate(-0.66 -1.32)"
+              fill="#cf2a45"
+            />
+          </svg>
           <div class="tooltip2">
             <p>{{ item.title }}</p>
           </div>
@@ -25,8 +41,8 @@
         جميع الحقوق محفوظة لدى <span class="span">بلدية غزة</span> &copy; 2021
       </p>
       <div v-for="item in socialmedai" :key="item.id" class="square">
-        <!-- <img src="../assets/image/icons8_facebook_logo_1.svg" /> -->
-        <img :src="item.icon" />
+        <img src="../assets/image/icons8_facebook_logo_1.svg" />
+        <!-- <img :src="item.icon" /> -->
       </div>
     </div>
   </nav>
@@ -44,8 +60,10 @@ export default {
   },
   async mounted() {
     let result = await axios.get("http://localhost:3000/SideBar");
-    this.sidebar = result.data;
-    console.log(result.data);
+    this.sidebar = result.data[0].index;
+    console.log(result.data[0]);
+    // console.log(this.$route.params.name);
+
     let result2 = await axios.get("http://localhost:3000/SocialMedai");
     this.socialmedai = result2.data;
   },
@@ -101,8 +119,36 @@ export default {
   }
 
   nav ul li {
+    border-left: 1px dashed #d6d6d6;
+
     width: 25%;
     height: 10vh;
+  }
+  nav .none {
+    display: none;
+  }
+  .tooltip2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  nav {
+    position: fixed;
+    height: 7vh;
+    bottom: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul li {
+    border-left: 1px dashed #d6d6d6;
+
+    width: 25%;
+    height: 7vh;
   }
   nav .none {
     display: none;
@@ -125,6 +171,7 @@ nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fafafa;
 }
 nav ul li a {
   display: flex;

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-sm-12 col-md-12 col-lg-4 mtcol12 animate__animated animate__backInUp animate__delay-1s"
+    class="col-sm-12 col-md-10 col-lg-4 mtcol12 animate__animated animate__backInUp animate__delay-1s"
   >
     <div class="d-flex justify-content-between">
       <h3>إعلانات البلدية</h3>
@@ -46,7 +46,7 @@
           class="carousel-item active"
           data-bs-interval="10000"
         >
-          <div v-for="item in list" :key="item.id" class="Ddiv round mb-3">
+          <div v-for="item in list" :key="item.id" class="Ddiv round mt-3">
             <p>
               {{ item.paragraph }}
             </p>
@@ -95,9 +95,43 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/Section2");
     this.data = result.data[0];
-    console.log(result.data[0]);
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+@media screen and (max-width: 767px) {
+  .mtcol12 {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .mtcol12 {
+    margin-top: 70px;
+  }
+}
+.Ddiv {
+  padding: 13px 13px 20px 13px;
+  /* padding: 9px 13px 17px 13px; */
+  background: white;
+}
+
+.section .Ddiv p {
+  font-size: 16px;
+  color: #392c23;
+  font-family: FFShamelFamily-SansOneBook;
+  padding: 7px 0 0px 0px;
+}
+
+.section .Ddiv span {
+  color: #cf2a45;
+  font-size: 12px;
+}
+
+.Ddiv span a {
+  text-decoration: none;
+  color: #392c23;
+  font-size: 10px;
+}
+</style>

@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Footer from "../components/Footer.vue";
+import SideBar from "../components/SideBar.vue";
 import Home from "../views/Home.vue";
 import MobileApplication from "../views/MobileApplication.vue";
 import ConnectUs from "../views/ConnectUs.vue";
@@ -29,23 +31,28 @@ const routes = [
     name: "FrequentlyQuestions",
     component: FrequentlyQuestions,
   },
+  // {
+  //   path: "/SideBar/:name",
+  //   name: "SideBar",
+  //   component: Footer,
+  // },
   {
-    path: "/albaladia",
+    path: "/SideBar/albaladia",
     name: "AlBaladia",
     component: AlBaladia,
   },
   {
-    path: "/almadina",
+    path: "/SideBar/almadina",
     name: "AlMadina",
     component: AlMadina,
   },
   {
-    path: "/alkhadamat",
+    path: "/SideBar/alkhadamat",
     name: "AlKhadamat",
     component: AlKhadamat,
   },
   {
-    path: "/almasharie",
+    path: "/SideBar/almasharie",
     name: "AlMasharie",
     component: AlMasharie,
   },

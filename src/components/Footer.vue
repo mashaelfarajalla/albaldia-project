@@ -4,6 +4,7 @@
       <div>
         <div class="footerdiv d-flex justify-content-start">
           <router-link
+            @click="getdata"
             v-for="item in footer"
             :key="item.id"
             :to="{ name: `${item.name}` }"
@@ -26,10 +27,18 @@ export default {
       footer: [],
     };
   },
+  methods: {
+    getdata() {
+      let result = axios.get(
+        "http://localhost:3000/SideBar/" + this.$route.params.name
+      );
+      console.log(this.$route.params.name);
+      // console.log(result);
+    },
+  },
   async mounted() {
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
-    console.log(result.data);
   },
 };
 </script>
@@ -48,6 +57,7 @@ footer {
 }
 
 .footernav {
+  border-top: 1px solid rgb(237 237 237);
   width: 100%;
   height: 55px;
   display: flex;
@@ -75,13 +85,8 @@ footer {
   text-decoration: none;
 }
 
-.footerlink:hover {
-  color: #ffffff;
-  background-position: right;
-  border-left: 1px solid #3ec4b5;
-}
-
-.footerlink .active {
+.footerlink:hover,
+.footerlink.router-link-exact-active {
   color: #ffffff;
   background-position: right;
   border-left: 1px solid #3ec4b5;
