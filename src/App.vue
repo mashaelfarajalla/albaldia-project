@@ -16,6 +16,7 @@
 import SideBar from "../src/components/SideBar.vue";
 import Header from "../src/components/Header.vue";
 import Footer from "../src/components/Footer.vue";
+// import Stor from "../src/store/index.vue";
 
 export default {
   name: "",

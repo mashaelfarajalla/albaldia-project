@@ -31,30 +31,42 @@ const routes = [
     name: "FrequentlyQuestions",
     component: FrequentlyQuestions,
   },
-  // {
-  //   path: "/SideBar/:name",
-  //   name: "SideBar",
-  //   component: Footer,
-  // },
+  {
+    path: "/SideBar/:name",
+    name: "SideBar",
+    component: SideBar,
+  },
   {
     path: "/SideBar/albaladia",
     name: "AlBaladia",
     component: AlBaladia,
+    meta: {
+      title: "AlBaladia",
+    },
   },
   {
     path: "/SideBar/almadina",
     name: "AlMadina",
     component: AlMadina,
+    meta: {
+      title: "AlMadina",
+    },
   },
   {
     path: "/SideBar/alkhadamat",
     name: "AlKhadamat",
     component: AlKhadamat,
+    meta: {
+      title: "AlKhadamat",
+    },
   },
   {
     path: "/SideBar/almasharie",
     name: "AlMasharie",
     component: AlMasharie,
+    meta: {
+      title: "AlMasharie",
+    },
   },
 ];
 

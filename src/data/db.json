@@ -1,24 +1,24 @@
 {
   "SideBar": [{
     "index":[
-        { "id": 1,"name":"Home"  ,"title": "الرئيسية" , "icon":"/img/icons8home.a7c8a611.svg" },
-        { "id": 2, "name":"MobileApplication" , "title": "تطبيق موبايل","icon":"/img/icons8android.bf680878.svg" },
-        { "id": 3,"name":"ConnectUs" , "title": "تواصل معنا" ,"icon":"/img/icons8telephone.82633158.svg"},
-        { "id": 4, "name":"FrequentlyQuestions","title": "الاسئلة الشائعة" ,"icon":"/img/icons8help.72018148.svg" }
+        { "id": 1,"name":"Home"  ,"title": "الرئيسية" , "icon":"/image/icons8home.svg" },
+        { "id": 2, "name":"MobileApplication" , "title": "تطبيق موبايل","icon":"/image/icons8android.svg" },
+        { "id": 3,"name":"ConnectUs" , "title": "تواصل معنا" ,"icon":"/image/icons8telephone.svg"},
+        { "id": 4, "name":"FrequentlyQuestions","title": "الاسئلة الشائعة" ,"icon":"/image/icons8help.svg" }
       ],
       "albaladia":[
-      { "id": 1,"name":"Home"  ,"title": "الرئيسية" , "icon":"/img/icons8home.a7c8a611.svg" },
-      { "id": 2, "name":"Center" , "title": "المركز","icon":"/img/icons8android.bf680878.svg" }
+      { "id": 1,"name":"Home"  ,"title": "الرئيسية" , "icon":"/image/icons8home.svg" },
+      { "id": 2, "name":"AlBaladia" , "title": "المركز","icon":"/image/svgexport-6(47).svg" }
       ],
        "almadina":[
-        { "id": 1,"name":"Location"  ,"title": "الموقع والمناخ " , "icon":"/img/icons8home.a7c8a611.svg" },
-        { "id": 2, "name":"History" , "title": "تاريخ وحضارة","icon":"/img/icons8android.bf680878.svg" }
+        { "id": 1,"name":"Home"  ,"title": "الموقع والمناخ " , "icon":"/image/icons8_goal.svg" },
+        { "id": 2, "name":"AlMadina" , "title": "تاريخ وحضارة","icon":"/image/icons8_sand_timer.svg" }
       ],
-       "alkdamat":[
-        { "id": 1,"name":"services"  ,"title": " الخدمات العامة " , "icon":"/img/icons8home.a7c8a611.svg" }
+       "alkhadamat":[
+        { "id": 1,"name":"AlKhadamat"  ,"title": " الخدمات العامة " , "icon":"/image/icons8_service.svg" }
       ],
         "almasharie":[
-        { "id": 1,"name":"projects"  ,"title": "المشاريع القائمة" , "icon":"/img/icons8home.a7c8a611.svg" }
+        { "id": 1,"name":"AlKhadamat"  ,"title": "المشاريع القائمة" , "icon":"/image/icons8_engineering.svg" }
       ]
 
   }
@@ -76,10 +76,11 @@
   "HomeSection3":[
     {
       "id":1,
-      "image":"",
+      "image":"/img/Image5.5ab60756.png",
       "title":"في غزة",
       "body":"هل تبحث عن مكان (متحف, بنك, مستشفى،...) ؟",
-      "titlebtn":"استكشاف"
+      "titlebtn":"استكشاف" 
+      
     }
   ],
   "HomeServers":[

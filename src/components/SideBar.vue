@@ -6,6 +6,7 @@
     <ul class="nav nav-pills nav-flush flex-sm-row flex-lg-column text-center">
       <li v-for="item in sidebar" :key="item.id" class="nav-item">
         <router-link
+          exact
           :to="{ name: `${item.name}` }"
           aria-current="page"
           title=""
@@ -13,8 +14,8 @@
           data-bs-placement="right"
           data-bs-original-title="Home"
         >
-          <!-- <img :src="item.icon" /> -->
-          <svg
+          <img :src="item.icon" />
+          <!-- <svg
             id="icons8_home_1"
             xmlns="http://www.w3.org/2000/svg"
             width="24.926"
@@ -28,7 +29,7 @@
               transform="translate(-0.66 -1.32)"
               fill="#cf2a45"
             />
-          </svg>
+          </svg> -->
           <div class="tooltip2">
             <p>{{ item.title }}</p>
           </div>
@@ -50,6 +51,7 @@
 
 <script>
 import axios from "axios";
+import { useStore } from "../store";
 export default {
   name: "SideBar",
   data() {
@@ -59,10 +61,31 @@ export default {
     };
   },
   async mounted() {
+    console.log(this.$route.fullPath);
+
+    const store = useStore();
+    console.log(store.name);
+
     let result = await axios.get("http://localhost:3000/SideBar");
-    this.sidebar = result.data[0].index;
-    console.log(result.data[0]);
-    // console.log(this.$route.params.name);
+    // let path = this.currentPath.split("/");
+    // console.log(this.to.name);
+    console.log(store.getdata(this.$route.fullPath));
+    console.log(store.path);
+    if (store.path == undefined) {
+      this.sidebar = result.data[0].index;
+    } else if (store.path == "albaladia") {
+      this.sidebar = result.data[0].albaladia;
+    } else if (store.path == "almadina") {
+      this.sidebar = result.data[0].almadina;
+    }
+     else if (store.path == "alkhadamat") {
+      this.sidebar = result.data[0].alkhadamat;
+    }
+     else if (store.path == "almasharie") {
+      this.sidebar = result.data[0].almasharie;
+    }
+
+    // this.sidebar = result.data[0].store.path;
 
     let result2 = await axios.get("http://localhost:3000/SocialMedai");
     this.socialmedai = result2.data;
@@ -180,19 +203,23 @@ nav ul li a {
   justify-content: center;
 }
 
-nav ul li a svg path {
+/* nav ul li a svg path {
   fill: #392c23;
+} */
+nav ul li a img {
+  filter: invert(16%) sepia(14%) saturate(1055%) hue-rotate(341deg)
+    brightness(62%) contrast(92%);
 }
-
 nav ul li .router-link-exact-active,
 nav ul li:hover {
   height: 87px;
   width: 100%;
   background-color: #f3f2f2;
 }
-nav ul li:hover a svg path,
-nav ul li .router-link-exact-active svg path {
-  fill: #cf2a45;
+nav ul li:hover img,
+nav ul li .router-link-exact-active img {
+  filter: invert(28%) sepia(42%) saturate(5614%) hue-rotate(335deg)
+    brightness(84%) contrast(92%);
 }
 .text {
   margin: 0 auto;

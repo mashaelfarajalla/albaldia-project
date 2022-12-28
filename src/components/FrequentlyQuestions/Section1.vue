@@ -167,4 +167,5 @@ span.swiper-pagination-bullet {
 .swiper-pagination-fraction {
   bottom: 350px;
 }
+
 </style>

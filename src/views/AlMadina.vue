@@ -41,7 +41,6 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/AlMadina");
     this.data = result.data;
-    console.log(result.data);
   },
 };
 </script>

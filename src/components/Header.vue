@@ -476,7 +476,7 @@ export default {
   },
   async mounted() {
     var dropdown = document.getElementsByClassName("dropDown");
-    console.log(dropdown);
+    // console.log(dropdown);
     var i;
 
     for (i = 0; i < dropdown.length; i++) {

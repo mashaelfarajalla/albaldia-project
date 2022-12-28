@@ -11,6 +11,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "pinia": "^2.0.28",
     "popper.js": "^1.16.1",
     "swiper": "^8.4.5",
     "vue": "^3.2.45",

@@ -47,7 +47,7 @@
           data-bs-interval="10000"
         >
           <img
-            src="../../../assets/image/imag1.jpg"
+            src="@/assets/image/imag1.jpg"
             class="d-block w-100 round"
             alt="..."
           />

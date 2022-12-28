@@ -1,8 +1,6 @@
 <template>
   <div class="row align-items-center justify-content-between">
-    <div
-      class="col-sm col-md-6 col-lg-6 animate__animated animate__slideInRight animate__delay-1s"
-    >
+    <div class="col-sm col-md-6 col-lg-6">
       <div class="">
         <h3>تطبيق مصمم خصيصًا لك</h3>
         <p class="p">
@@ -156,9 +154,7 @@
       </div>
     </div>
 
-    <div
-      class="col-sm col-md-6 col-lg-6 text-center animate__animated animate__flipInY animate__delay-1s"
-    >
+    <div class="col-sm col-md-6 col-lg-6 text-center">
       <img class="imagephone" src="../../assets/image/Group1.png" />
     </div>
   </div>

@@ -5,7 +5,7 @@
     style="position: relative"
     class="col-sm-12 col-md-10 col-lg-4 round mtcol12 animate__animated animate__backInLeft animate__delay-1s"
   >
-    <img src="../../../assets/image/Image5.png" class="w-100" />
+    <img :src="`${item.image}`" class="w-100" />
     <div class="box">
       <h3 class="h5">{{ item.title }}</h3>
       <p class="p paddingp">{{ item.body }}</p>
@@ -46,14 +46,11 @@ export default {
 </script>
 
 <style scoped>
-
-
 @media screen and (min-width: 992px) {
-   .mtcol12 {
+  .mtcol12 {
     margin-top: 38px;
   }
 }
-
 
 @media screen and (max-width: 767px) {
   .mtcol12 {

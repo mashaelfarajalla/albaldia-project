@@ -4,7 +4,6 @@
       <div>
         <div class="footerdiv d-flex justify-content-start">
           <router-link
-            @click="getdata"
             v-for="item in footer"
             :key="item.id"
             :to="{ name: `${item.name}` }"
@@ -20,22 +19,21 @@
 
 <script>
 import axios from "axios";
+
+// import { useRoute } from "vue-router";
+
 export default {
+  setup() {
+    // const route = useRoute();
+    // return [route];
+  },
   name: "Footer",
   data() {
     return {
       footer: [],
     };
   },
-  methods: {
-    getdata() {
-      let result = axios.get(
-        "http://localhost:3000/SideBar/" + this.$route.params.name
-      );
-      console.log(this.$route.params.name);
-      // console.log(result);
-    },
-  },
+
   async mounted() {
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
