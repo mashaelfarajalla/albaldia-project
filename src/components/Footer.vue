@@ -19,6 +19,7 @@
 
 <script>
 import axios from "axios";
+import { useStore } from "../store/index";
 
 // import { useRoute } from "vue-router";
 
@@ -35,8 +36,16 @@ export default {
   },
 
   async mounted() {
+    const store = useStore();
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
+    // store.getdata(this.$route.fullPath);
+  },
+  methods: {
+    // GetData() {
+    //   const store = useStore();
+    //   store.getdata(this.$route.fullPath);
+    // },
   },
 };
 </script>

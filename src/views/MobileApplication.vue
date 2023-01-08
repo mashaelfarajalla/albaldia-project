@@ -1,5 +1,9 @@
 <template>
-  <MobileApp />
+  <div class="bg section index container1 padding">
+    <div class="container">
+      <MobileApp />
+    </div>
+  </div>
 </template>
 <script>
 import MobileApp from "@/components/MobileApplication/MobileApp";

@@ -1,5 +1,9 @@
 <template>
-  <Section1 />
+  <div class="bg section index container1 padding">
+    <div class="container">
+      <Section1 />
+    </div>
+  </div>
 </template>
 
 <script>

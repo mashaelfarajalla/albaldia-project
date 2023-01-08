@@ -157,7 +157,9 @@
 
   <header class="d-md-flex d-lg-none index">
     <label class="logo">
-      <a href="index.html"><img src="../assets/image/iconimag.png" /> </a>
+      <router-link :to="{ name: 'Home' }"
+        ><img src="../assets/image/iconimag.png" />
+      </router-link>
     </label>
     <div
       class="grid d-flex justify-content-between align-items-center text-center"
@@ -244,7 +246,7 @@
     </div>
 
     <ul class="ul" :style="[open ? 'display:block;' : 'display:none;']">
-      <li v-for="item in header" :key="item.id">
+      <li v-for="item in Header" :key="item.id">
         <a href="#" class="dropDown">
           <div>{{ item.title }}</div>
           <div>
@@ -258,7 +260,7 @@
           <router-link
             v-for="i in item.iconMun"
             :key="i.id"
-            :to="{ name: `${item.name}` }"
+            :to="{ name: `${i.name}` }"
             class="header-link py-3"
             title=""
             data-bs-toggle="tooltip"
@@ -266,32 +268,7 @@
             data-bs-original-title="Dashboard"
           >
             <span class="mx-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  id="svgexport-6_47_"
-                  data-name="svgexport-6 (47)"
-                  transform="translate(-2 -2)"
-                >
-                  <g
-                    id="Group_1637"
-                    data-name="Group 1637"
-                    transform="translate(2 2)"
-                  >
-                    <path
-                      id="Path_1259"
-                      data-name="Path 1259"
-                      d="M76.717,179.718V158.289a.857.857,0,0,1,.857-.857H87.86a.857.857,0,0,1,.857.857v4.286h7.714a.857.857,0,0,1,.857.857v16.286h.857a.857.857,0,0,1,0,1.714H75.86a.857.857,0,0,1,0-1.714Zm10.286,0V159.146H78.432v20.571h1.712v-4.286a.857.857,0,0,1,.857-.857h3.429a.857.857,0,0,1,.857.857v4.286Zm-5.145-3.429v3.429h1.714v-3.429Zm6.86-12v15.429h6.857V164.289ZM91.286,178H93a.857.857,0,0,0,0-1.714H91.286a.857.857,0,1,0,0,1.714Zm0-3.429H93a.857.857,0,0,0,0-1.714H91.286a.857.857,0,1,0,0,1.714ZM81,172.861h3.429a.857.857,0,1,0,0-1.714H81a.857.857,0,0,0,0,1.714Zm10.286-1.714H93a.857.857,0,1,0,0-1.714H91.286a.857.857,0,1,0,0,1.714ZM81,169.432h3.429a.857.857,0,1,0,0-1.714H81a.857.857,0,0,0,0,1.714Zm10.286-1.714H93A.857.857,0,0,0,93,166H91.286a.857.857,0,1,0,0,1.714ZM81,166h3.429a.857.857,0,1,0,0-1.714H81A.857.857,0,1,0,81,166Zm3.429-5.143a.857.857,0,1,1,0,1.714H80.97l-.027,0-.027,0-.027,0-.027,0-.026,0-.032-.007-.029-.008-.03-.009-.03-.009-.025-.009-.024-.01-.024-.01-.023-.011-.023-.012-.023-.012-.022-.014-.021-.014-.021-.015-.021-.015-.021-.015-.024-.02-.023-.021-.022-.021-.021-.021-.022-.025-.02-.023-.019-.025-.018-.025-.015-.021-.014-.022-.013-.022-.013-.022-.012-.023-.013-.028-.013-.029-.011-.03-.009-.027-.009-.03-.007-.026-.006-.026-.005-.027,0-.027,0-.027,0-.027,0-.027,0-.027v-.057l0-.027,0-.027,0-.015a.858.858,0,0,1,.851-.753Z"
-                      transform="translate(-75.003 -157.432)"
-                      fill="#cf2a45"
-                    />
-                  </g>
-                </g>
-              </svg>
+              <img :src="i.icon" />
             </span>
           </router-link>
         </ul>
@@ -431,45 +408,47 @@ export default {
       expanded: false,
       ContainerHeight: 0,
 
-      header: [
+      Header: [
         {
-          id: "1",
+          id: 1,
           title: "البلدية",
-          name: "AlBaladia",
-          open: false,
-          icon: "",
-          iconMun: [{ id: 1, icon: "" }],
-        },
-        {
-          id: "2",
-          title: "المدينة",
-          name: "AlMadina",
-          icon: "",
           iconMun: [
-            { id: 1, icon: "" },
-            { id: 2, icon: "" },
+            { id: 1, name: "AlBaladiaIndex", icon: "/image/icons8home.svg" },
+            { id: 2, name: "AlBaladia2", icon: "/image/svgexport-6(47).svg" },
           ],
         },
         {
-          id: "3",
+          id: 2,
+          title: "المدينة",
+          iconMun: [
+            { id: 1, name: "AlMadinaIndex", icon: "/image/icons8_goal.svg" },
+            { id: 2, name: "AlMadina2", icon: "/image/icons8_sand_timer.svg" },
+          ],
+        },
+        {
+          id: 3,
           title: "الخدمات",
-          name: "AlKhadamat",
-          icon: "",
-          iconMun: [{ id: 1, icon: "" }],
+          iconMun: [
+            { id: 1, name: "AlKhadamat", icon: "/image/icons8_service.svg" },
+          ],
         },
         {
-          id: "4",
+          id: 4,
           title: "المشاريع",
-          name: "AlMasharie",
           icon: "",
-          iconMun: [{ id: 1, icon: "" }],
+          iconMun: [
+            {
+              id: 1,
+              name: "AlMasharie",
+              icon: "/image/icons8_engineering.svg",
+            },
+          ],
         },
         {
-          id: "5",
+          id: 5,
           title: "المركز الإعلامي",
-          name: "Home",
-          icon: "",
-          iconMun: [{ id: 1, icon: "" }],
+
+          iconMun: [{ id: 1, name: "Home", icon: "/image/icons8home.svg" }],
         },
       ],
     };
@@ -517,6 +496,7 @@ export default {
   header .divimg {
     margin-top: 85px;
     width: 0;
+    margin-left: -193px;
   }
 
   header a {
@@ -608,26 +588,32 @@ export default {
     width: 60px;
   }
 
-  header .ul li ul a svg path {
-    fill: #392c23;
+  header ul.ul li ul a span img {
+    filter: invert(16%) sepia(14%) saturate(1055%) hue-rotate(341deg)
+      brightness(62%) contrast(92%);
   }
 
-  header .ul li ul a svg path:hover,
-  header .ul li ul a.active svg path {
-    fill: #cf2a45;
+  header .ul li ul a img:hover,
+  header .ul li ul a.router-link-active.router-link-exact-active img {
+    filter: invert(28%) sepia(42%) saturate(5614%) hue-rotate(335deg)
+      brightness(84%) contrast(92%);
   }
 
   .expanded {
     transform: rotate(180deg);
   }
-  header .ul li ul a.router-link-active.router-link-exact-active svg path {
-    fill: #cf2a45;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  header .ul li ul a.router-link-active.router-link-exact-active svg path {
-    fill: #cf2a45;
+  header ul.ul li ul a span img {
+    filter: invert(16%) sepia(14%) saturate(1055%) hue-rotate(341deg)
+      brightness(62%) contrast(92%);
+  }
+
+  header .ul li ul a img:hover,
+  header .ul li ul a.router-link-active.router-link-exact-active img {
+    filter: invert(28%) sepia(42%) saturate(5614%) hue-rotate(335deg)
+      brightness(84%) contrast(92%);
   }
   header {
     width: 100%;

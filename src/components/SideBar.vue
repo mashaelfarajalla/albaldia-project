@@ -4,7 +4,7 @@
     style="z-index: var(--z-fixed)"
   >
     <ul class="nav nav-pills nav-flush flex-sm-row flex-lg-column text-center">
-      <li v-for="item in sidebar" :key="item.id" class="nav-item">
+      <li v-for="item in store.sidebar" :key="item.id" class="nav-item">
         <router-link
           exact
           :to="{ name: `${item.name}` }"
@@ -15,21 +15,6 @@
           data-bs-original-title="Home"
         >
           <img :src="item.icon" />
-          <!-- <svg
-            id="icons8_home_1"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24.926"
-            height="21.53"
-            viewBox="0 0 24.926 21.53"
-          >
-            <path
-              id="icons8_home_1-2"
-              data-name="icons8_home_1"
-              d="M13.123,1.32.66,12.888l1.154,1.247,1.121-1.041V22.85h8.49V14.36h3.4v8.49h8.49V13.094l1.121,1.041,1.154-1.247Zm0,2.308,8.49,7.893v9.631H16.519v-8.49H9.727v8.49H4.633V11.522Z"
-              transform="translate(-0.66 -1.32)"
-              fill="#cf2a45"
-            />
-          </svg> -->
           <div class="tooltip2">
             <p>{{ item.title }}</p>
           </div>
@@ -37,13 +22,15 @@
       </li>
     </ul>
 
-    <div class="d-lg-flex flex-column align-items-center none">
+    <div
+      v-if="store.show"
+      class="d-lg-flex flex-column align-items-center none"
+    >
       <p class="text mb-2">
         جميع الحقوق محفوظة لدى <span class="span">بلدية غزة</span> &copy; 2021
       </p>
       <div v-for="item in socialmedai" :key="item.id" class="square">
-        <img src="../assets/image/icons8_facebook_logo_1.svg" />
-        <!-- <img :src="item.icon" /> -->
+        <img :src="item.icon" />
       </div>
     </div>
   </nav>
@@ -60,33 +47,13 @@ export default {
       socialmedai: [],
     };
   },
-  async mounted() {
-    console.log(this.$route.fullPath);
-
+  setup() {
     const store = useStore();
-    console.log(store.name);
-
-    let result = await axios.get("http://localhost:3000/SideBar");
-    // let path = this.currentPath.split("/");
-    // console.log(this.to.name);
-    console.log(store.getdata(this.$route.fullPath));
-    console.log(store.path);
-    if (store.path == undefined) {
-      this.sidebar = result.data[0].index;
-    } else if (store.path == "albaladia") {
-      this.sidebar = result.data[0].albaladia;
-    } else if (store.path == "almadina") {
-      this.sidebar = result.data[0].almadina;
-    }
-     else if (store.path == "alkhadamat") {
-      this.sidebar = result.data[0].alkhadamat;
-    }
-     else if (store.path == "almasharie") {
-      this.sidebar = result.data[0].almasharie;
-    }
-
-    // this.sidebar = result.data[0].store.path;
-
+    return { store };
+  },
+  async mounted() {
+    console.log(this.store.getdata());
+  
     let result2 = await axios.get("http://localhost:3000/SocialMedai");
     this.socialmedai = result2.data;
   },
@@ -203,9 +170,6 @@ nav ul li a {
   justify-content: center;
 }
 
-/* nav ul li a svg path {
-  fill: #392c23;
-} */
 nav ul li a img {
   filter: invert(16%) sepia(14%) saturate(1055%) hue-rotate(341deg)
     brightness(62%) contrast(92%);

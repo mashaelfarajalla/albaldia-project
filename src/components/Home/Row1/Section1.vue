@@ -46,12 +46,12 @@
           class="carousel-item active"
           data-bs-interval="10000"
         >
-          <img
+          <!-- <img
             src="@/assets/image/imag1.jpg"
             class="d-block w-100 round"
             alt="..."
-          />
-          <!-- <img :src="item.image" class="d-block w-100 round" /> -->
+          /> -->
+          <img :src="item.image" class="d-block w-100 round" />
           <div class="carousel-caption round d-sm-block">
             <div class="divmag">
               <span>{{ item.data1 }}</span>

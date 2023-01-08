@@ -54,7 +54,7 @@
 
   <swiper :pagination="pagination" :modules="modules" class="mySwiper">
     <swiper-slide v-for="list in data" :key="list.id">
-      <div class="row">
+      <div class="row mySwiper1">
         <div class="col-lg-6">
           <p class="" v-for="item in list" :key="item.id">
             {{ item.question }}
@@ -167,5 +167,4 @@ span.swiper-pagination-bullet {
 .swiper-pagination-fraction {
   bottom: 350px;
 }
-
 </style>

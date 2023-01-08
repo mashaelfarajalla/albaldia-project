@@ -1,7 +1,11 @@
 <template>
-  <div class="row justify-content-evenly">
-    <Section1 />
-    <Section2 />
+  <div class="bg section index container1 padding">
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <Section1 />
+        <Section2 />
+      </div>
+    </div>
   </div>
 </template>
 

@@ -3,11 +3,9 @@
     <SideBar />
     <div class="main-body">
       <Header />
-      <div class="bg section index container1 padding">
-        <div class="container">
-          <router-view />
-        </div>
-      </div>
+
+      <router-view />
+
       <Footer />
     </div>
   </div>
@@ -167,7 +165,7 @@ div.carousel-dark .carousel-indicators [data-bs-target] {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1420px;
+    max-width: 1480px !important ;
   }
 }
 

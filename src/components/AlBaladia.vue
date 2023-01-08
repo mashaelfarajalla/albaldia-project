@@ -7,18 +7,21 @@
   >
     <div v-for="item in card" :key="item.id" class="col">
       <div class="card shadow-sm">
-        <img src="../assets/image/atrafplace-1092x614.png" />
+        <img :src="item.image" />
         <div class="divabsolute">
-          <img src="../assets/image/mmmmm.png" />
+          <img :src="item.Imagecover" />
         </div>
 
         <div class="card-body mt-5">
           <h5>{{ item.title }}</h5>
           <p class="card-text">
-            {{ item.body }}
+            {{ item.body.substring(0, 170) + "..." }}
           </p>
 
-          <div class="d-flex align-items-center">
+          <router-link
+            :to="'/details/' + item.id"
+            class="d-flex align-items-center"
+          >
             <small class="text-muted">عرض التفاصيل</small>
             <div class="circle5">
               <svg
@@ -37,7 +40,7 @@
                 />
               </svg>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
@@ -54,7 +57,7 @@ export default {
     };
   },
   async mounted() {
-    let result = await axios.get("http://localhost:3000/AlBaladia");
+    let result = await axios.get("http://localhost:3000/AlBaladia8");
     this.card = result.data;
   },
 };
