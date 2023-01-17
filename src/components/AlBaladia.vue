@@ -19,7 +19,7 @@
           </p>
 
           <router-link
-            :to="'/details/' + item.id"
+            :to="'/albaladiaindex/details/' + item.id"
             class="d-flex align-items-center"
           >
             <small class="text-muted">عرض التفاصيل</small>

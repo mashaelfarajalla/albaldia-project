@@ -7,7 +7,7 @@
       </p>
     </div>
     <form>
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center mt-4">
         <div class="form-group col-sm-6 flex-column d-flex">
           <label for="preachingtype" class="form-label"> نوع المقترح </label>
           <select class="form-select" v-model="form.select" id="preachingtype">
@@ -29,7 +29,7 @@
           />
         </div>
       </div>
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center mt-4">
         <div class="form-group col-sm-6 flex-column d-flex">
           <label for="phone" class="form-label">رقم الجوال</label>
           <input
@@ -52,7 +52,7 @@
           />
         </div>
       </div>
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center mt-4">
         <div class="form-group col-sm-6 flex-column d-flex">
           <label for="address" class="form-label">عنوان السكن</label>
           <input
@@ -76,7 +76,7 @@
           />
         </div>
       </div>
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center mt-4">
         <div class="form-group dropZoneContainer flex-column d-flex">
           <label for="address" class="form-label">ارفاق ملف</label>
           <input
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center mt-4">
         <div class="form-group flex-column d-flex">
           <label for="data" class="form-label">بيانات المقترح</label>
           <textarea

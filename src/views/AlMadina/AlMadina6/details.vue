@@ -14,7 +14,10 @@
               <div class="card-body">
                 <h5>{{ item.title }}</h5>
                 <router-link
-                  :to="'/details2Almadina/' + item.id"
+                  :to="
+                    `/SideBar/almadinaindex/detailsAlmadina/${this.$route.params.id}/details2Almadina/` +
+                    item.id
+                  "
                   class="d-flex align-items-center"
                 >
                   <small class="text-muted">عرض التفاصيل</small>

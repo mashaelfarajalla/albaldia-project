@@ -4,25 +4,55 @@
       <div class="container">
         <div>
           <h3>بلدية غزة</h3>
-          <Vision />
         </div>
-
-        <ul class="">
-          <li class="d-inline">
-            <router-link class="active" :to="{ name: 'Vision' }"
-              >رؤية البلدية</router-link
+        <ul class="" id="myTab" role="tablist">
+          <li class="" role="presentation">
+            <a
+              class="nav-link active"
+              id="pills-see-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#our-see"
+              role="tab"
+              aria-controls="our-see"
+              aria-selected="true"
             >
+              رؤية البلدية
+            </a>
           </li>
-          <li class="d-inline">
-            <router-link :to="{ name: 'Alahdaf' }">أهداف البلدية</router-link>
-          </li>
-          <li class="d-inline">
-            <router-link :to="{ name: 'SiasatAlbaladia' }"
-              >سياسة البلدية</router-link
+          <li class="" role="presentation">
+            <a
+              class="nav-link"
+              id="pills-goal-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#our-goal"
+              type="button"
+              role="tab"
+              aria-controls="our-goal"
+              aria-selected="false"
             >
+              أهداف البلدية
+            </a>
+          </li>
+          <li class="" role="presentation">
+            <a
+              class="nav-link"
+              id="#pills-policy-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#our-policy"
+              type="button"
+              role="tab"
+              aria-controls="our-policy"
+              aria-selected="false"
+            >
+              سياسة البلدية
+            </a>
           </li>
         </ul>
-        <div></div>
+        <div class="tab-content" id="myTabContent">
+          <Vision />
+          <SiasatAlbaladia />
+          <Alahdaf />
+        </div>
       </div>
     </div>
   </MainSection>
@@ -30,13 +60,21 @@
 
 <script>
 import MainSection from "@/components/MainSection.vue";
-// import Vision from "./Vision.vue";
+import Vision from "./Vision.vue";
+import SiasatAlbaladia from "./SiasatAlbaladia.vue";
+import Alahdaf from "./Alahdaf.vue";
+
 export default {
-  components: { MainSection },
+  components: { MainSection, Vision, SiasatAlbaladia, Alahdaf },
 };
 </script>
 
 <style scoped>
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  cursor: pointer;
+}
 ul li a {
   color: #392c23;
   font-size: 16px;
@@ -44,12 +82,9 @@ ul li a {
   margin: 0 5px;
 }
 
-.divborder {
-  margin-top: 40px;
-  border-bottom: 1px solid #d6d6d6;
-}
 
 ul {
+  border-bottom: 1px solid #d6d6d6;
   margin-top: 15px;
   padding-right: 0;
 }

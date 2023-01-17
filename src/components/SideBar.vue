@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sidber d-lg-flex flex-shrink-0 flex-sm-row flex-lg-column justify-content-between"
+    class="sidber d-none d-lg-flex flex-shrink-0 flex-sm-row flex-lg-column justify-content-between"
     style="z-index: var(--z-fixed)"
   >
     <ul class="nav nav-pills nav-flush flex-sm-row flex-lg-column text-center">
@@ -34,6 +34,30 @@
       </div>
     </div>
   </nav>
+
+  <nav
+    class="sidber d-sm-flex d-lg-none flex-shrink-0 flex-sm-row flex-lg-column justify-content-between"
+    style="z-index: var(--z-fixed)"
+  >
+    <ul class="nav nav-pills nav-flush flex-sm-row flex-lg-column text-center">
+      <li v-for="item in store.indexhome" :key="item.id" class="nav-item">
+        <router-link
+          exact
+          :to="{ name: `${item.name}` }"
+          aria-current="page"
+          title=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          data-bs-original-title="Home"
+        >
+          <img :src="item.icon" />
+          <div class="tooltip2">
+            <p>{{ item.title }}</p>
+          </div>
+        </router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -49,13 +73,13 @@ export default {
   },
   setup() {
     const store = useStore();
+
     return { store };
   },
   async mounted() {
-    console.log(this.store.getdata());
-  
     let result2 = await axios.get("http://localhost:3000/SocialMedai");
     this.socialmedai = result2.data;
+    console.log(this.store.indexhome);
   },
 };
 </script>
@@ -94,6 +118,12 @@ export default {
     right: 71px;
     opacity: 1;
   }
+
+  nav ul li .router-link-exact-active,
+  nav ul li:hover {
+    height: 87px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -120,6 +150,14 @@ export default {
   .tooltip2 {
     display: none;
   }
+
+  nav ul li .router-link-exact-active {
+    height: 10vh;
+    width: 100%;
+  }
+  /* nav ul li:hover {
+    height: 10vh;
+  } */
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -145,6 +183,10 @@ export default {
   }
   .tooltip2 {
     display: none;
+  }
+  nav ul li .router-link-exact-active {
+    height: 7vh;
+    width: 100%;
   }
 }
 nav {
@@ -176,8 +218,6 @@ nav ul li a img {
 }
 nav ul li .router-link-exact-active,
 nav ul li:hover {
-  height: 87px;
-  width: 100%;
   background-color: #f3f2f2;
 }
 nav ul li:hover img,

@@ -3,7 +3,7 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-lg-6">
             <h3>المتحف الإلكتروني</h3>
             <p>
               تزخر مدينة غزة الفلسطينية بتراث أثري وتاريخي يعود لآلاف السنين،
@@ -17,11 +17,11 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="item in data" :key="item.id" class="col-4">
+          <div v-for="item in data" :key="item.id" class="col-lg-4">
             <div class="card shadow-sm" style="position: relative">
               <img :src="item.image" />
               <div class="card-body body">
-                <router-link :to="'/detailsAlmadina/' + item.id">
+                <router-link :to="'/SideBar/almadinaindex/detailsAlmadina/' + item.id">
                   <h4>{{ item.title }}</h4>
                 </router-link>
               </div>
@@ -51,13 +51,37 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 992px) {
+  .body {
+    height: 91%;
+    width: 93%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .body {
+    height: 88%;
+    width: 91%;
+  }
+  .card {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .body {
+    height: 94%;
+    width: 96%;
+  }
+  .card {
+    margin-top: 20px;
+  }
+}
 .body {
-  border-radius: 20px;
+  border-radius: 9px;
   position: absolute;
   /* bottom: -17px; */
   /* left: 12px; */
-  height: 92%;
-  width: 94%;
+
   background: #17171a75;
 }
 h4 {

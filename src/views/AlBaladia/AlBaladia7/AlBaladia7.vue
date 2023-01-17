@@ -1,11 +1,11 @@
 <template>
   <MainSection>
-     <div class="bg section index container1 padding">
+    <div class="bg section index container1">
       <div class="container">
-    <div class="row">
-      <Section1 />
-      <Section2 />
-      </div>
+        <div class="row">
+          <Section1 />
+          <Section2 />
+        </div>
       </div>
     </div>
   </MainSection>

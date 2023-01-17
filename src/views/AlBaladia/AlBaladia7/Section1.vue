@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4" style="background-color: #e6e6e6">
+  <div class="col-4 backround">
     <h3>مقار ومرافق البلدية</h3>
     <p>اكتشف مقار ومرافق البلدية</p>
 
@@ -20,8 +20,15 @@
     </form>
 
     <div class="backgroubdcolorwhite">
-      <div class="verticl-menu">
-        <a v-for="item in data" :key="item.id" class="active mb-4 d-flex">
+      <div class="verticl-menu mt-3">
+        <router-link
+          to="/modal"
+          v-for="item in data"
+          :key="item.id"
+          class="mb-4 d-flex"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
           <span class="circle">{{ item.id }}</span>
           <div class="me-2">
             <span class="spantitle1">{{ item.title }}</span>
@@ -58,7 +65,7 @@
               </svg>
             </span>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -80,6 +87,11 @@ export default {
 </script>
 
 <style scoped>
+.backround {
+  border-left: 1px solid rgb(255 254 254);
+  background-color: rgb(230, 230, 230);
+  padding: 60px 55px 0 0;
+}
 input[type="text"] {
   border: none;
   border-bottom: 1px solid #392c23;

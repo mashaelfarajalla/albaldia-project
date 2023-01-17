@@ -1,6 +1,12 @@
 <template>
-  <header class="d-none d-lg-flex p-3 mb-3 border-bottom">
+  <header class="d-none d-lg-flex px-5 mb-3 border-bottom">
     <div class="container">
+      <div class="divimg">
+        <router-link :to="{ name: 'Home' }"
+          ><img src="../assets/image/iconimag.png" />
+        </router-link>
+      </div>
+
       <div
         class="grid d-flex justify-content-between align-items-center text-center"
       >
@@ -98,12 +104,6 @@
               <li><a class="dropdown-item" href="#">الانجليزية</a></li>
             </ul>
           </div>
-        </div>
-
-        <div class="g-col g-col-md-4 divimg">
-          <router-link :to="{ name: 'Home' }"
-            ><img src="../assets/image/iconimag.png" />
-          </router-link>
         </div>
         <div class="g-col g-col-md-4 d-flex">
           <div class="d-flex">
@@ -448,7 +448,9 @@ export default {
           id: 5,
           title: "المركز الإعلامي",
 
-          iconMun: [{ id: 1, name: "Home", icon: "/image/icons8home.svg" }],
+          iconMun: [
+            { id: 1, name: "MediaCenter", icon: "/image/icons8home.svg" },
+          ],
         },
       ],
     };
@@ -494,9 +496,9 @@ export default {
     width: 80px;
   }
   header .divimg {
-    margin-top: 85px;
-    width: 0;
-    margin-left: -193px;
+    position: absolute;
+    /* left: 50%; */
+    left: 48%;
   }
 
   header a {
@@ -549,6 +551,7 @@ export default {
     left: 0px;
     text-align: center;
     transition: all 0.5s;
+    margin-top: 0 !important;
   }
 
   .submenu1 {
@@ -657,6 +660,7 @@ export default {
     left: 0px;
     text-align: center;
     transition: all 0.5s;
+    margin-top: 0 !important;
   }
 
   .submenu1 {

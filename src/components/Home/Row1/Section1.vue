@@ -46,11 +46,6 @@
           class="carousel-item active"
           data-bs-interval="10000"
         >
-          <!-- <img
-            src="@/assets/image/imag1.jpg"
-            class="d-block w-100 round"
-            alt="..."
-          /> -->
           <img :src="item.image" class="d-block w-100 round" />
           <div class="carousel-caption round d-sm-block">
             <div class="divmag">
@@ -111,7 +106,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 992px) {
   .container1 div.carousel-caption {
-    padding: 22px 30px 0 64px;
+    padding: 45px 30px 0 64px;
   }
 }
 @media screen and (max-width: 767px) {

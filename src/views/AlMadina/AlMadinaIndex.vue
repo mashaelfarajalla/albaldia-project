@@ -3,7 +3,7 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col-5">
+          <div class="col-sm-12 col-lg-5">
             <h3>الموقع والمناخ</h3>
             <div class="divpadding">
               <P>
@@ -33,8 +33,8 @@
             </div>
           </div>
           <div
-            class="col-6 bg-white d-flex align-items-center"
-            style="height: 402px; border-radius: 20px"
+            class="col-sm-12 col-lg-6 divbgimg d-flex align-items-center"
+            style="border-radius: 20px"
           >
             <img src="/image/imagegaza.png" class="img-fluid" />
           </div>
@@ -52,7 +52,26 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width: 992px) {
+  .divbgimg {
+    height: 402px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .divbgimg {
+    height: 225px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .divbgimg {
+    padding: 20px;
+  }
+}
 .divpadding {
   padding-left: 3px;
+}
+.divbgimg {
+  border: 1px solid #d6d6d6;
 }
 </style>

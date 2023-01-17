@@ -222,7 +222,7 @@ export default {
 .line {
   border: none;
   border-top: 2px solid #d6d6d6;
-  width: 55px;
+  width: 28px;
   margin: auto;
   display: inline-block;
   line-height: 8px;

@@ -7,7 +7,7 @@ export const useStore = defineStore("main", {
     route: useRoute(),
     path: [],
     sidebar: [],
-
+    indexhome: [],
     show: true,
   }),
 

@@ -1,6 +1,6 @@
 <template>
   <div class="row align-items-center justify-content-between">
-    <div class="col-sm col-md-6 col-lg-6">
+    <div class="col-sm col-md-6 col-lg-6 animate__animated animate__fadeIn">
       <div class="">
         <h3>تطبيق مصمم خصيصًا لك</h3>
         <p class="p">
@@ -54,6 +54,9 @@ export default {
 </script>
 
 <style>
+/* :root {
+  --animate-delay: 2s;
+} */
 @media screen and (min-width: 992px) {
   .circle2 {
     width: 56px;

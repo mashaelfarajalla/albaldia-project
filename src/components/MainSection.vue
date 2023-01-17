@@ -4,7 +4,6 @@
 
 <script>
 import axios from "axios";
-import { useRoute } from "vue-router";
 
 import { useStore } from "../store/index.js";
 
@@ -25,8 +24,11 @@ export default {
     path = path[2];
     if (path == undefined) {
       this.store.sidebar = result2.data[0].index;
+      this.store.indexhome = result2.data[0].index;
       this.store.show = true;
     } else {
+      this.store.indexhome = result2.data[0].index;
+
       this.store.sidebar = result2.data[0][path];
       this.store.show = false;
     }

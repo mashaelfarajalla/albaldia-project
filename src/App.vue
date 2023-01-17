@@ -68,7 +68,7 @@ export default {
     top: 90px;
   }
   .padding {
-    padding: 65px 0px 32px 0;
+    padding: 65px 3rem 32px;
   }
 }
 
@@ -80,6 +80,10 @@ export default {
     width: 100%;
     top: 75px;
   }
+
+  .main-body {
+    height: calc(100vh - 7vh);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -89,6 +93,9 @@ export default {
   }
   .padding {
     padding: 30px 0px 32px 0;
+  }
+  .main-body {
+    height: calc(100vh - 7vh);
   }
 }
 .all-page {
@@ -166,6 +173,13 @@ div.carousel-dark .carousel-indicators [data-bs-target] {
   .container-xl,
   .container-xxl {
     max-width: 1480px !important ;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-md,
+  .container-sm {
+    max-width: 818px !important;
   }
 }
 

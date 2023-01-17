@@ -3,7 +3,7 @@
     <div class="bg section index container1">
       <div class="container">
         <div class="row">
-          <div class="col-6 p-0">
+          <div class="col-sm-12 col-lg-6 p-0">
             <div
               id="carouselExampleControls"
               class="sliderpage carousel slide"
@@ -59,7 +59,7 @@
               </button>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-sm-12 col-lg-6">
             <div class="divpadding2">
               <div class="">
                 <h3>الأحياء</h3>
@@ -113,19 +113,51 @@ export default {
 };
 </script>
 
-<style scope>
-.divpadding2 {
-  padding: 57px 52px 0 0;
+<style scoped>
+@media screen and (min-width: 992px) {
+  .divpadding2 {
+    padding: 57px 52px 0 0;
+  }
+  .sliderpage {
+    position: sticky;
+    top: -75px;
+    height: calc(100vh - 145px);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 50% !important;
+  }
 }
 
-.sliderpage {
-  position: sticky;
-  top: -75px;
-  height: calc(100vh - 145px);
+@media screen and (max-width: 767px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 33% !important;
+  }
+  .divpadding2 {
+    margin-top: 35px;
+  }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 33% !important;
+  }
+  .divpadding2 {
+    margin-top: 35px;
+  }
+}
 div .p {
   font-size: 16px;
   color: #392c23;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 57px !important;
+  height: 140px !important;
+  background: black !important;
 }
 </style>

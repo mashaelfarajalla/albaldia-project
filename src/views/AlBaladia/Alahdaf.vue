@@ -1,9 +1,12 @@
 <template>
-  <MainSection>
-     <div class="bg section index container1 padding">
-      <div class="container">
+  <div
+    class="tab-pane fade"
+    id="our-goal"
+    role="tabpanel"
+    aria-labelledby="pills-goal-tab"
+  >
     <div class="row">
-      <div class="col-5">
+      <div class="col-md-5">
         <div class="d-flex align-items-center">
           <img src="../../../public/image/svg2.svg" />
           <h5 class="divh5 mx-3">أهدافنا</h5>
@@ -16,9 +19,7 @@
         </div>
       </div>
     </div>
-    </div>
-    </div>
-  </MainSection>
+  </div>
 </template>
 
 <script>
@@ -35,7 +36,7 @@ export default {
   },
 
   async mounted() {
-    let result = await axios.get("http://localhost:3000/Alahdaf");
+    let result = await axios.get("http://localhost:3000/SiasatAlbaladia");
     this.data = result.data;
   },
 };

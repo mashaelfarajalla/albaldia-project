@@ -5,32 +5,41 @@
         <div class="row align-items-center">
           <div class="divborder">
             <h3>غزة تاريخ وحضارة</h3>
-            <ul class="">
-              <li class="d-inline" data-class=".Gazahistory">
-                <a class="active" href="#Gazahistory">غزة التاريخ</a>
-              </li>
-              <li class="d-inline" data-class=".GazaCivilization">
-                <a href="#GazaCivilization">غزة الحضارة</a>
-              </li>
-            </ul>
           </div>
-
-          <div class="shuffle-images mt-3">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div
-                v-for="item in data"
-                :key="item.id"
-                class="all col Gazahistory"
+          <ul class="" id="myTab" role="tablist">
+            <li class="" role="presentation">
+              <a
+                class="nav-link active"
+                id="pills-Gazahistory-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#our-history"
+                type="button"
+                role="tab"
+                aria-controls="our-history"
+                aria-selected="true"
               >
-                <div class="card shadow-sm">
-                  <img :src="item.image" />
-                  <div class="card-body">
-                    <h6>{{ item.title }}</h6>
-                    <small class="text-muted">{{ item.details }}</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+                غزة التاريخ
+              </a>
+            </li>
+
+            <li class="" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-GazaCivilization-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#our-Civilization"
+                role="tab"
+                aria-controls="our-Civilization"
+                aria-selected="false"
+              >
+                غزة الحضارة
+              </a>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <History />
+            <Civilization />
           </div>
         </div>
       </div>
@@ -39,24 +48,31 @@
 </template>
 
 <script>
-import axios from "axios";
 import MainSection from "../../components/MainSection.vue";
+import History from "./History.vue";
+
+import Civilization from "./Civilization.vue";
+// import axios from "axios";
+
 export default {
-  data() {
-    return {
-      data: [],
-    };
-  },
-  components: { MainSection },
-  async mounted() {
-    let result = await axios.get("http://localhost:3000/AlMadina2");
-    this.data = result.data;
-  },
+  components: { MainSection, History, Civilization },
+  // data() {
+  //   return {
+  //     data: [],
+  //   };
+  // },
+  // async mounted() {
+  //   let result = await axios.get("http://localhost:3000/AlMadina2");
+  //   this.data = result.data[0];
+  //   console.log(this.data);
+  // },
 };
 </script>
 
 <style scoped>
-.card:hover {
+ul li {
+  list-style-type: none;
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -67,12 +83,9 @@ ul li a {
   margin: 0 5px;
 }
 
-.divborder {
-  margin-top: 40px;
-  border-bottom: 1px solid #d6d6d6;
-}
-
 ul {
+  border-bottom: 1px solid #d6d6d6;
+
   margin-top: 15px;
   padding-right: 0;
 }

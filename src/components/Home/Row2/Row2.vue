@@ -57,6 +57,11 @@ export default {
 </script>
 
 <style>
+.h4 {
+  font-size: 18px;
+  color: #cf2a45;
+  font-family: "FFShamelFamily-SansOneBold";
+}
 .circle {
   height: 50px;
   width: 50px;

@@ -4,8 +4,8 @@
       <h3>جاهزون لنسمع مقترحاتك</h3>
       <p>أهلا بك .. يمكنك التواصل معنا مباشرة على أرقامنا التالية</p>
     </div>
-    <div class="div">
-      <h4>تواصل معنا</h4>
+    <div class="div1 mt-3">
+      <h3 class="">تواصل معنا</h3>
       <div class="row">
         <div v-for="item in conntect" :key="item.id" class="col-sm-12 col-md-6">
           <p>
@@ -14,10 +14,10 @@
         </div>
       </div>
     </div>
-    <div class="mt-3">
+    <div class="mt-4">
       <h5>الشبكات الاجتماعية</h5>
 
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center mt-4">
         <div v-for="item in socialmedai" :key="item.id" class="circle3">
           <img :src="item.icon" />
         </div>
@@ -80,7 +80,12 @@ export default {
     justify-content: center;
   }
 }
-.div p {
+
+.div1 h3 {
+  color: #392c23;
+  font-size: 16px;
+}
+.div1 p {
   color: #707070;
   font-size: 14;
   font-family: "FFShamelFamily-SansOneBook";
