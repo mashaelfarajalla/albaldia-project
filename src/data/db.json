@@ -40,7 +40,7 @@
         { "id": 1,"name":"MediaCenter"  ,"title": "أخبار واعلانات " , "icon":"/image/icons8_news.svg" }
       , { "id": 2,"name":"MediaCenter2"  ,"title": "الألبومات" , "icon":"/image/icon8.svg" }
       , { "id": 3,"name":"MediaCenter3"  ,"title": "تقارير وإصدارات" , "icon":"/image/icons8_pdf.svg" }
-      , { "id": 4,"name":"AlMasharie2"  ,"title": "أرقام وإحصائيات" , "icon":"/image/icons8_bar_chart.svg" }
+      , { "id": 4,"name":"MediaCenter4"  ,"title": "أرقام وإحصائيات" , "icon":"/image/icons8_bar_chart.svg" }
 
       ]
 

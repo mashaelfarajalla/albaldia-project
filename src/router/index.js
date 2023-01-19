@@ -4,20 +4,11 @@ import MobileApplication from "../views/MobileApplication.vue";
 import ConnectUs from "../views/ConnectUs.vue";
 import FrequentlyQuestions from "../views/FrequentlyQuestions.vue";
 import AlBaladiaIndex from "../views/AlBaladia/AlBaladiaIndex.vue";
-import Vision from "../views/AlBaladia/Vision.vue";
-import Alahdaf from "../views/AlBaladia/Alahdaf.vue";
-import SiasatAlbaladia from "../views/AlBaladia/SiasatAlbaladia.vue";
 import AlBaladia2 from "../views/AlBaladia/AlBaladia2.vue";
 import AlBaladia3 from "../views/AlBaladia/AlBaladia3/AlBaladia3";
-import Section1 from "../views/AlBaladia/AlBaladia3/Section1";
-import Section2 from "../views/AlBaladia/AlBaladia3/Section2";
-import Section3 from "../views/AlBaladia/AlBaladia3/Section3";
-import Section4 from "../views/AlBaladia/AlBaladia3/Section4";
-import Section5 from "../views/AlBaladia/AlBaladia3/Section5";
-
 import AlBaladia4 from "../views/AlBaladia/AlBaladia4/AlBaladia4.vue";
 import AlBaladia5 from "../views/AlBaladia/AlBaladia5.vue";
-import AlBaladia6 from "../views/AlBaladia/AlBaladia6.vue";
+import AlBaladia6 from "../views/AlBaladia/AlBaladia6/AlBaladia6";
 import AlBaladia7 from "../views/AlBaladia/AlBaladia7/AlBaladia7";
 import AlBaladia8 from "../views/AlBaladia//AlBaladia8/AlBaladia8";
 import details from "../views/AlBaladia//AlBaladia8/details";
@@ -41,6 +32,7 @@ import AlMasharie2 from "../views/AlMasharie/AlMasharie2.vue";
 import MediaCenter from "../views/MediaCenter/MediaCenter.vue";
 import MediaCenter2 from "../views/MediaCenter/MediaCenter2.vue";
 import MediaCenter3 from "../views/MediaCenter/MediaCenter3.vue";
+import MediaCenter4 from "../views/MediaCenter/MediaCenter4/MediaCenter4.vue";
 
 import Modal from "../views/AlBaladia/AlBaladia7/Modal";
 
@@ -72,32 +64,12 @@ const routes = [
     name: "Modal",
     component: Modal,
   },
-
-  {
-    path: "/SideBar/vision",
-    name: "Vision",
-    component: Vision,
-  },
   {
     path: "/SideBar/albaladiaindex",
     name: "AlBaladiaIndex",
     component: AlBaladiaIndex,
   },
-  {
-    path: "/SideBar/alahdaf",
-    name: "Alahdaf",
-    component: Alahdaf,
-  },
-  {
-    path: "/SideBar/SiasatAlbaladia",
-    name: "SiasatAlbaladia",
-    component: SiasatAlbaladia,
-  },
-  // {
-  //   path: "/SideBar/albaladiaindex",
-  //   name: "AlBaladiaIndex",
-  //   component: AlBaladiaIndex,
-  // },
+
   {
     path: "/SideBar/albaladiaindex/albaladia2",
     name: "AlBaladia2",
@@ -108,31 +80,7 @@ const routes = [
     name: "AlBaladia3",
     component: AlBaladia3,
   },
-  {
-    path: "/section1",
-    name: "Section1",
-    component: Section1,
-  },
-  {
-    path: "/section2",
-    name: "Section2",
-    component: Section2,
-  },
-  {
-    path: "/section3",
-    name: "Section3",
-    component: Section3,
-  },
-  {
-    path: "/section4",
-    name: "Section4",
-    component: Section4,
-  },
-  {
-    path: "/section5",
-    name: "Section5",
-    component: Section5,
-  },
+
   {
     path: "/SideBar/albaladiaindex/albaladia4",
     name: "AlBaladia4",
@@ -269,6 +217,11 @@ const routes = [
     path: "/SideBar/mediacenter/mediacenter3",
     name: "MediaCenter3",
     component: MediaCenter3,
+  },
+  {
+    path: "/SideBar/mediacenter/mediacenter4",
+    name: "MediaCenter4",
+    component: MediaCenter4,
   },
 ];
 

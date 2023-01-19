@@ -30,11 +30,11 @@
             </div>
           </div>
           <div class="col-7">
-            <div class="row">
+            <div class="row" data-masonry='{"percentPosition":true}'>
               <div
                 v-for="item in data.children"
                 :key="item.id"
-                class="col-6 bg-white divcol-6 mt-3"
+                class="bg-white col-6 divcol-6"
               >
                 <span>{{ item.number }}</span>
                 <div>
@@ -74,8 +74,11 @@ export default {
 .divcol-6 {
   border: 1px dashed #d6d6d6;
   padding: 32px;
-  height: min-content;
+  /* height: min-content; */
   border-radius: 20px;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  height: 300px;
 }
 
 span {
