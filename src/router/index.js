@@ -30,7 +30,7 @@ import AlMasharie from "../views/AlMasharie/AlMasharie.vue";
 import AlMasharie2 from "../views/AlMasharie/AlMasharie2.vue";
 
 import MediaCenter from "../views/MediaCenter/MediaCenter.vue";
-import MediaCenter2 from "../views/MediaCenter/MediaCenter2.vue";
+import MediaCenter2 from "../views/MediaCenter/MediaCenter2/MediaCenter2";
 import MediaCenter3 from "../views/MediaCenter/MediaCenter3.vue";
 import MediaCenter4 from "../views/MediaCenter/MediaCenter4/MediaCenter4.vue";
 
@@ -157,13 +157,24 @@ const routes = [
     },
   },
 
+  // {
+  //   path: "/SideBar/almadinaindex/almadina6/detailsAlmadina/:id",
+  //   name: "detailsAlmadina",
+  //   component: detailsAlmadina,
+  // },
+  // {
+  //   path: "/SideBar/almadinaindex/almadina6/detailsAlmadina/:id/details2Almadina/:idd",
+  //   name: "details2Almadina",
+  //   component: details2Almadina,
+  // },
+
   {
-    path: "/SideBar/almadinaindex/detailsAlmadina/:id",
+    path: "/SideBar/almadinaindex/almadina6/detailsAlmadina/:id",
     name: "detailsAlmadina",
     component: detailsAlmadina,
   },
   {
-    path: "/SideBar/almadinaindex/detailsAlmadina/:id/details2Almadina/:id",
+    path: "/SideBar/almadinaindex/almadina6/details2Almadina/:id",
     name: "details2Almadina",
     component: details2Almadina,
   },
@@ -184,7 +195,7 @@ const routes = [
   },
 
   {
-    path: "/SideBar/alkhadamat",
+    path: "/SideBar/alkhadamat/alkhadamat2",
     name: "AlKhadamat2",
     component: AlKhadamat2,
   },
@@ -196,7 +207,7 @@ const routes = [
   },
 
   {
-    path: "/SideBar/almasharie",
+    path: "/SideBar/almasharie/almasharie2",
     name: "AlMasharie2",
     component: AlMasharie2,
   },

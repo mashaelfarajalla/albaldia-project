@@ -1,5 +1,5 @@
 <template>
-  <div class="col-5">
+  <div class="col-lg-5">
     <div class="d-flex align-items-center">
       <h3 class="ms-4">الخطة الاستراتيجية لبلدية غزة</h3>
 

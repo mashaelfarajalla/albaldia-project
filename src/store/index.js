@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-import axios from "axios";
 import { useRoute } from "vue-router";
 
 export const useStore = defineStore("main", {

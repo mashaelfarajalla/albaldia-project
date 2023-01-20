@@ -1,24 +1,43 @@
 <template>
-  <div class="bg section index container1 padding">
-    <div class="container">
-      <div class="row justify-content-between">
-        <Section1 />
-        <Section2 />
+  <MainSection>
+    <div class="bg section index container1 padding">
+      <div class="container">
+        <div class="row justify-content-between">
+          <Section1 />
+          <Section2 />
+        </div>
       </div>
     </div>
-  </div>
+  </MainSection>
 </template>
 
 <script>
+import MainSection from "@/components/MainSection.vue";
 import Section1 from "./Section1.vue";
 import Section2 from "./Section2.vue";
 
 export default {
-  components: { Section1, Section2 },
+  components: { Section1, Section2, MainSection },
 };
 </script>
 
 <style>
+@media screen and (min-width: 992px) {
+  .divbg {
+    padding: 28px 25px 15px 62px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .divbg {
+    padding: 33px 16px 25px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .divbg {
+    padding: 33px 16px 25px 0;
+  }
+}
 a.dropdown-toggle {
   text-decoration: none;
   color: #392c23;
@@ -39,7 +58,6 @@ a.dropdown-toggle {
 }
 .divbg {
   background-color: white;
-  padding: 28px 25px 15px 62px;
   border: 1px dashed #d6d6d6;
   border-radius: 20px;
 }

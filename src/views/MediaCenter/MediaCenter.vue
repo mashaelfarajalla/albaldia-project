@@ -39,9 +39,23 @@
             </ul>
           </div>
         </div>
-        <div class="row mySwiper2">
+        <div class="row mySwiper2 mt-5">
           <swiper
-            :slidesPerView="4"
+            :slidesPerView="1"
+            :breakpoints="{
+              '480': {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              '640': {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              '992': {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+            }"
             :spaceBetween="30"
             :pagination="{
               clickable: true,
@@ -329,11 +343,27 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   .container1 div.carousel-caption {
+    height: 79%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container1 div.carousel-caption {
+    height: 77%;
+  }
+}
+@media screen and (max-width: 767px) {
+   .container1 div.carousel-caption {
+    height: 79%;
+  }
+}
+
 .line {
   height: 67px;
   width: 1px;
   background: #ffffff;
-  margin: auto;
+  /* margin: auto !important; */
 }
 
 .container1 div.carousel-caption {
@@ -346,7 +376,6 @@ export default {
   z-index: 1;
   bottom: 0rem;
   left: 0%;
-  height: 79%;
 }
 
 .container1.section div .carousel-caption p {

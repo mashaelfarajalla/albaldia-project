@@ -91,8 +91,9 @@ export default {
     let result = await axios.get(
       "http://localhost:3000/AlMadina6/" + this.$route.params.id
     );
+    console;
     this.data = result.data.children[this.$route.params.id];
-    console.log(result.data.children);
+    console.log(result.data.children[this.$route.params.id]);
     console.log(this.$route.params.id);
   },
 };

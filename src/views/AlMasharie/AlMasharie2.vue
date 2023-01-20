@@ -43,7 +43,21 @@
         </div>
         <div>
           <swiper
-            :slidesPerView="5"
+            :slidesPerView="1"
+            :breakpoints="{
+              '480': {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              '640': {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              '992': {
+                slidesPerView: 5,
+                spaceBetween: 50,
+              },
+            }"
             :spaceBetween="30"
             :pagination="{
               clickable: true,

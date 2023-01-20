@@ -15,6 +15,7 @@
     "pinia": "^2.0.28",
     "popper.js": "^1.16.1",
     "swiper": "^8.4.5",
+    "treeflex": "^2.0.1",
     "vue": "^3.2.45",
     "vue-router": "^4.0.3"
   },
@@ -23,8 +24,7 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0"
   },
-    "tags": [
+  "tags": [
     "swiper"
   ]
-
 }

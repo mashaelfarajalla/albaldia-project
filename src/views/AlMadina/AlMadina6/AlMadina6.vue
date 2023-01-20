@@ -21,7 +21,12 @@
             <div class="card shadow-sm" style="position: relative">
               <img :src="item.image" />
               <div class="card-body body">
-                <router-link :to="'/SideBar/almadinaindex/detailsAlmadina/' + item.id">
+                <router-link
+                  :to="
+                    '/SideBar/almadinaindex/almadina6/detailsAlmadina/' +
+                    item.id
+                  "
+                >
                   <h4>{{ item.title }}</h4>
                 </router-link>
               </div>

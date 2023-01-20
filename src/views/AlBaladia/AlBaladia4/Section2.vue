@@ -1,12 +1,12 @@
 <template>
-  <div class="col-6">
+  <div class="col-lg-6">
     <div class="d-flex align-items-center">
       <h3 class="ms-4 divtitle">
         ..لعرض أو تحميل الخطة الاستراتيجية، يرجى اختيار الخطة أدناه
       </h3>
     </div>
-    <div class="row">
-      <div v-for="item in data" :key="item.id" class="col-6 divbg2">
+    <div class="row mt-5">
+      <div v-for="item in data" :key="item.id" class="col-md-6 divbg2">
         <div class="row">
           <div class="col d-flex mb-3">
             <span>
@@ -19,11 +19,10 @@
           </div>
         </div>
         <div class="row justify-content-end">
-          <div class="col-6 d-flex">
+          <div class="col-8 d-flex">
             <p>{{ item.size }} ك. ب</p>
             <span>|</span>
-            <p></p>
-            <p>
+            <p class="mousep">
               تحميل
               <span>
                 <svg
@@ -70,5 +69,8 @@ export default {
   padding: 28px 25px 15px 0;
   border: 1px solid #d6d6d6;
   border-radius: 20px;
+}
+.mousep {
+  cursor: pointer;
 }
 </style>

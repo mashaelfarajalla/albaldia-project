@@ -38,11 +38,9 @@
 <script>
 import CanvasJSChart, { CanvasJS } from "../assets/CanvasJSVueComponent.vue";
 
-import Box from "./box.vue";
-import chart from "./chart.vue";
 CanvasJS.addColorSet("colors1", ["#3EC4B5"]);
 export default {
-  components: { chart, Box, CanvasJSChart },
+  components: { CanvasJSChart },
   data() {
     return {
       chart: null,

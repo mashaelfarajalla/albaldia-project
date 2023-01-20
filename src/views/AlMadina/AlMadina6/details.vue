@@ -15,7 +15,7 @@
                 <h5>{{ item.title }}</h5>
                 <router-link
                   :to="
-                    `/SideBar/almadinaindex/detailsAlmadina/${this.$route.params.id}/details2Almadina/` +
+                    `/SideBar/almadinaindex/almadina6/details2Almadina/` +
                     item.id
                   "
                   class="d-flex align-items-center"
