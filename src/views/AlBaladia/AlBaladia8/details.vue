@@ -74,7 +74,7 @@
           </div>
 
           <div class="row mt-5">
-            <div class="col-sm col-lg-4 divbg">
+            <div class="col-md-12 col-lg-4 divbg">
               <div class="d-flex align-items-center">
                 <span>
                   <svg
@@ -175,7 +175,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-sm col-lg-4 divbg">
+            <div class="col-md-12 col-lg-4 divbg">
               <div class="d-flex align-items-center">
                 <span>
                   <svg
@@ -230,7 +230,7 @@
                 </P>
               </div>
             </div>
-            <div class="col-sm col-lg-4 divbackround">
+            <div class="col-md-12 col-lg-4 divbackround">
               <swiper :navigation="true" :modules="modules" class="mySwiper">
                 <swiper-slide v-for="item in data.children2" :key="item.id">
                   <div class="div">

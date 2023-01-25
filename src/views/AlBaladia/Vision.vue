@@ -6,7 +6,7 @@
     aria-labelledby="pills-see-tab"
   >
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-lg-5">
         <div class="d-flex align-items-center">
           <img src="../../../public/image/svg1.svg" />
           <h5 class="divh5 mx-3">رؤيتنا</h5>

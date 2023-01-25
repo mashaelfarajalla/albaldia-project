@@ -78,16 +78,10 @@
 
 <script>
 import axios from "axios";
-import DataModel from "./Modal.vue";
+import DataModel from "./Model";
 
 export default {
   components: { DataModel },
-  methods: {
-    async ShowModel(id) {
-      let result = await axios.get("http://localhost:3000/Albaladia7");
-      this.itemdata = result.data[id];
-    },
-  },
 
   data() {
     return {
@@ -98,7 +92,7 @@ export default {
   },
   async mounted() {
     console.log(this.itemdata);
-    let result = await axios.get("http://localhost:3000/Albaladia7");
+    let result = await axios.get("http://localhost:3000/AlMadina5");
     this.data = result.data;
   },
 };

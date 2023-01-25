@@ -1,5 +1,5 @@
 <template>
-  <div class="col-8 p-0">
+  <div class="col-lg-8 p-0">
     <iframe
       class="w-100"
       style="height: 100%; border: 0"
@@ -8,15 +8,23 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
-    <Model />
   </div>
 </template>
 
 <script>
-import Model from "./Modal.vue";
-export default {
-  components: { Model },
-};
+export default {};
 </script>
 
-<style></style>
+<style scoped>
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .col-lg-8 {
+    height: calc(100vh - 85px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .col-lg-8 {
+    height: calc(100vh - 85px);
+  }
+}
+</style>

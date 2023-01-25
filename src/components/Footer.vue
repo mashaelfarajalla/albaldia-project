@@ -1,32 +1,34 @@
 <template>
-  <footer class="d-none d-lg-block">
-    <div class="footernav">
-      <div>
-        <div class="footerdiv d-flex justify-content-start">
-          <router-link
-            v-for="item in footer"
-            :key="item.id"
-            :to="{ name: `${item.name}` }"
-            class="footerlink"
-          >
-            {{ item.title }}
-          </router-link>
+  <MainSection>
+    <footer class="d-none d-lg-block">
+      <div class="footernav">
+        <div>
+          <div class="footerdiv d-flex justify-content-start">
+            <router-link
+              v-for="item in footer"
+              :key="item.id"
+              :to="{ name: `${item.name}` }"
+              class="footerlink"
+            >
+              {{ item.title }}
+            </router-link>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </MainSection>
 </template>
 
 <script>
+import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
-import { useStore } from "../store/index";
-
-// import { useRoute } from "vue-router";
+import { useStore } from "../store";
 
 export default {
   setup() {
-    // const route = useRoute();
-    // return [route];
+    const store = useStore();
+
+    return { store };
   },
   name: "Footer",
   data() {
@@ -34,18 +36,11 @@ export default {
       footer: [],
     };
   },
+  components: { MainSection },
 
   async mounted() {
-    const store = useStore();
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
-    // store.getdata(this.$route.fullPath);
-  },
-  methods: {
-    // GetData() {
-    //   const store = useStore();
-    //   store.getdata(this.$route.fullPath);
-    // },
   },
 };
 </script>

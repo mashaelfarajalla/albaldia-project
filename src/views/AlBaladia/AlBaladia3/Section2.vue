@@ -23,32 +23,41 @@
           </div>
         </div>
         <div class="row center">
-          <div
-            v-for="item in data"
-            :key="item.id"
-            class="col-5 col-md col-lg-2 mx-2 p-0"
-          >
-            <img :src="item.image" />
-            <h5 class="mt-2" style="color: #cf2a45">{{ item.title }}</h5>
-            <p>{{ item.details }}</p>
+          <div class="col-12">
+            <ul class="mb-3" id="pills-tab" role="tablist">
+              <li
+                v-for="item in data"
+                :key="item.id"
+                class="col"
+                role="presentation"
+              >
+                <a
+                  class="nav-link active"
+                  :id="item.id"
+                  data-bs-toggle="pill"
+                  :data-bs-target="'#' + item.target"
+                  type="button"
+                  role="tab"
+                  :aria-controls="item.target"
+                  aria-selected="true"
+                  @click="getdata(item.id)"
+                >
+                  <div class="col">
+                    <img :src="item.image" />
+                    <h5 class="mt-2" style="color: #cf2a45">
+                      {{ item.title }}
+                    </h5>
+                    <p>{{ item.details }}</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="col-lg-5 bgdiv">
-        <div class="paddingrow">
-          <img src="/image/image.png" />
-          <h5 class="mt-4">م. هاشم عرفة سكيك</h5>
-          <div class="d-flex my-5 justify-content-center align-items-center">
-            <div class="line"></div>
-            <p>عضو مجلس بلدي</p>
-            <div class="line"></div>
-          </div>
-          <p class="pbody">
-            ماجستير إدارة تشييد، مدير عام شركة بالكون للمقاولات والتجارة العامة،
-            عضو مجلس إدارة اتحاد المقاولين، أمين سر مركز التحكيم الهندسي، أمين
-            سر مركز فض الخلافات
-          </p>
-        </div>
+
+      <div class="tab-content col-lg-5 bgdiv" id="pills-tabContent">
+        <Section21 :getdata="data2" />
       </div>
     </div>
   </div>
@@ -56,25 +65,45 @@
 
 <script>
 import axios from "axios";
+import Section21 from "./Section21";
 export default {
+  components: { Section21 },
   data() {
     return {
       data: [],
-      data2: [],
+      data2: [
+        {
+          id: 1,
+          target: "section21",
+          image: "/image/image.png",
+          title: "أ. د. يحيى  السراج",
+          details: "رئيس بلدية غزة",
+          p: " ماجستير إدارة تشييد، مدير عام شركة بالكون للمقاولات والتجارة العامة، عضو مجلس إدارة اتحاد المقاولين، أمين سر مركز التحكيم الهندسي، أمين سر مركز فض الخلافات",
+        },
+      ],
     };
   },
+  methods: {
+    getdata(id) {
+      console.log(id);
+      this.data2 = this.data[id - 1];
+      console.log(this.data2);
+    },
+  },
+
   async mounted() {
     let result = await axios.get("http://localhost:3000/albaladia3");
     this.data = result.data[0].Section2;
     console.log(this.data);
   },
-  methods: {
-    getdata(id) {},
-  },
 };
 </script>
 
 <style scoped>
+li.col {
+  display: inline-block;
+  margin: 0 10px;
+}
 @media screen and (min-width: 992px) {
   .line {
     margin: auto 30px;
@@ -120,6 +149,9 @@ export default {
   justify-content: center;
 }
 
+ul li {
+  list-style-type: none;
+}
 .pbody {
   font-size: 14px;
   color: #392c23;

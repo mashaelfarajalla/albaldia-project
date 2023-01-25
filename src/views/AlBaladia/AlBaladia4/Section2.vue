@@ -6,7 +6,7 @@
       </h3>
     </div>
     <div class="row mt-5">
-      <div v-for="item in data" :key="item.id" class="col-md-6 divbg2">
+      <div v-for="item in data" :key="item.id" class="col-md divbg2">
         <div class="row">
           <div class="col d-flex mb-3">
             <span>
@@ -63,7 +63,25 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+@media screen and (min-width: 992px) {
+  .col-md.divbg2 {
+    margin: 0 21px 30px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  div.col-lg-6 {
+    padding: 25px;
+  }
+  .divbg2 {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .col-md.divbg2 {
+    margin: 0px 25px 30px;
+  }
+}
 .divbg2 {
   background-color: white;
   padding: 28px 25px 15px 0;

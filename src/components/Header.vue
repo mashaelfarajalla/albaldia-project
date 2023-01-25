@@ -261,7 +261,7 @@
             v-for="i in item.iconMun"
             :key="i.id"
             :to="{ name: `${i.name}` }"
-            class="header-link py-3"
+            class="header-link routerlinka py-3"
             title=""
             data-bs-toggle="tooltip"
             data-bs-placement="right"
@@ -383,7 +383,6 @@
       <i
         :class="[open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars-staggered']"
       ></i>
-      <!-- <i class="fa-solid fa-bars-staggered"></i> -->
     </label>
   </header>
 </template>
@@ -394,11 +393,8 @@ export default {
   name: "Header",
   setup() {
     let open = ref(false);
-    // let header = [];
     function Show() {
       open.value = !open.value;
-
-      console.log("show");
     }
     return { open, Show };
   },
@@ -413,23 +409,114 @@ export default {
           id: 1,
           title: "البلدية",
           iconMun: [
-            { id: 1, name: "AlBaladiaIndex", icon: "/image/icons8home.svg" },
-            { id: 2, name: "AlBaladia2", icon: "/image/svgexport-6(47).svg" },
+            {
+              id: 1,
+              name: "AlBaladiaIndex",
+              title: "الرئيسية",
+              icon: "/image/icons8_goal.svg",
+            },
+            {
+              id: 2,
+              name: "AlBaladia2",
+              title: "الخلفية التاريخية",
+              icon: "/image/icons8_time_machine_1.svg",
+            },
+            {
+              id: 3,
+              name: "AlBaladia3",
+              title: "المجلس البلدي",
+              icon: "/image/icons8_management.svg",
+            },
+            {
+              id: 4,
+              name: "AlBaladia4",
+              title: "الخطة  الاستراتيجية",
+              icon: "/image/icons8_strategy_1.svg",
+            },
+            {
+              id: 5,
+              name: "AlBaladia5",
+              title: "الهيكلية الإدارية ",
+              icon: "/image/icons8_networking_manager.svg",
+            },
+            {
+              id: 6,
+              name: "AlBaladia6",
+              title: "الميزانية والموازنة",
+              icon: "/image/icons8_transaction.svg",
+            },
+            {
+              id: 7,
+              name: "AlBaladia7",
+              title: "مقار ومرافق البلدية",
+              icon: "/image/icons8_building.svg",
+            },
+            {
+              id: 8,
+              name: "AlBaladia8",
+              title: "المراكز",
+              icon: "/image/svgexport-6(47).svg",
+            },
           ],
         },
         {
           id: 2,
           title: "المدينة",
           iconMun: [
-            { id: 1, name: "AlMadinaIndex", icon: "/image/icons8_goal.svg" },
-            { id: 2, name: "AlMadina2", icon: "/image/icons8_sand_timer.svg" },
+            {
+              id: 1,
+              name: "AlMadinaIndex",
+              title: "الموقع والمناخ ",
+              icon: "/image/icons8_marker.svg",
+            },
+            {
+              id: 2,
+              name: "AlMadina2",
+              title: "تاريخ وحضارة",
+              icon: "/image/icons8_sand_timer.svg",
+            },
+            {
+              id: 3,
+              name: "AlMadina3",
+              title: "الأحياء",
+              icon: "/image/icons8_layers_1.svg",
+            },
+            {
+              id: 4,
+              name: "AlMadina4",
+              title: "الأحياء",
+              icon: "/image/icons8_country.svg",
+            },
+            {
+              id: 5,
+              name: "AlMadina5",
+              title: "الخريطة التفاعلية",
+              icon: "/image/icons8_map.svg",
+            },
+            {
+              id: 6,
+              name: "AlMadina6",
+              title: "المتحف الإلكتروني",
+              icon: "/image/icons8_building.svg",
+            },
           ],
         },
         {
           id: 3,
           title: "الخدمات",
           iconMun: [
-            { id: 1, name: "AlKhadamat", icon: "/image/icons8_service.svg" },
+            {
+              id: 1,
+              name: "AlKhadamat",
+              title: " الخدمات العامة ",
+              icon: "/image/icons8_service.svg",
+            },
+            {
+              id: 2,
+              name: "AlKhadamat2",
+              title: " أنظمة وأدلة",
+              icon: "/image/Union 33.svg",
+            },
           ],
         },
         {
@@ -440,7 +527,14 @@ export default {
             {
               id: 1,
               name: "AlMasharie",
+              title: "المشاريع القائمة",
               icon: "/image/icons8_engineering.svg",
+            },
+            {
+              id: 2,
+              name: "AlMasharie2",
+              title: " المشاريع التطويرية",
+              icon: "/image/icons8_idea.svg",
             },
           ],
         },
@@ -449,7 +543,30 @@ export default {
           title: "المركز الإعلامي",
 
           iconMun: [
-            { id: 1, name: "MediaCenter", icon: "/image/icons8home.svg" },
+            {
+              id: 1,
+              name: "MediaCenter",
+              title: "أخبار واعلانات ",
+              icon: "/image/icons8_news.svg",
+            },
+            {
+              id: 2,
+              name: "MediaCenter2",
+              title: "الألبومات",
+              icon: "/image/icon8.svg",
+            },
+            {
+              id: 3,
+              name: "MediaCenter3",
+              title: "تقارير وإصدارات",
+              icon: "/image/icons8_pdf.svg",
+            },
+            {
+              id: 4,
+              name: "MediaCenter4",
+              title: "أرقام وإحصائيات",
+              icon: "/image/icons8_bar_chart.svg",
+            },
           ],
         },
       ],
@@ -457,12 +574,18 @@ export default {
   },
   async mounted() {
     var dropdown = document.getElementsByClassName("dropDown");
-    // console.log(dropdown);
+    var routerlinka = document.getElementsByClassName("routerlinka");
+    var ul = document.getElementsByClassName("ul");
+    console.log(ul);
     var i;
+    //let result = await axios.get("http://localhost:3000/SideBar");
+    // console.log(result.data[0]);
+    // this.Header = result.data[0];
 
     for (i = 0; i < dropdown.length; i++) {
       dropdown[i].addEventListener("click", function () {
         var dropdownContent = this.nextElementSibling;
+
         if (dropdownContent.style.display === "flex") {
           dropdownContent.style.display = "none";
         } else {

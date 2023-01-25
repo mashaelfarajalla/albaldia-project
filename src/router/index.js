@@ -16,7 +16,7 @@ import AlMadinaIndex from "../views/AlMadina/AlMadinaIndex.vue";
 import AlMadina2 from "../views/AlMadina/AlMadina2.vue";
 import AlMadina3 from "../views/AlMadina/AlMadina3.vue";
 import AlMadina4 from "../views/AlMadina/AlMadina4.vue";
-import AlMadina5 from "../views/AlMadina/AlMadina5.vue";
+import AlMadina5 from "../views/AlMadina//AlMadina5/AlMadina5.vue";
 
 import AlMadina6 from "../views/AlMadina/AlMadina6/AlMadina6.vue";
 import detailsAlmadina from "../views/AlMadina/AlMadina6/details";
@@ -108,7 +108,7 @@ const routes = [
   },
 
   {
-    path: "/albaladiaindex/details/:id",
+    path: "/SideBar/albaladiaindex/details/:id",
     name: "details",
     component: details,
   },

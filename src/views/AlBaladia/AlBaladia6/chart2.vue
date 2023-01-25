@@ -1,5 +1,7 @@
 <template>
-  <CanvasJSChart :options="options" :styles="styleOptions"> </CanvasJSChart>
+  <CanvasJSChart :options="options" :styles="styleOptions"> 
+  
+  </CanvasJSChart>
 </template>
 
 <script>
@@ -82,4 +84,8 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+
+
+
+</style>

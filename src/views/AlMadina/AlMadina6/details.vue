@@ -13,13 +13,17 @@
               <img :src="item.image" />
               <div class="card-body">
                 <h5>{{ item.title }}</h5>
-                <router-link
-                  :to="
-                    `/SideBar/almadinaindex/almadina6/details2Almadina/` +
-                    item.id
-                  "
+                <a
                   class="d-flex align-items-center"
+                  data-bs-toggle="modal"
+                  :id="item.id"
+                  :data-bs-target="'#' + item.target"
+                  type="button"
+                  role="tab"
+                  :aria-controls="item.target"
+                  aria-selected="true"
                 >
+                  <details2 :datadetalis="item" />
                   <small class="text-muted">عرض التفاصيل</small>
                   <div class="circle5">
                     <svg
@@ -38,7 +42,7 @@
                       />
                     </svg>
                   </div>
-                </router-link>
+                </a>
               </div>
             </div>
           </div>
@@ -51,6 +55,7 @@
 <script>
 import axios from "axios";
 import MainSection from "@/components/MainSection.vue";
+import details2 from "./details2.vue";
 
 export default {
   data() {
@@ -58,7 +63,7 @@ export default {
       data: [],
     };
   },
-  components: { MainSection },
+  components: { MainSection, details2 },
   async mounted() {
     let result = await axios.get(
       "http://localhost:3000/AlMadina6/" + this.$route.params.id

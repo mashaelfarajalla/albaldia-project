@@ -84,7 +84,29 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-lg-4"></div>
+      <div class="col-sm-12 col-lg-4">
+        <VCalendar :attributes="attributes" />
+        <v-date-picker v-model="date" />
+        <div class="row mt-4">
+          <div class="col d-flex">
+            <div class="circlecalendar circlecalendar1"></div>
+            <p class="mx-2">الحالية</p>
+          </div>
+          <div class="col d-flex">
+            <div class="circlecalendar circlecalendar2"></div>
+            <p class="mx-2">السابقة</p>
+          </div>
+          <div class="col d-flex">
+            <div class="circlecalendar circlecalendar3"></div>
+            <p class="mx-2">القادمة</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button class="btncalendar">عرض جميع الجلسات</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -92,13 +114,32 @@
 <script>
 import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
+import VCalendar from "v-calendar";
+
+import "v-calendar/dist/style.css";
 
 export default {
-  components: { MainSection },
+  components: { MainSection, VCalendar },
   data() {
     return {
       data: [],
       data2: [],
+
+      attributes: [
+        {
+          key: 1,
+          highlight: true,
+          dot: true,
+          bar: true,
+          content: "red",
+          popover: {},
+          customData: {},
+
+          dates: new Date(),
+          excludeDates: null,
+          order: 0,
+        },
+      ],
     };
   },
 
@@ -113,6 +154,34 @@ export default {
 </script>
 
 <style scoped>
+.vc-container.vc-blue {
+  width: 100%;
+  height: 400px;
+  /* height: calc(100vh - 100px); */
+  margin-top: 55px;
+}
+.circlecalendar {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.circlecalendar1 {
+  background-color: #3ec4b5;
+}
+.circlecalendar2 {
+  background-color: #cf2a45;
+}
+.circlecalendar3 {
+  background-color: #32c33a;
+}
+.btncalendar {
+  width: 200px;
+  height: 50px;
+  border: 0;
+  border-radius: 10px;
+  color: #392c23;
+  font-size: 16px;
+}
 @media screen and (min-width: 992px) {
   .flex {
     display: flex;
@@ -126,7 +195,9 @@ export default {
 @media screen and (max-width: 767px) {
   .disinline {
     display: inline-block;
+    margin: 0 10px;
   }
+
   .center {
     text-align: center;
   }

@@ -16,6 +16,7 @@
     "popper.js": "^1.16.1",
     "swiper": "^8.4.5",
     "treeflex": "^2.0.1",
+    "v-calendar": "^3.0.0-alpha.8",
     "vue": "^3.2.45",
     "vue-router": "^4.0.3"
   },

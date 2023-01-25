@@ -9,7 +9,7 @@
       <div class="col-lg-6">
         <chart1 />
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 chart2">
         <chart2 />
       </div>
     </div>
@@ -27,4 +27,15 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+@media screen and (max-width: 767px) {
+  .chart2 {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .chart2 {
+    margin-top: 20px;
+  }
+}
+</style>

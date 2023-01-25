@@ -26,16 +26,23 @@
               <p>
                 {{ modeldata.p2 }}
               </p>
+              <p>
+                {{ modeldata.p3 }}
+              </p>
+              <div>
+                <h5>اهداف المركز</h5>
+                <p>
+                  {{ modeldata.alahdaf }}
+                </p>
+                <ol>
+                  <li v-for="list in modeldata.alahdafchild" :key="list.id">
+                    {{ list.child }}
+                  </li>
+                </ol>
+              </div>
             </div>
             <div class="col-lg-5">
               <img :src="modeldata.iamge" class="img-fluid" />
-            </div>
-            <div class="row colrow" style="padding-right: 40px">
-              <div class="col-sm-12 col">
-                <p>
-                  {{ modeldata.p3 }}
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -58,6 +65,13 @@ export default {
 </script>
 
 <style>
+
+
+.modal-body {
+  height: 408px;
+  overflow-y: scroll;
+}
+
 .modal {
   --bs-modal-border-color: white !important;
 }
@@ -79,22 +93,12 @@ export default {
   font-family: "FFShamelFamily-SansOneBold";
 }
 
-.modal-body p {
+.modal-body p,
+ol li {
   font-size: 14px;
   color: #392c23;
 }
-@media screen and (max-width: 767px) {
-  .colrow {
-    margin-top: 20px !important;
-    padding-left: 0 !important;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .colrow {
-    margin-top: 20px !important;
-    padding-left: 0 !important;
-  }
-}
+
 @media (min-width: 1200px) {
   .modal-xl {
     --bs-modal-width: 934px !important;

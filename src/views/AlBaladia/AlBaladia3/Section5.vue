@@ -6,7 +6,7 @@
     aria-labelledby="pills-Biology-committees-tab"
   >
     <div class="row">
-      <div class="col-4 backround">
+      <div class="col-lg-4 backround">
         <h3>لجان الأحياء</h3>
         <div class="backgroubdcolorwhite">
           <div class="verticl-menu mt-3">
@@ -14,8 +14,13 @@
               v-for="item in data"
               :key="item.id"
               class="mb-4 d-flex"
+              :id="item.tab"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              :data-bs-target="item.target"
+              type="button"
+              role="tab"
+              :aria-controls="item.controls"
+              aria-selected="true"
             >
               <span class="circle">{{ item.id }}</span>
               <div class="me-2">
@@ -36,14 +41,14 @@
                     />
                   </svg>
                 </span>
+                <ModelData :modeldata="item" />
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="col-8">
-        <img src="/image/Map.png" class="w-100" style="height: 100%" />
-      </div>
+
+      <Section2 />
     </div>
   </div>
 </template>
@@ -51,16 +56,18 @@
 <script>
 import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
+import Section2 from "../AlBaladia7/Section2.vue";
+import ModelData from "./ModelData.vue";
 
 export default {
-  components: { MainSection },
+  components: { MainSection, Section2, ModelData },
   data() {
     return {
       data: [],
     };
   },
   async mounted() {
-    let result = await axios.get("http://localhost:3000/Albaladia7");
+    let result = await axios.get("http://localhost:3000/section5");
     this.data = result.data;
   },
 };
