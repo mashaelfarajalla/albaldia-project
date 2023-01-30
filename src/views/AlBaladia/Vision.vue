@@ -1,6 +1,7 @@
 <template>
   <div
-    class="tab-pane fade show active"
+    class="tab-pane fade show active animate__animated animate__fadeInUp"
+    style="animation-duration: 1s; animation-delay: 0.2s"
     id="our-see"
     role="tabpanel"
     aria-labelledby="pills-see-tab"

@@ -1,7 +1,5 @@
 <template>
-  <CanvasJSChart :options="options" :styles="styleOptions"> 
-  
-  </CanvasJSChart>
+  <CanvasJSChart :options="options" :styles="styleOptions"> </CanvasJSChart>
 </template>
 
 <script>
@@ -14,7 +12,8 @@ export default {
   data() {
     return {
       options: {
-        theme: "light2",
+        backgroundColor: "transparent",
+
         animationEnabled: true,
         title: {
           text: "أين تذهب أموال بلدية غزة؟",
@@ -84,8 +83,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-
-
-</style>
+<style scoped></style>

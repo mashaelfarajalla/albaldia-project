@@ -12,7 +12,9 @@ export default {
   data() {
     return {
       options: {
-        theme: "light2",
+        backgroundColor: "transparent",
+
+        // theme: "light2",
         animationEnabled: true,
         title: {
           text: "من أين تأتي أمول بلدية غزة؟",

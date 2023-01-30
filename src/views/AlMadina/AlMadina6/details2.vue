@@ -5,8 +5,6 @@
       class="modal fade"
       :id="datadetalis.target"
       tabindex="-1"
-      data-keyboard="false"
-      data-backdrop="static"
       :aria-labelledby="datadetalis.id"
       aria-hidden="true"
     >
@@ -14,12 +12,12 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" :id="datadetalis.id"></h5>
-            <!-- <button
+            <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-            ></button> -->
+            ></button>
           </div>
           <div class="modal-body">
             <div class="row">

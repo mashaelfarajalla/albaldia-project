@@ -1,6 +1,7 @@
 <template>
   <div
-    class="tab-pane fade"
+    class="tab-pane fade animate__animated animate__fadeInUp"
+    style="animation-duration: 1s; animation-delay: 0.2s"
     id="our-policy"
     role="tabpanel"
     aria-labelledby="#pills-policy-tab"

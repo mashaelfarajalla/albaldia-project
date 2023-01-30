@@ -1,18 +1,17 @@
 <template>
-  <div class="y-answer yborder">
+  <div
+    class="y-answer yborder animate__animated animate__fadeInUp"
+    style="animation-duration: 1s; animation-delay: 0.2s"
+  >
     <div class="row">
-      <div class="y-answers" v-for="list in data" :key="list.id">
-        <h3>الاجابة :</h3>
-        <div
-          class="col-12 d-flex"
-          v-for="item in list[0].answer"
-          :key="item.id"
-        >
+      <h3>الاجابة :</h3>
+      <div class="y-answers" v-for="list in data.answer" :key="list.id">
+        <div class="col-12 d-flex">
           <span>
-            {{ item.id }}
+            {{ list.id }}
           </span>
           <p class="col-11">
-            {{ item.answer }}
+            {{ list.answer }}
             <!-- تحتاج لتجهيز الاوراق والمستندات المطلوبة حسب نوع المعاملة ثم التوجه
             الى دائرة خدمات الجمهور او .عن طريق نظام الخدمات الالكتروني لتدقيم
             المطلب -->

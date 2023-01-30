@@ -66,7 +66,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 992px) {
   .col-md.divbg2 {
-    margin: 0 21px 30px !important;
+    margin: 0 22px 30px !important;
   }
 }
 @media screen and (max-width: 767px) {

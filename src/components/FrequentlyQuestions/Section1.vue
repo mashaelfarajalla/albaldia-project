@@ -32,9 +32,22 @@
           />
         </svg>
       </div>
-      <h3 class="d-inline-block mx-2">الأسئلة الشائعة</h3>
-      <p>هنا بعض الأسئلة الشائعة وإجاباتها</p>
-      <form>
+      <h3
+        class="d-inline-block mx-2 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
+        الأسئلة الشائعة
+      </h3>
+      <p
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
+        هنا بعض الأسئلة الشائعة وإجاباتها
+      </p>
+      <form
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.3s"
+      >
         <div class="row justify-content-start mt-4">
           <div
             class="form-group col-12 col-md-6 col-lg-10"
@@ -55,27 +68,31 @@
   <swiper :pagination="pagination" :modules="modules" class="mySwiper">
     <swiper-slide v-for="list in data" :key="list.id">
       <div class="row mySwiper1">
-        <div class="col-lg-6">
-          <p class="" v-for="item in list" :key="item.id">
+        <div
+          class="col-lg-6 divqutions animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.1s"
+        >
+          <p
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.2s"
+            v-for="item in list"
+            :key="item.id"
+            @click="getdata(item)"
+          >
             {{ item.question }}
           </p>
         </div>
         <div class="col-lg-6">
-          <Section2 :data="data" />
+          <Section2 :data="data2" />
         </div>
       </div>
     </swiper-slide>
   </swiper>
 </template>
 <script>
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 import Section2 from "./Section2.vue";
-// Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/pagination";
 
-// import required modules
 import { Pagination } from "swiper";
 import axios from "axios";
 
@@ -89,7 +106,15 @@ export default {
   data() {
     return {
       data: [],
+      data2: [],
     };
+  },
+  methods: {
+    getdata(item) {
+      // this.data2 = this.data[id - 1];
+      this.data2 = item;
+      console.log(this.data2);
+    },
   },
   setup() {
     return {
@@ -105,8 +130,8 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/Questions");
     this.data = result.data[0];
-    console.log(result.data[0]);
-    console.log(result.data[0].pag1[0].answer);
+    console.log(result.data[0].pag1);
+    this.getdata(result.data[0].pag1[0]);
   },
 };
 </script>
@@ -136,6 +161,10 @@ input[type="text"] {
   left: 24px;
 }
 
+.divqutions p:first-child {
+  background-color: #3ec4b5;
+  color: white;
+}
 .swiper-slide p {
   background-color: white;
   text-align: start;
@@ -145,6 +174,7 @@ input[type="text"] {
   font-size: 16px;
   font-family: "FFShamelFamily-SansOneBold";
   color: #392c23;
+  cursor: pointer;
 }
 
 span.swiper-pagination-bullet {

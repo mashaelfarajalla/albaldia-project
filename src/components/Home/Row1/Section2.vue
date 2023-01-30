@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-sm-12 col-md-10 col-lg-4 mtcol12 animate__animated animate__backInUp animate__delay-1s"
+    class="col-sm-12 col-md-10 col-xl-4 col-lg-6 mtcol12 animate__animated animate__backInUp animate__delay-1s"
   >
     <div class="d-flex justify-content-between">
       <h3>إعلانات البلدية</h3>
@@ -46,7 +46,7 @@
           class="carousel-item active"
           data-bs-interval="10000"
         >
-          <div v-for="item in list" :key="item.id" class="Ddiv round mt-3">
+          <div v-for="item in list" :key="item.id" class="Ddiv round">
             <p>
               {{ item.paragraph }}
             </p>
@@ -112,8 +112,9 @@ export default {
   }
 }
 .Ddiv {
-  padding: 20px 13px 23px 13px;
+  /* padding: 20px 13px 23px 13px; */
   background: white;
+  padding: 18px 24px;
 }
 
 .section .Ddiv p {

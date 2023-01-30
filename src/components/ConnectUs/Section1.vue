@@ -1,13 +1,33 @@
 <template>
   <div class="col-md-12 col-lg-5">
     <div class="">
-      <h3>جاهزون لنسمع مقترحاتك</h3>
-      <p>أهلا بك .. يمكنك التواصل معنا مباشرة على أرقامنا التالية</p>
+      <h3
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.1s"
+      >
+        جاهزون لنسمع مقترحاتك
+      </h3>
+      <p
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
+        أهلا بك .. يمكنك التواصل معنا مباشرة على أرقامنا التالية
+      </p>
     </div>
     <div class="div1 mt-3">
-      <h3 class="">تواصل معنا</h3>
+      <h3
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.3s"
+      >
+        تواصل معنا
+      </h3>
       <div class="row">
-        <div v-for="item in conntect" :key="item.id" class="col-sm-12 col-md-6">
+        <div
+          v-for="item in conntect"
+          :key="item.id"
+          class="col-sm-12 col-md-6 animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.4s"
+        >
           <p>
             {{ item.ask }} :<span>{{ item.answer }}</span>
           </p>
@@ -15,18 +35,33 @@
       </div>
     </div>
     <div class="mt-4">
-      <h5>الشبكات الاجتماعية</h5>
+      <h5
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.3s"
+      >
+        الشبكات الاجتماعية
+      </h5>
 
       <div class="d-flex align-items-center mt-4">
-        <div v-for="item in socialmedai" :key="item.id" class="circle3">
+        <div
+          v-for="item in socialmedai"
+          :key="item.id"
+          class="circle3 animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.4s"
+        >
           <img :src="item.icon" />
         </div>
       </div>
     </div>
     <div class="row center">
       <div
-        class="col-sm-12 col-md-10 col-lg-12"
-        style="position: relative; margin-top: 33px"
+        class="col-sm-12 col-md-10 col-lg-12 animate__animated animate__fadeInUp"
+        style="
+          animation-duration: 1s;
+          animation-delay: 0.1s;
+          position: relative;
+          margin-top: 33px;
+        "
       >
         <img src="../../assets/image/Image5.png" class="w-100" />
         <div class="bg3">

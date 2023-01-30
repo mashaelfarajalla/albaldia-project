@@ -41,7 +41,8 @@ export default {
 @media screen and (min-width: 992px) {
   /* width */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
+    height: 5px;
   }
 
   /* Track */
@@ -164,6 +165,14 @@ div.carousel-dark .carousel-indicators [data-bs-target] {
   height: 47px;
   border-radius: 13px;
 }
+.section .button:hover {
+  background-color: white;
+  color: #cf2a45;
+  border: 1px solid #cf2a45;
+}
+.section .button:hover svg path {
+  fill: #cf2a45;
+}
 
 @media (min-width: 1400px) {
   .container,
@@ -179,7 +188,8 @@ div.carousel-dark .carousel-indicators [data-bs-target] {
 @media (min-width: 768px) {
   .container-md,
   .container-sm {
-    max-width: 818px !important;
+    /* max-width: 818px !important; */
+    max-width: 865px !important;
   }
 }
 

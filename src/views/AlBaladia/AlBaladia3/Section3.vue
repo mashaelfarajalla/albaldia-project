@@ -85,7 +85,9 @@
         </div>
       </div>
       <div class="col-sm-12 col-lg-4">
-        <VCalendar :attributes="attributes" />
+        <DatePicker v-model="date" :attributes="attrs" locale="ar"></DatePicker>
+
+        <!-- <VCalendar :attributes="attributes" />
         <v-date-picker v-model="date" />
         <div class="row mt-4">
           <div class="col d-flex">
@@ -105,7 +107,7 @@
           <div class="col-6">
             <button class="btncalendar">عرض جميع الجلسات</button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -114,30 +116,38 @@
 <script>
 import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
-import VCalendar from "v-calendar";
-
+import { Calendar, DatePicker } from "v-calendar";
 import "v-calendar/dist/style.css";
 
 export default {
-  components: { MainSection, VCalendar },
+  components: { MainSection, Calendar, DatePicker },
   data() {
+    var date = new Date();
     return {
       data: [],
       data2: [],
 
-      attributes: [
+      date: new Date(),
+      attrs: [
         {
-          key: 1,
-          highlight: true,
-          dot: true,
-          bar: true,
-          content: "red",
-          popover: {},
-          customData: {},
-
-          dates: new Date(),
-          excludeDates: null,
-          order: 0,
+          highlight: {
+            color: "white",
+            class: "next-session",
+          },
+          dates: [
+            new Date(date.getFullYear(), date.getMonth(), 26),
+            new Date(date.getFullYear(), date.getMonth(), 25),
+          ],
+        },
+        {
+          highlight: {
+            color: "white",
+            class: "prev-session",
+          },
+          dates: [
+            new Date(date.getFullYear(), date.getMonth(), 13),
+            new Date(date.getFullYear(), date.getMonth(), 15),
+          ],
         },
       ],
     };

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-sm-12 col-md-10 col-lg-4 animate__animated animate__backInRight animate__delay-1s"
+    class="col-sm-12 col-md-10 col-xl-4 col-lg-6 animate__animated animate__backInRight animate__delay-1s"
   >
     <div class="d-flex justify-content-between">
       <h3>أخبار اليوم</h3>
@@ -39,7 +39,7 @@
           aria-label="Slide 4"
         ></button>
       </div>
-      <div class="carousel-inner mt-3">
+      <div class="carousel-inner">
         <div
           v-for="item in data"
           :key="item.id"
@@ -79,7 +79,7 @@
             </div>
             <div class="line"></div>
             <span>{{ item.time }}</span>
-            <p>{{ item.paragraph }}</p>
+            <h5>{{ item.paragraph }}</h5>
           </div>
         </div>
       </div>
@@ -107,6 +107,7 @@ export default {
 @media screen and (min-width: 992px) {
   .container1 div.carousel-caption {
     padding: 45px 30px 0 64px;
+    /* padding: 1rem 1rem; */
   }
 }
 @media screen and (max-width: 767px) {
@@ -136,8 +137,8 @@ export default {
   left: 0%;
 }
 
-.container1.section div .carousel-caption p {
-  font-family: FFShamelFamily-SansOneBook;
+.container1.section div .carousel-caption h5 {
+  font-family: "FFShamelFamily-SansOneBook";
   font-size: 18px;
   color: white;
 }

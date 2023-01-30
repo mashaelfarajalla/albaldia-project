@@ -1,31 +1,24 @@
 <template>
   <div
     class="tab-pane fade show active"
-    id="v-pills-section1"
+    :id="sectiondata.target"
     role="tabpanel"
-    aria-labelledby="v-pills-section1-tab"
+    :aria-labelledby="sectiondata.id"
   >
     <div class="row">
       <div class="col-lg-6">
         <CanvasJSChart :options="options" />
       </div>
       <div class="col-lg-6">
-        <h3 class="h3title">تطور العمران</h3>
+        <h3 class="h3title">{{ sectiondata.title }}</h3>
         <p class="mt-3">
-          مدينة ساحلية فلسطينية، وأكبر مدن قطاع غزة وتقع في شماله، في الطرف
-          الجنوبي للساحل الشرقي من البحر المتوسط. تبعد عن مدينة القدس مسافة 78
-          كم إلى الجنوب الغربي، وهي مركز محافظة غزة وأكبر مدن السلطة الفلسطينية
-          من حيث تعداد السكان، حيث بلغ عدد سكان محافظة غزة 700 ألف نسمة في عام
-          2013، ما يجعلها أكبر تجمع للفلسطينيين في فلسطين
+          {{ sectiondata.p1 }}
         </p>
         <p>
-          تبلغ مساحتها 56 كم2، مما يجعلها من أكثر المدن كثافة بالسكان في العالم
+          {{ sectiondata.p2 }}
         </p>
         <p>
-          تعتبر مدينة غزة من أهم المدن الفلسطينية، لأهمية موقعها الاستراتيجي
-          والأهمية الاقتصادية والعمرانية للمدينة، بالإضافة إلى كونها المقر
-          المؤقت للسلطة الوطنية الفلسطينية، ووجود الكثير من مقراتها ووزارتها
-          فيها
+          {{ sectiondata.p3 }}
         </p>
       </div>
     </div>
@@ -38,6 +31,7 @@ import CanvasJSChart, { CanvasJS } from "../assets/CanvasJSVueComponent.vue";
 CanvasJS.addColorSet("colors1", ["#3EC4B5"]);
 export default {
   components: { CanvasJSChart },
+  props: { sectiondata: Object },
   data() {
     return {
       chart: null,

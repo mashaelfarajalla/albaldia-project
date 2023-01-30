@@ -163,7 +163,7 @@ export default {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   nav {
     position: fixed;
-    height: 7vh;
+    height: 15vh;
     bottom: 0;
     width: 100%;
   }
@@ -176,7 +176,7 @@ export default {
     border-left: 1px dashed #d6d6d6;
 
     width: 25%;
-    height: 7vh;
+    height: 15vh;
   }
   nav .none {
     display: none;
@@ -185,7 +185,7 @@ export default {
     display: none;
   }
   nav ul li .router-link-exact-active {
-    height: 7vh;
+    height: 15vh;
     width: 100%;
   }
 }

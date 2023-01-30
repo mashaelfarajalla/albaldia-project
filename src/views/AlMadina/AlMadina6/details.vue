@@ -13,7 +13,7 @@
               <img :src="item.image" />
               <div class="card-body">
                 <h5>{{ item.title }}</h5>
-                <a
+                <!-- <a
                   class="d-flex align-items-center"
                   data-bs-toggle="modal"
                   :id="item.id"
@@ -22,9 +22,15 @@
                   role="tab"
                   :aria-controls="item.target"
                   aria-selected="true"
+                  @click="getdata(item.id)"
+                > -->
+                <router-link
+                  :to="`/SideBar/almadinaindex/almadina6/${data.id}/` + item.id"
+                  class="d-flex align-items-center"
                 >
-                  <details2 :datadetalis="item" />
-                  <small class="text-muted">عرض التفاصيل</small>
+                  <!-- <detailsdata v-if="false" :datadetalis="item" /> -->
+
+                  <small class="text-muted">عرض التفاصيل {{ item.id }}</small>
                   <div class="circle5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -42,11 +48,12 @@
                       />
                     </svg>
                   </div>
-                </a>
+                </router-link>
               </div>
             </div>
           </div>
         </div>
+        <detailsdata v-if="false" :datadetalis="data2" />
       </div>
     </div>
   </MainSection>
@@ -55,20 +62,30 @@
 <script>
 import axios from "axios";
 import MainSection from "@/components/MainSection.vue";
-import details2 from "./details2.vue";
-
+import detailsdata from "./details22.vue";
 export default {
+  methods: {
+    getdata(id) {
+      // console.log(id);
+      this.data2 = this.data;
+
+      console.log(this.data2);
+    },
+  },
+
   data() {
     return {
       data: [],
+      data2: [],
     };
   },
-  components: { MainSection, details2 },
+  components: { MainSection, detailsdata },
   async mounted() {
     let result = await axios.get(
       "http://localhost:3000/AlMadina6/" + this.$route.params.id
     );
     this.data = result.data;
+    // this.getdata(1);
   },
 };
 </script>

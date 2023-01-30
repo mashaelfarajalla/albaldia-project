@@ -22,10 +22,7 @@
               <img :src="item.image" />
               <div class="card-body body">
                 <router-link
-                  :to="
-                    '/SideBar/almadinaindex/almadina6/detailsAlmadina/' +
-                    item.id
-                  "
+                  :to="'/SideBar/almadinaindex/almadina6/' + item.id"
                 >
                   <h4>{{ item.title }}</h4>
                 </router-link>
@@ -47,9 +44,11 @@ export default {
       data: [],
     };
   },
+
   components: { MainSection },
   async mounted() {
     let result = await axios.get("http://localhost:3000/AlMadina6");
+    console.log(this.data);
     this.data = result.data;
   },
 };

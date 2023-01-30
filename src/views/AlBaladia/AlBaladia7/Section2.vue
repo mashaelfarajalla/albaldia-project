@@ -1,5 +1,7 @@
 <template>
   <div class="col-lg-8 p-0">
+    <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
+
     <iframe
       class="w-100"
       style="height: 100%; border: 0"
@@ -12,6 +14,7 @@
 </template>
 
 <script>
+// import "./map";
 export default {};
 </script>
 

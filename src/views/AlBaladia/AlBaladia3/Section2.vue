@@ -32,7 +32,7 @@
                 role="presentation"
               >
                 <a
-                  class="nav-link active"
+                  class="nav-link"
                   :id="item.id"
                   data-bs-toggle="pill"
                   :data-bs-target="'#' + item.target"
@@ -42,7 +42,7 @@
                   aria-selected="true"
                   @click="getdata(item.id)"
                 >
-                  <div class="col">
+                  <div class="col text-center">
                     <img :src="item.image" />
                     <h5 class="mt-2" style="color: #cf2a45">
                       {{ item.title }}
@@ -71,22 +71,13 @@ export default {
   data() {
     return {
       data: [],
-      data2: [
-        {
-          id: 1,
-          target: "section21",
-          image: "/image/image.png",
-          title: "أ. د. يحيى  السراج",
-          details: "رئيس بلدية غزة",
-          p: " ماجستير إدارة تشييد، مدير عام شركة بالكون للمقاولات والتجارة العامة، عضو مجلس إدارة اتحاد المقاولين، أمين سر مركز التحكيم الهندسي، أمين سر مركز فض الخلافات",
-        },
-      ],
+      data2: [],
     };
   },
   methods: {
-    getdata(id) {
+    async getdata(id) {
       console.log(id);
-      this.data2 = this.data[id - 1];
+      this.data2 = await this.data[id - 1];
       console.log(this.data2);
     },
   },
@@ -95,6 +86,7 @@ export default {
     let result = await axios.get("http://localhost:3000/albaladia3");
     this.data = result.data[0].Section2;
     console.log(this.data);
+    this.getdata(1);
   },
 };
 </script>
@@ -137,6 +129,15 @@ li.col {
   border-top: 2px solid #c8c8c8;
   display: inline-block;
   line-height: 8px;
+}
+
+/* li a:first-child img {
+  border-radius: 50%;
+  border: 10px solid #3ec4b5;
+} */
+a.active img {
+  border-radius: 50%;
+  border: 10px solid #3ec4b5;
 }
 
 .bgdiv {

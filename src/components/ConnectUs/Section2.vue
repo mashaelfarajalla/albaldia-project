@@ -1,12 +1,23 @@
 <template>
   <div class="col-md-12 col-lg-6 mtcol12">
     <div>
-      <h3>مقترحات</h3>
-      <p>
+      <h3
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.1s"
+      >
+        مقترحات
+      </h3>
+      <p
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
         .أهلا بك .. نحن على استعداد لخدمتك واستقبال كافة اقتراحاتك واستفساراتك
       </p>
     </div>
-    <form>
+    <form
+      class="animate__animated animate__fadeInUp"
+      style="animation-duration: 1s; animation-delay: 0.3s"
+    >
       <div class="row justify-content-center mt-4">
         <div class="form-group col-sm-6 flex-column d-flex">
           <label for="preachingtype" class="form-label"> نوع المقترح </label>

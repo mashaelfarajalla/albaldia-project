@@ -2,7 +2,7 @@
   <MainSection>
     <div class="bg section index container1 padding">
       <div class="container">
-        <div class="row">
+        <div class="row mb-5">
           <div class="d-flex align-items-center">
             <h3 class="ms-4">المشاريع التطويرية</h3>
 
@@ -55,7 +55,7 @@
               },
               '992': {
                 slidesPerView: 5,
-                spaceBetween: 50,
+                spaceBetween: 15,
               },
             }"
             :spaceBetween="30"
@@ -71,7 +71,7 @@
                   <img :src="item.icon" />
                 </span>
                 <p class="ptitle mt-3">{{ item.title }}</p>
-                <p class="ploctaion">
+                <p class="ploctaion mt-3">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@
                   </span>
                   {{ item.location }}
                 </p>
-                <p class="ptime">مدة التنفيذ: {{ item.time }}</p>
+                <p class="ptime mt-2">مدة التنفيذ: {{ item.time }}</p>
 
                 <div class="d-flex">
                   <div class="line"></div>
@@ -182,6 +182,12 @@ export default {
 </script>
 
 <style scoped>
+.bg-white {
+  padding: 0 23px;
+
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+}
 .square2 {
   width: 80px;
   height: 80px;
@@ -195,14 +201,19 @@ export default {
 }
 
 .ptitle {
-  font-size: 14px;
+  font-size: 12px;
   font-family: "FFShamelFamily-SansOneBold";
   color: #392c23;
+  margin-bottom: 0;
 }
 
 .ploctaion {
   font-size: 12px;
   color: #392c23;
+}
+
+a {
+  text-decoration: none;
 }
 
 .ptime {
@@ -235,8 +246,8 @@ export default {
 }
 .line {
   border: none;
-  border-top: 2px solid #d6d6d6;
-  width: 28px;
+  border-top: 1px solid #d6d6d6;
+  width: 32px;
   margin: auto;
   display: inline-block;
   line-height: 8px;

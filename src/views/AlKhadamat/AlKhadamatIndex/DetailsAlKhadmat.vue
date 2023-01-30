@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="col-7">
-            <div class="row" data-masonry='{"percentPosition":true}'>
+            <div class="row masonry" data-masonry='{"percentPosition":true}'>
               <div
                 v-for="item in data.children"
                 :key="item.id"
@@ -43,6 +43,21 @@
                 </div>
               </div>
             </div>
+
+            <!-- <div class="grid" data-masonry='{"percentPosition":true}'>
+              <div
+                data-masonry='{"percentPosition":true}'
+                v-for="item in data.children"
+                :key="item.id"
+                class="grid-item bg-white divcol-6"
+              >
+                <span>{{ item.number }}</span>
+                <div>
+                  <p class="ptitle">{{ item.title }}</p>
+                  <p>{{ item.details }}</p>
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -62,6 +77,9 @@ export default {
   },
   components: { MainSection, bottom },
   async mounted() {
+    setTimeout(function () {
+      new Masonry(".masonry");
+    }, 1000);
     let result = await axios.get(
       "http://localhost:3000/AlKhadamat/" + this.$route.params.id
     );
@@ -74,11 +92,13 @@ export default {
 .divcol-6 {
   border: 1px dashed #d6d6d6;
   padding: 32px;
-  /* height: min-content; */
+  height: min-content;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   break-inside: avoid;
-  height: 300px;
+  /* margin-right: 5px; */
+  /* height: 300px; */
+  width: 50%;
 }
 
 span {

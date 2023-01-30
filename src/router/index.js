@@ -20,7 +20,7 @@ import AlMadina5 from "../views/AlMadina//AlMadina5/AlMadina5.vue";
 
 import AlMadina6 from "../views/AlMadina/AlMadina6/AlMadina6.vue";
 import detailsAlmadina from "../views/AlMadina/AlMadina6/details";
-import details2Almadina from "../views/AlMadina/AlMadina6/details2";
+import details2Almadina from "../views/AlMadina/AlMadina6/details22";
 
 import AlKhadamat from "../views/AlKhadamat/AlKhadamatIndex/AlKhadamatIndex";
 import AlKhadamat2 from "../views/AlKhadamat/AlKadamat2/AlKadamat2.vue";
@@ -169,12 +169,12 @@ const routes = [
   // },
 
   {
-    path: "/SideBar/almadinaindex/almadina6/detailsAlmadina/:id",
+    path: "/SideBar/almadinaindex/almadina6/:name",
     name: "detailsAlmadina",
     component: detailsAlmadina,
   },
   {
-    path: "/SideBar/almadinaindex/almadina6/details2Almadina/:id",
+    path: "/SideBar/almadinaindex/almadina6/:name/:id",
     name: "details2Almadina",
     component: details2Almadina,
   },

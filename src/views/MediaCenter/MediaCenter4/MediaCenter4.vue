@@ -13,85 +13,22 @@
             aria-orientation="vertical"
           >
             <a
-              class="active"
-              id="v-pills-section1-tab"
+              v-for="item in data"
+              :key="item.id"
+              :id="item.id"
               data-bs-toggle="pill"
-              data-bs-target="#v-pills-section1"
+              :data-bs-target="'#' + item.target"
               type="button"
               role="tab"
-              aria-controls="v-pills-section1"
+              :aria-controls="item.target"
               aria-selected="true"
+              @click="getdata(item.id)"
             >
-              تطور العمران
-            </a>
-            <a
-              class=""
-              id="v-pills-section2-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-section2"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-section2"
-              aria-selected="false"
-            >
-              تطور السكان
-            </a>
-            <a
-              class=""
-              id="v-pills-section3-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-section3"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-section3"
-              aria-selected="false"
-            >
-              تطور البنية التحتية
-            </a>
-            <a
-              class=""
-              id="v-pills-section4-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-section4"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-section4"
-              aria-selected="false"
-            >
-              تطور الانتاج
-            </a>
-            <a
-              class=""
-              id="v-pills-section5-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-section5"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-section5"
-              aria-selected="false"
-            >
-              تطور الزراعة
-            </a>
-            <a
-              class=""
-              id="v-pills-section6-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-section6"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-section6"
-              aria-selected="false"
-            >
-              تطور الصناعة
+              {{ item.title }}
             </a>
           </div>
           <div class="tab-content col-lg-10" id="v-pills-tabContent">
-            <section1 />
-            <section2 />
-            <section3 />
-            <section4 />
-            <section5 />
-            <section6 />
+            <section1 :sectiondata="data2" />
           </div>
         </div>
       </div>
@@ -101,23 +38,32 @@
 
 <script>
 import MainSection from "@/components/MainSection.vue";
-
+import axios from "axios";
 import section1 from "./section1/section1.vue";
-import section2 from "./section2.vue";
-import section3 from "./section3.vue";
-import section4 from "./section4.vue";
-import section5 from "./section5.vue";
-import section6 from "./section6.vue";
 
 export default {
   components: {
     MainSection,
     section1,
-    section2,
-    section3,
-    section4,
-    section5,
-    section6,
+  },
+  data() {
+    return {
+      data: [],
+      data2: [],
+    };
+  },
+  methods: {
+    async getdata(id) {
+      console.log(id);
+      this.data2 = await this.data[id - 1];
+      console.log(this.data2);
+    },
+  },
+  async mounted() {
+    let result = await axios.get("http://localhost:3000/MediaCenetr4");
+    this.data = result.data;
+    // console.log(this.data);
+    this.getdata(1);
   },
 };
 </script>

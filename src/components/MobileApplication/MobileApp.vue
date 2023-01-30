@@ -1,16 +1,29 @@
 <template>
   <div class="row align-items-center justify-content-between">
-    <div class="col-sm col-md-6 col-lg-6 animate__animated animate__fadeIn">
+    <div class="col-sm col-md-6 col-lg-6">
       <div class="">
-        <h3>تطبيق مصمم خصيصًا لك</h3>
-        <p class="p">
+        <h3
+          class="animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.1s"
+        >
+          تطبيق مصمم خصيصًا لك
+        </h3>
+        <p
+          class="p animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.2s"
+        >
           من خلال التطبيق الخاص بنا, يمكنك اجراء العديد من الخدمات التي تساعدك
           .وتسهل عليك الكثير من الوقت والجهد
         </p>
       </div>
 
       <div class="d-flex flex-column">
-        <div v-for="item in data" :key="item.id" class="hover d-flex my-3">
+        <div
+          v-for="item in data"
+          :key="item.id"
+          class="hover d-flex my-3 animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.2s"
+        >
           <div class="circle2">
             <img :src="item.icon" />
           </div>
@@ -23,7 +36,10 @@
         </div>
       </div>
 
-      <div class="noneimg img mt-4">
+      <div
+        class="noneimg img mt-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
         <a href="#" class="mx-3"
           ><img src="../../assets/image/googleplay1.jpg"
         /></a>
@@ -31,7 +47,10 @@
       </div>
     </div>
 
-    <div class="col-sm col-md-6 col-lg-6 text-center">
+    <div
+      class="col-sm col-md-6 col-lg-6 text-center animate__animated animate__fadeInUp"
+      style="animation-duration: 1s; animation-delay: 0.1s"
+    >
       <img class="imagephone" src="../../assets/image/Group1.png" />
     </div>
   </div>

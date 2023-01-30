@@ -3,7 +3,7 @@
     v-for="item in data"
     :key="item.id"
     style="position: relative"
-    class="col-sm-12 col-md-10 col-lg-4 round mtcol12 animate__animated animate__backInLeft animate__delay-1s"
+    class="col-sm-12 col-md-10 col-xl-4 col-lg-6 round mtcol12 animate__animated animate__backInLeft animate__delay-1s"
   >
     <img :src="`${item.image}`" class="w-100" />
     <div class="box">
@@ -48,7 +48,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 992px) {
   .mtcol12 {
-    margin-top: 38px;
+    margin-top: 35px;
   }
 }
 
@@ -61,6 +61,9 @@ export default {
   .mtcol12 {
     margin-top: 70px;
   }
+}
+.w-100 {
+  height: 285px;
 }
 .box {
   position: absolute;

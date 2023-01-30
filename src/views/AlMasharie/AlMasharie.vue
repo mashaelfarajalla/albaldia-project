@@ -2,7 +2,7 @@
   <MainSection>
     <div class="bg section index container1 padding">
       <div class="container">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center mb-5">
           <h3 class="ms-4">المشاريع القائمة</h3>
 
           <div class="ms-4">

@@ -12,12 +12,14 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "jquery": "^3.6.3",
+    "masonry-layout": "^4.2.2",
     "pinia": "^2.0.28",
     "popper.js": "^1.16.1",
     "swiper": "^8.4.5",
     "treeflex": "^2.0.1",
     "v-calendar": "^3.0.0-alpha.8",
     "vue": "^3.2.45",
+    "vue-masonry": "^0.16.0",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
