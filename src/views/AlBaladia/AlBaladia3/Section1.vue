@@ -9,25 +9,50 @@
       <div class="col-sm-12 col-md-6 col-lg-4">
         <div class="row justify-content-between center">
           <div class="col-sm-2 col-md-6">
-            <img src="/image/Image21.png" class="img-fluid" />
+            <img
+              src="/image/Image21.png"
+              class="img-fluid animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            />
           </div>
           <div class="col-md-6">
-            <p class="pti">د.يحيى رشدي السراج</p>
-            <p>رئيس بلدية غزة</p>
-            <img src="/image/NoPath.png" />
+            <p
+              class="pti animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
+              د.يحيى رشدي السراج
+            </p>
+            <p
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
+              رئيس بلدية غزة
+            </p>
+            <img
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+              src="/image/NoPath.png"
+            />
           </div>
         </div>
       </div>
       <div class="col-sm col-lg-6">
         <div class="row">
           <div class="col-sm-2 col-lg-1 align-self-start">
-            <img src="/image/Group 54806.png" class="img-fluid" />
+            <img
+              src="/image/Group 54806.png"
+              class="img-fluid animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+            />
           </div>
 
           <div
-            class="col-sm-12 col-md-7 col-lg-7 col-lg align-self-center mt-4 me-md-3"
+            class="col-sm-12 col-md-7 col-lg-9 col-lg align-self-center mt-4 me-md-3"
           >
-            <p>
+            <p
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+            >
               أن تكون مدينة غزة، مركزا اقتصاديا وحضاريا وثقافيا ، وتقديم خدمات
               متميزة" ضمن بيئة مستدامة ومشاركة مجتمعية واعية، يسود فيها الأمن
               والعدالة ".الإجتماعية
@@ -35,13 +60,20 @@
           </div>
 
           <div class="col-sm-2 col-lg-1 align-self-end end">
-            <img src="/image/Group 54807.png" class="img-fluid" />
+            <img
+              src="/image/Group 54807.png"
+              class="img-fluid animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+            />
           </div>
         </div>
       </div>
     </div>
     <div class="row paddingdiv mt-5">
-      <div class="col-md-12 col-lg div5 ms-4">
+      <div
+        class="col-md-12 col-lg div5 ms-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.5s"
+      >
         <h3 class="mx-3">نبذة مختصرة</h3>
         <div class="mt-3" style="line-height: 2">
           <p>
@@ -58,7 +90,10 @@
           </p>
         </div>
       </div>
-      <div class="col-md-12 col-lg div5 ms-4">
+      <div
+        class="col-md-12 col-lg div5 ms-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.6s"
+      >
         <h3 class="mx-3">المناصب التي شغلها</h3>
         <div class="mt-3">
           <P> :عمل عضوا في العديد من المؤسسات المهنية والعامة، مثل </P>
@@ -76,7 +111,10 @@
           </p>
         </div>
       </div>
-      <div class="col-md-12 col-lg div5">
+      <div
+        class="col-md-12 col-lg div5 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.7s"
+      >
         <h3 class="mx-3">الاتصال والتواصل</h3>
         <div class="mt-5" style="line-height: 3">
           <h5>للاتصال والتواصل مع مكتب رئيس بلدية غزة :</h5>

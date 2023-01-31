@@ -1,0 +1,21 @@
+.vc-highlights {
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.vc-highlights .prev-session {
+    color: white;
+    background-color: #cf2a45 !important;
+}
+
+.vc-highlights .next-session {
+    background-color: #32c33a !important;
+}
+
+.vc-highlights+span {
+    color: #fff;
+}
+
+.vc-day-content {
+    font-size: 16px !important;
+}

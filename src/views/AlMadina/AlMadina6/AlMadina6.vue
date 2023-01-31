@@ -17,12 +17,12 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="item in data" :key="item.id" class="col-lg-4">
+          <div v-for="item in data" :key="item.name" class="col-lg-4">
             <div class="card shadow-sm" style="position: relative">
               <img :src="item.image" />
               <div class="card-body body">
                 <router-link
-                  :to="'/SideBar/almadinaindex/almadina6/' + item.id"
+                  :to="'/SideBar/almadinaindex/almadina6/' + item.name"
                 >
                   <h4>{{ item.title }}</h4>
                 </router-link>
@@ -48,8 +48,8 @@ export default {
   components: { MainSection },
   async mounted() {
     let result = await axios.get("http://localhost:3000/AlMadina6");
+    this.data = result.data[0];
     console.log(this.data);
-    this.data = result.data;
   },
 };
 </script>

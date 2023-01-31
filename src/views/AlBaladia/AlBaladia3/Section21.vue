@@ -1,28 +1,51 @@
 <template>
   <div
-    class="tab-pane fade show active"
-    id="section21"
+    class="show active"
+    :id="store.datasercction.target"
     role="tabpanel"
-    aria-labelledby="1"
+    :aria-labelledby="store.datasercction.id"
   >
     <div class="paddingrow">
-      <img :src="getdata.image" />
-      <h5 class="mt-4" style="color: #cf2a45">{{ getdata.title }}</h5>
-      <div class="d-flex my-4 justify-content-center align-items-center">
+      <img
+        class="animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.6s"
+        :src="store.datasercction.image"
+      />
+      <h5
+        class="mt-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.7s; color: #cf2a45"
+      >
+        {{ store.datasercction.title }}
+      </h5>
+      <div
+        class="d-flex my-4 justify-content-center align-items-center animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.8s"
+      >
         <div class="line"></div>
-        <p>{{ getdata.details }}</p>
+        <p>{{ store.datasercction.details }}</p>
         <div class="line"></div>
       </div>
-      <p class="pbody">
-        {{ getdata.p }}
+      <p
+        class="pbody animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.9s"
+      >
+        {{ store.datasercction.p }}
       </p>
     </div>
   </div>
 </template>
 
 <script>
+import { useStore } from "@/store/data";
+
 export default {
   props: { sectiondata: Object, getdata: Object },
+
+  setup() {
+    const store = useStore();
+
+    return { store };
+  },
 };
 </script>
 
@@ -59,5 +82,19 @@ export default {
   border-top: 2px solid #c8c8c8;
   display: inline-block;
   line-height: 8px;
+}
+.paddingrow img {
+  border-radius: 50%;
+  border: 10px solid #392c23;
+}
+.tab-content > .active {
+  display: block !important;
+}
+
+/* .tab-content > .tab-pane {
+  display: none;
+} */
+.fade {
+  transition: opacity 0.15s linear;
 }
 </style>

@@ -1,4 +1,22 @@
-// console.log("map");
+console.log("map");
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
+
+window.initMap = initMap;
+(window.load = {
+  key: "AIzaSyCRjyqrNFSHfoKYqxoZlv2hCcTrmw2KKho",
+  // language: 'de',
+}),
+  setTimeout(() => {
+    initMap();
+  }, 1000);
 
 // var locations = [
 //   ["Bondi Beach", -33.890542, 151.274856, 4],
@@ -11,6 +29,7 @@
 // var map = new google.maps.Map(document.getElementById("map"), {
 //   zoom: 10,
 //   center: new google.maps.LatLng(-33.92, 151.25),
+//   mapTypeId: google.maps.MapTypeId.ROADMAP,
 // });
 
 // var infowindow = new google.maps.InfoWindow();

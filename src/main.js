@@ -6,10 +6,18 @@ import Masonry from "masonry-layout";
 import router from "./router";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import VueGoogleMaps from "@fawmi/vue-google-maps";
+
 const pinia = createPinia();
 
 createApp(App)
   .use(pinia)
+  // .use(VueGoogleMaps, {
+  //   load: {
+  //     key: "AIzaSyCRjyqrNFSHfoKYqxoZlv2hCcTrmw2KKho",
+  //   },
+  //   autobindAllEvents: true,
+  // })
   .use(VCalendar, {})
   .use(router)
 

@@ -9,8 +9,16 @@
       <div class="col-lg-7">
         <div class="row">
           <div class="col-11">
-            <h3>أعضاء المجلس البلدي الحاليين</h3>
-            <p>
+            <h4
+              class="mt-4 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
+              أعضاء المجلس البلدي الحاليين
+            </h4>
+            <p
+              class="mt-3 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+            >
               تسلم المجلس البلدي إدارة بلدية غزة مطلع آب/أغسطس 2016، في وقت
               تعاني فيه البلدية أزمة مالية كبيرة وترهلا إداريا وقلة في الموارد
               والإمكانات. ويضم المجلس البلدي 11 عضوا نشيطا يحملون شهادات ودرجات
@@ -28,7 +36,8 @@
               <li
                 v-for="item in data"
                 :key="item.id"
-                class="col"
+                class="col animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.5s"
                 role="presentation"
               >
                 <a
@@ -40,7 +49,7 @@
                   role="tab"
                   :aria-controls="item.target"
                   aria-selected="true"
-                  @click="getdata(item.id)"
+                  @click="store.getdata2(item)"
                 >
                   <div class="col text-center">
                     <img :src="item.image" />
@@ -56,8 +65,12 @@
         </div>
       </div>
 
-      <div class="tab-content col-lg-5 bgdiv" id="pills-tabContent">
-        <Section21 :getdata="data2" />
+      <div
+        class="tab-content col-lg-5 bgdiv animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.5s"
+        id="pills-tabContent"
+      >
+        <Section21 />
       </div>
     </div>
   </div>
@@ -66,6 +79,8 @@
 <script>
 import axios from "axios";
 import Section21 from "./Section21";
+import { useStore } from "@/store/data";
+
 export default {
   components: { Section21 },
   data() {
@@ -74,19 +89,23 @@ export default {
       data2: [],
     };
   },
-  methods: {
-    async getdata(id) {
-      console.log(id);
-      this.data2 = await this.data[id - 1];
-      console.log(this.data2);
-    },
+  setup() {
+    const store = useStore();
+
+    return { store };
   },
+  // methods: {
+  //   async getdata(item) {
+  //     this.data2 = await item;
+
+  //     console.log(this.data2);
+  //   },
+  // },
 
   async mounted() {
     let result = await axios.get("http://localhost:3000/albaladia3");
     this.data = result.data[0].Section2;
-    console.log(this.data);
-    this.getdata(1);
+    this.store.getdata2(result.data[0].Section2[0]);
   },
 };
 </script>
@@ -124,6 +143,11 @@ li.col {
     padding: 35px 0;
   }
 }
+h4 {
+  font-size: 16px;
+  font-family: "FFShamelFamily-SansOneBold";
+  color: #392c23;
+}
 .line {
   border: none;
   border-top: 2px solid #c8c8c8;
@@ -135,6 +159,7 @@ li.col {
   border-radius: 50%;
   border: 10px solid #3ec4b5;
 } */
+/* ul li:first-child img, */
 a.active img {
   border-radius: 50%;
   border: 10px solid #3ec4b5;

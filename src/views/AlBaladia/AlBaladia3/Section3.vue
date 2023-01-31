@@ -8,7 +8,10 @@
     <div class="row justify-content-between">
       <div class="col-sm-12 col-lg-7">
         <div class="row">
-          <form>
+          <form
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.3s"
+          >
             <div class="row justify-content-start mt-4">
               <div
                 class="form-group col-10 col-md-6 col-lg-8"
@@ -26,12 +29,22 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <span>ديسمبر 26, 2021</span>
-            <p>
+            <span
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+              >ديسمبر 26, 2021</span
+            >
+            <p
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+            >
               مجلس بلدية غزة يناقش مع نشطاء شباب جهود دعم المبادرات الشبابية
               (عنوان القرار الصادر يوضع هنا)
             </p>
-            <div class="d-flex align-items-center">
+            <div
+              class="d-flex align-items-center animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.6s"
+            >
               <button type="button" class="btn button1 ms-3">عرض الجلسة</button>
 
               <button type="button" class="btn button2">
@@ -54,13 +67,17 @@
             </div>
           </div>
           <div class="row mt-5">
-            <div>
+            <div
+              class="d-flex align-items-center animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.7s"
+            >
               <h3>القرارات الصادرة عن الجلسة</h3>
             </div>
             <div
               v-for="item in data"
               :key="item.id"
-              class="col-sm-12 col-md-6 d-inline-block"
+              class="col-sm-12 col-md-6 d-inline-block animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.9s"
             >
               <p>
                 <span class="span">{{ item.id }}</span
@@ -70,10 +87,16 @@
           </div>
 
           <div class="row center">
-            <h3>الأعضاء الحاضرين</h3>
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.9s"
+            >
+              الأعضاء الحاضرين
+            </h3>
             <div class="flex">
               <div
-                class="col-sm-5 col-md disinline"
+                class="col-sm-5 col-md disinline animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.1s"
                 v-for="item in data2"
                 :key="item.id"
               >
@@ -84,11 +107,19 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-lg-4">
-        <DatePicker v-model="date" :attributes="attrs" locale="ar"></DatePicker>
+      <div
+        class="col-sm-12 col-lg-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.4s"
+      >
+        <DatePicker
+          class="cs-datepicker"
+          v-model="date"
+          :attributes="attrs"
+          locale="ar"
+        ></DatePicker>
 
         <!-- <VCalendar :attributes="attributes" />
-        <v-date-picker v-model="date" />
+        <v-date-picker v-model="date" />-->
         <div class="row mt-4">
           <div class="col d-flex">
             <div class="circlecalendar circlecalendar1"></div>
@@ -107,7 +138,7 @@
           <div class="col-6">
             <button class="btncalendar">عرض جميع الجلسات</button>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -118,6 +149,7 @@ import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
 import { Calendar, DatePicker } from "v-calendar";
 import "v-calendar/dist/style.css";
+import "./style.css";
 
 export default {
   components: { MainSection, Calendar, DatePicker },
@@ -181,6 +213,7 @@ export default {
 .circlecalendar2 {
   background-color: #cf2a45;
 }
+
 .circlecalendar3 {
   background-color: #32c33a;
 }

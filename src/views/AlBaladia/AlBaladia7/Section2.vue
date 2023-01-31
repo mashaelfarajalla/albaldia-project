@@ -2,6 +2,16 @@
   <div class="col-lg-8 p-0">
     <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
 
+    <!-- <div id="map"></div> -->
+
+    <!-- <GMapMap
+      :center="{ lat: 51.093048, lng: 6.84212 }"
+      :zoom="7"
+      map-type-id="terrain"
+      style="width: 50vw; height: 900px"
+    >
+    </GMapMap> -->
+
     <iframe
       class="w-100"
       style="height: 100%; border: 0"
@@ -15,10 +25,20 @@
 
 <script>
 // import "./map";
-export default {};
+export default {
+  data() {
+    return {
+      center: { lat: 51.093048, lng: 6.84212 },
+    };
+  },
+};
 </script>
 
 <style scoped>
+#map {
+  height: 100%;
+  width: 100%;
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .col-lg-8 {
     height: calc(100vh - 85px);
