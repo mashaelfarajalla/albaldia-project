@@ -163,7 +163,7 @@ export default {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   nav {
     position: fixed;
-    height: 15vh;
+    height: 11vh;
     bottom: 0;
     width: 100%;
   }

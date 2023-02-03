@@ -334,7 +334,7 @@ export default {
   outline-width: 2px;
   /* right: -38px; */
   /* right: 30px; */
-  left: 47%;
+  left: 46%;
   top: 204%;
   transition: 0.2s ease-in;
   cursor: pointer;

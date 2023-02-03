@@ -4,11 +4,23 @@
       <div class="container">
         <div class="row bg-white sub-header">
           <div class="col-lg-2 d-flex align-items-center">
-            <img :src="data.Imagecover" />
-            <h4 class="h4">{{ data.title }}</h4>
+            <img
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+              :src="data.Imagecover"
+            />
+            <h4
+              class="h4 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
+              {{ data.title }}
+            </h4>
           </div>
           <div class="col-sm-12 col-lg">
-            <ul class="ul">
+            <ul
+              class="ul animate__animated animate__fadeInLeftBig"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+            >
               <li
                 class=""
                 :style="{ 'border-bottom': `2px solid ${data.color}` }"
@@ -31,7 +43,10 @@
         </div>
 
         <div class="padding2">
-          <div class="row">
+          <div
+            class="row animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.4s"
+          >
             <div
               id="carouselExampleControls"
               class="carousel slide px-0"
@@ -74,7 +89,10 @@
           </div>
 
           <div class="row mt-5">
-            <div class="col-md-12 col-lg-4 divbg">
+            <div
+              class="col-md-12 col-lg-4 divbg animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.5s"
+            >
               <div class="d-flex align-items-center">
                 <span>
                   <svg
@@ -175,7 +193,10 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-12 col-lg-4 divbg">
+            <div
+              class="col-md-12 col-lg-4 divbg animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.6s"
+            >
               <div class="d-flex align-items-center">
                 <span>
                   <svg
@@ -230,7 +251,10 @@
                 </P>
               </div>
             </div>
-            <div class="col-md-12 col-lg-4 divbackround">
+            <div
+              class="col-md-12 col-lg-4 divbackround animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.7s"
+            >
               <swiper :navigation="true" :modules="modules" class="mySwiper">
                 <swiper-slide v-for="item in data.children2" :key="item.id">
                   <div class="div">

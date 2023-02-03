@@ -6,7 +6,13 @@
     aria-labelledby="pills-Gazahistory-tab"
   >
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-1 row-cols-lg-3 g-3">
-      <div v-for="item in data" :key="item.id" class="col">
+      <div
+        v-for="item in data"
+        :key="item.id"
+        class="col animate__animated animate__fadeInUp"
+        style="animation-duration: 1s"
+        :style="`animation-delay:${item.time}s`"
+      >
         <div class="card shadow-sm">
           <img :src="item.image" />
           <div class="card-body">

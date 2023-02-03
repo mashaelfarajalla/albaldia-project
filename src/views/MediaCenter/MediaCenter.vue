@@ -3,9 +3,17 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="d-flex align-items-center">
-          <h3 class="ms-4">أخبار واعلانات</h3>
+          <h3
+            class="ms-4 animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
+            أخبار واعلانات
+          </h3>
 
-          <div class="ms-4">
+          <div
+            class="ms-4 animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.2s"
+          >
             <a
               class="dropdown-toggle"
               href="#"
@@ -22,7 +30,10 @@
             </ul>
           </div>
 
-          <div class="">
+          <div
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.2s"
+          >
             <a
               class="dropdown-toggle"
               href="#"
@@ -64,7 +75,10 @@
             class="mySwiper"
           >
             <swiper-slide>
-              <div>
+              <div
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.4s"
+              >
                 <img src="/image/Group 1.png" class="w-100" />
                 <div class="carousel-caption round d-sm-block">
                   <div class="divmag">
@@ -142,7 +156,10 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div>
+              <div
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.5s"
+              >
                 <img src="/image/Mask Group 1.png" class="w-100" />
                 <div class="carousel-caption round d-sm-block">
                   <div class="divmag">
@@ -221,7 +238,10 @@
             </swiper-slide>
 
             <swiper-slide>
-              <div>
+              <div
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.6s"
+              >
                 <img src="/image/Group11.png" class="w-100" />
                 <div class="carousel-caption round d-sm-block">
                   <div class="divmag">
@@ -298,7 +318,12 @@
                 </div>
               </div> </swiper-slide
             ><swiper-slide>
-              <div v-for="item in data" :key="item.id" class="divbackground">
+              <div
+                v-for="item in data"
+                :key="item.id"
+                class="divbackground animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.7s"
+              >
                 <p>{{ item.p }}</p>
               </div>
             </swiper-slide>
@@ -344,7 +369,7 @@ export default {
 
 <style scoped>
 @media screen and (min-width: 768px) and (max-width: 991px) {
-   .container1 div.carousel-caption {
+  .container1 div.carousel-caption {
     height: 79%;
   }
 }
@@ -354,7 +379,7 @@ export default {
   }
 }
 @media screen and (max-width: 767px) {
-   .container1 div.carousel-caption {
+  .container1 div.carousel-caption {
     height: 79%;
   }
 }

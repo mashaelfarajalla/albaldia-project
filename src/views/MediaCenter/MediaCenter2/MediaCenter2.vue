@@ -4,9 +4,17 @@
       <div class="container">
         <div class="row">
           <div class="d-flex align-items-center">
-            <h3 class="ms-4">الألبومات</h3>
+            <h3
+              class="ms-4 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              الألبومات
+            </h3>
 
-            <div class="ms-4">
+            <div
+              class="ms-4 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.2s"
+            >
               <a
                 class="dropdown-toggle"
                 href="#"
@@ -23,7 +31,10 @@
               </ul>
             </div>
 
-            <div class="">
+            <div
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.2s"
+            >
               <a
                 class="dropdown-toggle"
                 href="#"
@@ -41,7 +52,12 @@
             </div>
           </div>
         </div>
-        <ul class="" id="myTab" role="tablist">
+        <ul
+          class="animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.3s"
+          id="myTab"
+          role="tablist"
+        >
           <li class="" role="presentation">
             <a
               class="nav-link active"
@@ -112,6 +128,7 @@
 import MainSection from "@/components/MainSection.vue";
 import phote from "./phote.vue";
 import videosection from "./video.vue";
+import '../../AlMasharie/style.css'
 
 export default {
   components: { MainSection, phote, videosection },

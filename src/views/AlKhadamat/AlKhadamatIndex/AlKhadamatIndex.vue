@@ -3,11 +3,17 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row">
-          <div
-            class="col-sm-12 col-lg-6 animate__animated animate__bounceInDown animate__delay-.5s"
-          >
-            <h3>الخدمات العامة</h3>
-            <p>
+          <div class="col-sm-12 col-lg-6">
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              الخدمات العامة
+            </h3>
+            <p
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
               تقدم بلدية غزة نحو 30 خدمة أساسية لسكان مدينة غزة البالغ تعدادهم
               قرابة ‏670 الف نسمة في نهاية عام 2018م بما يشكل 13% من سكان دولة
               فلسطين حيث تبلغ مساحة المدينة 56كم2، مما يجعلها من أكثر المدن
@@ -21,7 +27,9 @@
           <div
             v-for="item in data"
             :key="item.id"
-            class="col animate__animated animate__zoomInUp animate__delay-1s"
+            class="col animate__animated animate__fadeInUp"
+            style="animation-duration: 1s"
+            :style="`animation-delay:${item.time}s`"
           >
             <div class="card p-3 hoverDiv shadow-sm">
               <div class="square2">
@@ -33,7 +41,7 @@
                   {{ item.details }}
                 </p>
                 <router-link
-                  :to="'/detailsAlKhadmat/' + item.id"
+                  :to="'/SideBar/alkhadamat/detailsAlKhadmat/' + item.id"
                   class="d-flex align-items-center"
                 >
                   <small class="">عرض التفاصيل</small>

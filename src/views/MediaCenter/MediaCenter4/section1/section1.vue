@@ -1,23 +1,47 @@
 <template>
   <div
-    class="tab-pane fade show active"
+    class="show active"
     :id="sectiondata.target"
     role="tabpanel"
     :aria-labelledby="sectiondata.id"
   >
     <div class="row">
-      <div class="col-lg-6">
-        <CanvasJSChart :options="options" />
+      <div
+        class="col-lg-6 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
+        <CanvasJSChart
+          class="animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.2s"
+          :options="options"
+        />
       </div>
-      <div class="col-lg-6">
-        <h3 class="h3title">{{ sectiondata.title }}</h3>
-        <p class="mt-3">
+      <div
+        class="col-lg-6 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.2s"
+      >
+        <h3
+          class="h3title animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.2s"
+        >
+          {{ sectiondata.title }}
+        </h3>
+        <p
+          class="mt-3 animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.3s"
+        >
           {{ sectiondata.p1 }}
         </p>
-        <p>
+        <p
+          class="animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.4s"
+        >
           {{ sectiondata.p2 }}
         </p>
-        <p>
+        <p
+          class="animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.5s"
+        >
           {{ sectiondata.p3 }}
         </p>
       </div>
@@ -37,6 +61,7 @@ export default {
       chart: null,
       options: {
         colorSet: "colors1",
+        backgroundColor: "transparent",
         animationEnabled: true,
         title: {
           text: "",
@@ -64,8 +89,16 @@ export default {
   line-height: 2;
 }
 @media screen and (max-width: 767px) {
-  .col-lg-6 .h3title {
+  .h3title {
     margin-top: 45px;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .h3title {
+    margin-top: 45px;
+  }
+  /* .{
+    background-color: transparent;
+  } */
 }
 </style>

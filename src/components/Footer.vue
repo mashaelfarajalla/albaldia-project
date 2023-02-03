@@ -36,11 +36,13 @@ export default {
       footer: [],
     };
   },
+
   components: { MainSection },
 
   async mounted() {
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
+    console.log(this.store.path);
   },
 };
 </script>
@@ -93,4 +95,5 @@ footer {
   background-position: right;
   border-left: 1px solid #3ec4b5;
 }
+/* .footerlink.router-link-exact-active  */
 </style>

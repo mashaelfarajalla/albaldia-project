@@ -32,6 +32,8 @@
           role="tab"
           :aria-controls="item.controls"
           aria-selected="true"
+          data-lat="31.5075659339788"
+          data-lng="34.464420823310356"
         >
           <span class="circle">{{ item.id }}</span>
           <div class="me-2">
@@ -69,7 +71,7 @@
               </svg>
             </span>
           </div>
-          <DataModel :modeldata="item" />
+          <!-- <DataModel :modeldata="item" /> -->
         </a>
       </div>
     </div>

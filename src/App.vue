@@ -131,6 +131,7 @@ export default {
 }
 
 .section {
+  /* z-index: -1; */
   overflow-y: auto;
   position: fixed;
   left: 0;

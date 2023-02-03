@@ -3,22 +3,25 @@
     <div class="bg section index container1" style="padding-top: 65px">
       <div class="container">
         <div class="row">
-          <h3 style="padding-right: 45px">أنظمة وأدلة</h3>
+          <h3  class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s ;padding-right: 45px" >أنظمة وأدلة</h3>
           <div class="row rowchalidren mt-5">
-            <div v-for="item in data" :key="item.id" class="col-6 col-md-4 col-lg firstchild">
+            <div v-for="item in data" :key="item.id" 
+            style="cursor: pointer;"
+            class="col-6 col-md-4 col-lg firstchild">
               <div class="row  justify-content-around align-items-center">
                 <div class="col-1">
                   <div class="circle7">
                     <img :src="item.icon" />
                   </div>
                 </div>
-                <div class="col-5 col-md-7 col-lg-4">{{ item.title }}</div>
+                <div class="col-5 col-md-7 col-lg-4 title">{{ item.title }}</div>
               </div>
             </div>
           </div>
           <div
             class="row mt-5 rowchalider2"
-            style="background-color: #f3f2f2; padding: 35px 0"
+            style="background-color: #f3f2f2; "
           >
             <swiper
               :slidesPerView="1"
@@ -185,7 +188,7 @@ import "swiper/css";
 
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
+import './style.css'
 // import required modules
 import { FreeMode, Pagination } from "swiper";
 
@@ -218,6 +221,9 @@ export default {
 .rowchalidren .firstchild:first-child .circle7{
   background-color: #3EC4B5;
 }
+.rowchalidren .firstchild:first-child .title{
+  color: #3EC4B5;
+}
 .rowchalidren .firstchild:first-child .circle7 img{
   filter: invert(92%) sepia(100%) saturate(1%) hue-rotate(36deg) brightness(104%) contrast(102%);
 
@@ -225,6 +231,11 @@ export default {
 }
 .rowchalider2 .swiper-slide:nth-child(3) .bg-white2{
   background-color: #3EC4B5;
+  color: white;
+}
+ .bg-white2:hover {
+  cursor: pointer;
+   background-color: #3EC4B5;
   color: white;
 }
 .rowchalider2 .swiper-slide:nth-child(3)::after{
@@ -248,10 +259,14 @@ export default {
   justify-content: space-around;
 }
 .swiper{
-height: 140px;
+  overflow: scroll;
+height: 132px
+}
+.row.mt-5.rowchalider2 {
+  padding: 35px 0 0 ;
 }
 .rowchalider2 .swiper-slide:nth-child(3)::after{
-      top: 63%;
+      top: 71%;
 
 }
 }
@@ -325,4 +340,9 @@ flex-direction: column;
   color: #CF2A45;
    font-size: 14px;
 }
+.circle7:hover{
+  background-color: #e9e8e8;
+}
+
+
 </style>

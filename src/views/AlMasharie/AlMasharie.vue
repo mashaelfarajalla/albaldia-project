@@ -3,9 +3,17 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="d-flex align-items-center mb-5">
-          <h3 class="ms-4">المشاريع القائمة</h3>
+          <h3
+            class="ms-4 animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
+            المشاريع القائمة
+          </h3>
 
-          <div class="ms-4">
+          <div
+            class="ms-4 animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.2s"
+          >
             <a
               class="dropdown-toggle"
               href="#"
@@ -39,7 +47,10 @@
             </ul>
           </div>
         </div>
-        <div class="row mySwiper2">
+        <div
+          class="row mySwiper2 animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.4s"
+        >
           <swiper
             :modules="modules"
             :slidesPerView="1"
@@ -107,7 +118,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import MainSection from "@/components/MainSection.vue";
-
+import "./style.css";
 import axios from "axios";
 
 // Import Swiper styles

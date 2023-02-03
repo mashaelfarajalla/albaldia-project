@@ -4,7 +4,16 @@
       <div class="bg section index container1 padding">
         <div class="container">
           <div class="row">
-            <h3>{{ store.datadetails.title }}</h3>
+            <router-link
+              :to="'/SideBar/almadinaindex/almadina6/'"
+              class="btn-close"
+            ></router-link>
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.2s"
+            >
+              {{ store.datadetails.title }}
+            </h3>
           </div>
           <div
             class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 align-items-center"
@@ -12,7 +21,9 @@
             <div
               v-for="item in store.datadetails.children"
               :key="item.id"
-              class="col"
+              class="col animate__animated animate__fadeInUp"
+              style="animation-duration: 1s"
+              :style="`animation-delay:${item.time}s`"
             >
               <div class="card shadow-sm">
                 <img :src="item.image" />
@@ -84,4 +95,9 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+.btn-close {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+</style>

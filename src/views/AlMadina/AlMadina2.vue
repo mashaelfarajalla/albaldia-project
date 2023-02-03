@@ -4,9 +4,19 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="divborder">
-            <h3>غزة تاريخ وحضارة</h3>
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              غزة تاريخ وحضارة
+            </h3>
           </div>
-          <ul class="" id="myTab" role="tablist">
+          <ul
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.3s"
+            id="myTab"
+            role="tablist"
+          >
             <li class="" role="presentation">
               <a
                 class="nav-link active"

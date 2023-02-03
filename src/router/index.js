@@ -189,7 +189,7 @@ const routes = [
   },
 
   {
-    path: "/detailsAlKhadmat/:id",
+    path: "/SideBar/alkhadamat/detailsAlKhadmat/:id",
     name: "DetailsAlKhadmat",
     component: DetailsAlKhadmat,
   },

@@ -1,11 +1,22 @@
 <template>
   <div class="mt-5">
-    <h3>المراكز</h3>
+    <h3
+      class="animate__animated animate__fadeInUp"
+      style="animation-duration: 1s; animation-delay: 0.1s"
+    >
+      المراكز
+    </h3>
   </div>
   <div
     class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 align-items-center"
   >
-    <div v-for="item in card" :key="item.id" class="col">
+    <div
+      class="col animate__animated animate__fadeInUp"
+      style="animation-duration: 1s"
+      :style="`animation-delay: ${item.time}s`"
+      v-for="item in card"
+      :key="item.id"
+    >
       <div class="card shadow-sm">
         <img :src="item.image" />
         <div class="divabsolute">
@@ -64,6 +75,10 @@ export default {
 </script>
 
 <style>
+.card-body a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
   .divabsolute {
     top: 35%;

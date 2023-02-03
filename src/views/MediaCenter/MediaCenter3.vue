@@ -3,8 +3,16 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row">
-          <h3>تقارير وإصدارات</h3>
-          <p>
+          <h3
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
+            تقارير وإصدارات
+          </h3>
+          <p
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.2s"
+          >
             ننشر في بلدية غزة صحيفة هنا غزة والإصدارات والتقارير المالية
             والتفصيلية التي تفصّل أنشطتنا ومشاريعنا
           </p>
@@ -19,7 +27,12 @@
             :modules="modules"
             class="mySwiper"
           >
-            <swiper-slide class="col" v-for="item in data" :key="item.di">
+            <swiper-slide
+              class="col animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+              v-for="item in data"
+              :key="item.di"
+            >
               <div
                 class="d-flex justify-content-center report-card"
                 :style="{ background: item.color }"

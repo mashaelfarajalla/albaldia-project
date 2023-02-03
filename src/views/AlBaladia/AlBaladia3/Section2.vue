@@ -43,6 +43,7 @@
                 <a
                   class="nav-link"
                   :id="item.id"
+                  :class="item.active"
                   data-bs-toggle="pill"
                   :data-bs-target="'#' + item.target"
                   type="button"

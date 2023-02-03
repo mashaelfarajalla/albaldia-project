@@ -22,6 +22,7 @@ export default {
     let routepath = this.$route.fullPath;
     let path = routepath.split("/");
     path = path[2];
+    this.store.path = path;
     if (path == undefined) {
       this.store.sidebar = result2.data[0].index;
       this.store.indexhome = result2.data[0].index;

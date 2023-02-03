@@ -4,9 +4,17 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-sm-12 col-lg-5">
-            <h3>الموقع والمناخ</h3>
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              الموقع والمناخ
+            </h3>
             <div class="divpadding">
-              <P>
+              <p
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.2s"
+              >
                 غزة مدينة ساحلية فلسطينية، وأكبر مدن قطاع غزة وتقع في شماله، في
                 الطرف الجنوبي للساحل الشرقي من البحر المتوسط. تبعد عن مدينة
                 القدس مسافة 78 كم إلى الجنوب الغربي، وهي مركز محافظة غزة وأكبر
@@ -14,14 +22,20 @@
                 محافظة غزة 700 ألف نسمة في عام 2013، ما يجعلها أكبر تجمع
                 للفلسطينيين في فلسطين، تبلغ .مساحتها 56 كم2، مما يجعلها من أكثر
                 المدن كثافة بالسكان في العالم
-              </P>
-              <p>
+              </p>
+              <p
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.3s"
+              >
                 تعتبر مدينة غزة من أهم المدن الفلسطينية، لأهمية موقعها
                 الاستراتيجي والأهمية الاقتصادية والعمرانية للمدينة، بالإضافة إلى
                 كونها المقر المؤقت .للسلطة الوطنية الفلسطينية، ووجود الكثير من
                 مقراتها ووزارتها فيها
               </p>
-              <p>
+              <p
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.4s"
+              >
                 أسس المدينة الكنعانيون في القرن الخامس عشر قبل الميلاد، احتلها
                 الكثير من . الغزاة كالفراعنة والإغريق والرومان والبيزنطيون
                 والعثمانيون والإنجليز وغيرهم . في عام 635 م دخل المسلمون العرب
@@ -33,8 +47,12 @@
             </div>
           </div>
           <div
-            class="col-sm-12 col-lg-6 divbgimg d-flex align-items-center"
-            style="border-radius: 20px"
+            class="col-sm-12 col-lg-6 divbgimg d-flex align-items-center animate__animated animate__fadeInUp"
+            style="
+              animation-duration: 1s;
+              animation-delay: 0.2s;
+              border-radius: 20px;
+            "
           >
             <img src="/image/imagegaza.png" class="img-fluid" />
           </div>

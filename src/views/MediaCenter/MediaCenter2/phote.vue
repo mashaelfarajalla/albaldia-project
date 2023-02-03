@@ -6,7 +6,10 @@
     aria-labelledby="pills-phote-tab"
   >
     <div class="row">
-      <div class="col-lg-4">
+      <div
+        class="col-lg-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.4s"
+      >
         <div
           id="carouselExampleControls"
           class="carousel slide"
@@ -20,6 +23,27 @@
             >
               <div class="card">
                 <img :src="item.image" class="card-img-top" alt="..." />
+                <a
+                  class="iconphto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  @click="getdata(section1)"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.688"
+                    height="22.88"
+                    viewBox="0 0 26.688 22.88"
+                  >
+                    <path
+                      id="Path_1072"
+                      data-name="Path 1072"
+                      d="M20536.861-1251.122h17.156a2.865,2.865,0,0,0,2.863-2.859v-.955h.949a2.863,2.863,0,0,0,2.859-2.859v-13.344a2.865,2.865,0,0,0-2.859-2.864h-17.156a2.865,2.865,0,0,0-2.859,2.864v.949h-.953a2.863,2.863,0,0,0-2.859,2.859v13.349A2.863,2.863,0,0,0,20536.861-1251.122Zm18.111-3.814h0v.955a.942.942,0,0,1-.955.949h-17.156a.942.942,0,0,1-.955-.949v-13.349a.942.942,0,0,1,.955-.949h.953v10.485a2.863,2.863,0,0,0,2.859,2.859h14.3Zm-14.3-1.909a.942.942,0,0,1-.955-.949v-13.344a.945.945,0,0,1,.955-.955h17.156a.945.945,0,0,1,.955.955v13.344a.942.942,0,0,1-.955.949Z"
+                      transform="translate(-20534.002 1274.002)"
+                      fill="#392c23"
+                    ></path>
+                  </svg>
+                </a>
                 <div class="card-body">
                   <p class="card-text">
                     {{ item.p }}
@@ -66,7 +90,11 @@
           </button>
         </div>
       </div>
-      <div class="col-lg-4">
+
+      <div
+        class="col-lg-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.5s"
+      >
         <div
           id="carouselExampleControls2"
           class="carousel slide"
@@ -80,6 +108,27 @@
             >
               <div class="card">
                 <img :src="item.image" class="card-img-top" alt="..." />
+                <a
+                  class="iconphto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  @click="getdata(section2)"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.688"
+                    height="22.88"
+                    viewBox="0 0 26.688 22.88"
+                  >
+                    <path
+                      id="Path_1072"
+                      data-name="Path 1072"
+                      d="M20536.861-1251.122h17.156a2.865,2.865,0,0,0,2.863-2.859v-.955h.949a2.863,2.863,0,0,0,2.859-2.859v-13.344a2.865,2.865,0,0,0-2.859-2.864h-17.156a2.865,2.865,0,0,0-2.859,2.864v.949h-.953a2.863,2.863,0,0,0-2.859,2.859v13.349A2.863,2.863,0,0,0,20536.861-1251.122Zm18.111-3.814h0v.955a.942.942,0,0,1-.955.949h-17.156a.942.942,0,0,1-.955-.949v-13.349a.942.942,0,0,1,.955-.949h.953v10.485a2.863,2.863,0,0,0,2.859,2.859h14.3Zm-14.3-1.909a.942.942,0,0,1-.955-.949v-13.344a.945.945,0,0,1,.955-.955h17.156a.945.945,0,0,1,.955.955v13.344a.942.942,0,0,1-.955.949Z"
+                      transform="translate(-20534.002 1274.002)"
+                      fill="#392c23"
+                    ></path>
+                  </svg>
+                </a>
                 <div class="card-body">
                   <p class="card-text">
                     {{ item.p }}
@@ -127,7 +176,10 @@
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div
+        class="col-lg-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.6s"
+      >
         <div
           id="carouselExampleControls3"
           class="carousel slide"
@@ -141,6 +193,27 @@
             >
               <div class="card">
                 <img :src="item.image" class="card-img-top" alt="..." />
+                <a
+                  class="iconphto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  @click="getdata(section3)"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26.688"
+                    height="22.88"
+                    viewBox="0 0 26.688 22.88"
+                  >
+                    <path
+                      id="Path_1072"
+                      data-name="Path 1072"
+                      d="M20536.861-1251.122h17.156a2.865,2.865,0,0,0,2.863-2.859v-.955h.949a2.863,2.863,0,0,0,2.859-2.859v-13.344a2.865,2.865,0,0,0-2.859-2.864h-17.156a2.865,2.865,0,0,0-2.859,2.864v.949h-.953a2.863,2.863,0,0,0-2.859,2.859v13.349A2.863,2.863,0,0,0,20536.861-1251.122Zm18.111-3.814h0v.955a.942.942,0,0,1-.955.949h-17.156a.942.942,0,0,1-.955-.949v-13.349a.942.942,0,0,1,.955-.949h.953v10.485a2.863,2.863,0,0,0,2.859,2.859h14.3Zm-14.3-1.909a.942.942,0,0,1-.955-.949v-13.344a.945.945,0,0,1,.955-.955h17.156a.945.945,0,0,1,.955.955v13.344a.942.942,0,0,1-.955.949Z"
+                      transform="translate(-20534.002 1274.002)"
+                      fill="#392c23"
+                    ></path>
+                  </svg>
+                </a>
                 <div class="card-body">
                   <p class="card-text">
                     {{ item.p }}
@@ -188,21 +261,32 @@
         </div>
       </div>
     </div>
+    <popupphot :dataphot="data2" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
-
+import popupphot from "./popupphot.vue";
 export default {
   data() {
     return {
       section1: [],
       section2: [],
       section3: [],
+      data2: [],
     };
   },
-
+  components: {
+    popupphot,
+  },
+  methods: {
+    getdata(item) {
+      this.data2 = item;
+      console.log("image");
+      console.log(this.data2);
+    },
+  },
   async mounted() {
     let result = await axios.get("http://localhost:3000/MediaCenter2");
     this.section1 = result.data[0].section1;
@@ -247,5 +331,20 @@ export default {
   left: 15px;
   display: flex;
   flex-direction: column;
+}
+.iconphto {
+  left: 50%;
+  position: absolute;
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  background: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 29%;
+}
+.carousel:hover .iconphto {
+  display: flex;
 }
 </style>

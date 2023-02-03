@@ -4,9 +4,17 @@
       <div class="container">
         <div class="row mb-5">
           <div class="d-flex align-items-center">
-            <h3 class="ms-4">المشاريع التطويرية</h3>
+            <h3
+              class="ms-4 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              المشاريع التطويرية
+            </h3>
 
-            <div class="ms-4">
+            <div
+              class="ms-4 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
               <a
                 class="dropdown-toggle"
                 href="#"
@@ -23,7 +31,10 @@
               </ul>
             </div>
 
-            <div class="">
+            <div
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
               <a
                 class="dropdown-toggle"
                 href="#"
@@ -59,13 +70,17 @@
               },
             }"
             :spaceBetween="30"
-            :pagination="{
-              clickable: true,
-            }"
             :modules="modules"
+            :navigation="true"
+            :pagination="true"
             class="mySwiper"
           >
-            <swiper-slide v-for="item in data" :key="item.id">
+            <swiper-slide
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.4s"
+              v-for="item in data"
+              :key="item.id"
+            >
               <div class="bg-white text-center py-5">
                 <span class="square2">
                   <img :src="item.icon" />
@@ -145,17 +160,16 @@
 import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
 
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-// Import Swiper styles
 import "swiper/css";
-
+import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-// import required modules
-import { Pagination } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
+import "./style2.css";
 export default {
   components: {
     Swiper,
@@ -164,7 +178,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination],
+      modules: [Navigation, Pagination, Scrollbar, A11y],
     };
   },
 

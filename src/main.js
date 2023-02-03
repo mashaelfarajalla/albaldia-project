@@ -14,7 +14,7 @@ createApp(App)
   .use(pinia)
   // .use(VueGoogleMaps, {
   //   load: {
-  //     key: "AIzaSyCRjyqrNFSHfoKYqxoZlv2hCcTrmw2KKho",
+  //     key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback",
   //   },
   //   autobindAllEvents: true,
   // })

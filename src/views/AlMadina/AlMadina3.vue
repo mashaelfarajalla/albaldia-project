@@ -3,7 +3,10 @@
     <div class="bg section index container1">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-lg-6 p-0">
+          <div
+            class="col-sm-12 col-lg-6 p-0 animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
             <div
               id="carouselExampleControls"
               class="sliderpage carousel slide"
@@ -62,12 +65,32 @@
           <div class="col-sm-12 col-lg-6">
             <div class="divpadding2">
               <div class="">
-                <h3>الأحياء</h3>
+                <h3
+                  class="animate__animated animate__fadeInUp"
+                  style="animation-duration: 1s; animation-delay: 0.1s"
+                >
+                  الأحياء
+                </h3>
               </div>
-              <div v-for="item in data" :key="item.id" class="mt-2">
+              <div
+                v-for="item in data"
+                :key="item.id"
+                class="mt-2 animate__animated animate__fadeInUp"
+                style="animation-duration: 1s"
+                :style="`animation-delay: ${item.time}s`"
+              >
                 <div class="d-flex align-items-center mb-3">
-                  <h5 class="ms-3">{{ item.title }}</h5>
-                  <button type="button" class="btn button">
+                  <h5
+                    class="ms-3 animate__animated animate__fadeInUp"
+                    style="animation-duration: 1s; animation-delay: 0.2s"
+                  >
+                    {{ item.title }}
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn button animate__animated animate__fadeInUp"
+                    style="animation-duration: 1s; animation-delay: 0.3s"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16.83"
@@ -84,7 +107,10 @@
                     استكشاف
                   </button>
                 </div>
-                <p class="p">
+                <p
+                  class="p animate__animated animate__fadeInUp"
+                  style="animation-duration: 1s; animation-delay: 0.3s"
+                >
                   {{ item.details }}
                 </p>
               </div>

@@ -3,9 +3,19 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row">
-          <h3>الميزانية والموازنة</h3>
+          <h3
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
+            الميزانية والموازنة
+          </h3>
 
-          <ul class="" id="myTab" role="tablist">
+          <ul
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.2s"
+            id="myTab"
+            role="tablist"
+          >
             <li class="" role="presentation">
               <a
                 class="nav-link active"

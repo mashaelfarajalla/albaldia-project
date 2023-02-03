@@ -4,21 +4,35 @@
       <div class="container">
         <div class="row">
           <div class="col-5">
-            <h3>{{ data.title }}</h3>
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              {{ data.title }}
+            </h3>
             <div>
-              <p>
+              <p
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.2s"
+              >
                 تقدم بلدية غزة خدمة توفير المياه بشكل مناسب وبأسعار معقولة لسد
                 احتياجات المواطنين، إذ تضخ يوميًا 100,000 كوب من المياه في
                 الشبكات من مصادر متعددة أبرزها؛ الآبار ومحطة التحلية والمياه
                 الواردة من شركة ميكروت. وتعمل
               </p>
-              <p>
+              <p
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.3s"
+              >
                 البلدية على إدارة مصادر المياه المختلفة وتنميتها وتطويرها وتخطيط
                 استخدامها، ناهيك عن توظف التكنولوجيا في عملية تشغيل آبار المياه
                 والتحكم بها عن بعد. وتوظف البلدية التكنولوجيا في عملية تشغيل 52
                 بئرًا للمياه بحيث يتم
               </p>
-              <p>
+              <p
+                class="animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.4s"
+              >
                 تشغيلها عن بعد من خلال تفعيل نظام سكادا للتحكم عن بعد، وتسعى
                 جاهدة إلى تشغيل وحدة التحكم عن بعد بشكل كامل، لمتابعة الآبار
                 والشبكات والتعرف على الأعطال وصيانتها بشكل مباشر وضمان وصول
@@ -26,7 +40,12 @@
                 إدخال بعض القطع اللازمة لذلك
               </p>
 
-              <bottom class="btn buttom">تقديم للخدمة</bottom>
+              <bottom
+                class="btn buttom animate__animated animate__fadeInUp"
+                style="animation-duration: 1s; animation-delay: 0.5s"
+              >
+                >تقديم للخدمة</bottom
+              >
             </div>
           </div>
           <div class="col-7">
@@ -34,7 +53,9 @@
               <div
                 v-for="item in data.children"
                 :key="item.id"
-                class="bg-white col-6 divcol-6"
+                class="bg-white col-6 divcol-6 animate__animated animate__fadeInUp"
+                style="animation-duration: 1s"
+                :style="`animation-delay:${item.time}s`"
               >
                 <span>{{ item.number }}</span>
                 <div>
@@ -43,21 +64,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <div class="grid" data-masonry='{"percentPosition":true}'>
-              <div
-                data-masonry='{"percentPosition":true}'
-                v-for="item in data.children"
-                :key="item.id"
-                class="grid-item bg-white divcol-6"
-              >
-                <span>{{ item.number }}</span>
-                <div>
-                  <p class="ptitle">{{ item.title }}</p>
-                  <p>{{ item.details }}</p>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>

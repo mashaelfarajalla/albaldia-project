@@ -3,11 +3,17 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row">
-          <h3>أرقام وإحصائيات</h3>
+          <h3
+            class="animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
+            أرقام وإحصائيات
+          </h3>
         </div>
         <div class="d-flex align-items-start">
           <div
-            class="col-lg-2 d-flex"
+            class="col-lg-2 d-flex animate__animated animate__fadeInRightBig"
+            style="animation-duration: 1s; animation-delay: 0.2s"
             id="v-pills-tab"
             role="tablist"
             aria-orientation="vertical"
@@ -16,6 +22,7 @@
               v-for="item in data"
               :key="item.id"
               :id="item.id"
+              :class="item.active"
               data-bs-toggle="pill"
               :data-bs-target="'#' + item.target"
               type="button"
@@ -72,6 +79,7 @@ export default {
 @media screen and (min-width: 992px) {
   a {
     padding-right: 20px;
+    margin: 20px 0;
   }
   .col-lg-2.d-flex {
     flex-direction: column;
@@ -105,6 +113,10 @@ export default {
   .d-flex.align-items-start {
     flex-direction: column;
   }
+
+  a {
+    margin: 20px 5px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .col-lg-2.d-flex {
@@ -113,12 +125,15 @@ export default {
   .d-flex.align-items-start {
     flex-direction: column;
   }
+
+  a {
+    margin: 20px 15px;
+  }
 }
 
 a {
   color: #848484c0;
   font-size: 14px;
-  margin: 20px 0;
   position: relative;
 
   text-decoration: none;

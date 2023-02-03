@@ -1,11 +1,17 @@
 <template>
   <div class="col-lg-5">
     <div class="d-flex align-items-center">
-      <h3 class="ms-4">الخطة الاستراتيجية لبلدية غزة</h3>
+      <h3
+        class="ms-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.1s"
+      >
+        الخطة الاستراتيجية لبلدية غزة
+      </h3>
 
       <div class="ms-4">
         <a
-          class="dropdown-toggle"
+          class="dropdown-toggle animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.2s"
           href="#"
           id="navbarDropdown"
           role="button"
@@ -22,7 +28,8 @@
 
       <div class="">
         <a
-          class="dropdown-toggle"
+          class="dropdown-toggle animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.3s"
           href="#"
           id="navbarDropdown"
           role="button"
@@ -38,7 +45,10 @@
       </div>
     </div>
     <div class="mt-4">
-      <p class="divp2">
+      <p
+        class="divp2 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.4s"
+      >
         نحرص في بلدية غزة على وضع خطط استراتيجية تستجيب لرؤيتنا وقيمنا، ونسعى في
         كل خطة إلى ترسيخ ثقافة الريادة والابتكار والاستثمار الأمثل في الموارد
         البشرية والمادية وتوفير بيئة داعمة ومحفزة تجعل من غزة مدينة صحية وآمنة
@@ -47,10 +57,18 @@
     </div>
 
     <div>
-      <p class="divtitle">
+      <p
+        class="divtitle animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.6s"
+      >
         لبلدية غزة عبر الآتي يمكنك الاطلاع على الخطط والأهداف الاستراتيجية :
       </p>
-      <div v-for="item in data" :key="item.id" class="d-flex divbg mb-4">
+      <div
+        v-for="item in data"
+        :key="item.id"
+        class="d-flex divbg mb-4 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.8s"
+      >
         <span>
           <img :src="`${item.icon}`" />
         </span>

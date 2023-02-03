@@ -4,8 +4,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h3>المتحف الإلكتروني</h3>
-            <p>
+            <h3
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
+              المتحف الإلكتروني
+            </h3>
+            <p
+              class="animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.3s"
+            >
               تزخر مدينة غزة الفلسطينية بتراث أثري وتاريخي يعود لآلاف السنين،
               ومنذ نشأتها في عام ثلاثة آلاف قبل الميلاد، تعتبر من أقدم المدن
               الأثرية والتاريخية، المعبرة عن تجذر الحضارة الفلسطينية العربية منذ
@@ -17,7 +25,13 @@
           </div>
         </div>
         <div class="row">
-          <div v-for="item in data" :key="item.name" class="col-lg-4">
+          <div
+            v-for="item in data"
+            :key="item.name"
+            class="col-lg-4 animate__animated animate__fadeInUp"
+            style="animation-duration: 1s"
+            :style="`animation-delay:${item.time}s`"
+          >
             <div class="card shadow-sm" style="position: relative">
               <img :src="item.image" />
               <div class="card-body body">

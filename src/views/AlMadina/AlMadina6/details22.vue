@@ -4,7 +4,10 @@
       <div class="bg section index container1">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 p-0">
+            <div
+              class="col-lg-6 p-0 animate__animated animate__fadeInUp"
+              style="animation-duration: 1s; animation-delay: 0.1s"
+            >
               <div
                 id="carouselExampleControls"
                 class="sliderpage carousel slide"
@@ -57,19 +60,42 @@
                     '/SideBar/almadinaindex/almadina6/' + store.datadetails.name
                   "
                   class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
                 ></router-link>
                 <div class="">
-                  <h2>{{ store.pathid.title }}</h2>
+                  <h2
+                    class="animate__animated animate__fadeInUp"
+                    style="animation-duration: 1s; animation-delay: 0.2s"
+                  >
+                    {{ store.pathid.title }}
+                  </h2>
                 </div>
                 <div class="mt-2">
                   <div class="d-flex align-items-center mb-3 border-bottom">
-                    <p>{{ store.pathid.address }}</p>
+                    <p
+                      class="animate__animated animate__fadeInUp"
+                      style="animation-duration: 1s; animation-delay: 0.3s"
+                    >
+                      {{ store.pathid.address }}
+                    </p>
                   </div>
-                  <p class="p">{{ store.pathid.body1 }}</p>
-                  <p class="p">{{ store.pathid.body2 }}</p>
-                  <p class="p">{{ store.pathid.body3 }}</p>
+                  <p
+                    class="p animate__animated animate__fadeInUp"
+                    style="animation-duration: 1s; animation-delay: 0.5s"
+                  >
+                    {{ store.pathid.body1 }}
+                  </p>
+                  <p
+                    class="p animate__animated animate__fadeInUp"
+                    style="animation-duration: 1s; animation-delay: 0.6s"
+                  >
+                    {{ store.pathid.body2 }}
+                  </p>
+                  <p
+                    class="p animate__animated animate__fadeInUp"
+                    style="animation-duration: 1s; animation-delay: 0.7s"
+                  >
+                    {{ store.pathid.body3 }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -132,6 +158,7 @@ export default {
       calc(3 * var(--bs-modal-header-padding-x))
       calc(-0.5 * var(--bs-modal-header-padding-y)) 0; */
     margin-bottom: 20px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -148,13 +175,14 @@ export default {
     width: 100% !important;
     height: calc(100vh - 136px) !important;
   }
-  .modal-body .row {
+  .container .row {
     flex-direction: column-reverse;
   }
   .btn-close {
     margin: calc(1.5 * var(--bs-modal-header-padding-y))
       calc(0 * var(--bs-modal-header-padding-x))
       calc(-0.5 * var(--bs-modal-header-padding-y)) 0;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -172,13 +200,14 @@ export default {
     width: 100% !important;
     height: calc(100vh - 145px) !important;
   }
-  .modal-body .row {
+  .container .row {
     flex-direction: column-reverse;
   }
   .btn-close {
     margin: calc(0.5 * var(--bs-modal-header-padding-y))
       calc(3 * var(--bs-modal-header-padding-x))
       calc(-0.5 * var(--bs-modal-header-padding-y)) 0;
+    font-size: 30px;
   }
 }
 
@@ -188,7 +217,7 @@ export default {
 
 .sliderpage {
   position: sticky;
-  top: -75px;
+  top: 0px;
   height: calc(100vh - 145px);
 }
 

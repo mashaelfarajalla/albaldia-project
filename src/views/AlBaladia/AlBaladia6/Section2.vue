@@ -8,7 +8,27 @@
     <div class="row justify-content-between">
       <div class="col-lg-6">
         <div class="row">
-          <div class="col"></div>
+          <div class="col">
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide-container">1917 - 1906</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-container">1921 - 1918</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-container">1928 - 1924</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-container">1934 - 1928</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-container">1948 - 1945</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col">
             <div class="bg-white d-flex" style="padding: 35px">
               <span>
@@ -168,10 +188,108 @@ export default {
       lenght: 3,
     };
   },
+  mounted() {
+    var galleryThumbs = new Swiper(".gallery-thumbs", {
+      spaceBetween: 0,
+      // direction: "vertical",
+      // centeredSlides: true,
+      slidesPerView: "auto",
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+      loop: true,
+      loopedSlides: 4,
+      breakpoints: {
+        320: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        900: {
+          slidesPerView: 5,
+          spaceBetween: 0,
+        },
+      },
+    });
+    // galleryTop.controller.control = galleryThumbs;
+    // galleryThumbs.controller.control = galleryTop;
+  },
 };
 </script>
 
 <style scoped>
+.swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swiper-slide {
+  height: 17% !important;
+  width: 80% !important;
+}
+.swiper-wrapper {
+  width: 83%;
+  /* /* transition-duration: 0ms !important; */
+  /* transform: translate3d(46.2857px, 0px, 0px) !important; */
+  /* transform: translate3d(46.2857px, 0px, 0px) !important; */
+  transform: translate3d(0px, 46.2857px, 0px) !important;
+  /* transform: translateX(46.2857px) !important; */
+}
+
+.swiper-container.gallery-thumbs {
+  height: 100%;
+  overflow-y: clip;
+  border-right: 1px solid #d6d6d6;
+}
+
+.gallery-thumbs .swiper-slide-active::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 8px solid rgb(220, 34, 34);
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+  outline: white;
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 2px;
+  right: -39px;
+
+  /* left: 47%; */
+  /* top: 204%; */
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.gallery-thumbs .swiper-slide-active::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 11px;
+  right: -70px;
+  transform: translate(0%, -50%);
+  width: 80px;
+  height: 4px !important;
+  background-color: #3ec4b5;
+}
+.gallery-thumbs .swiper-slide {
+  cursor: pointer;
+}
+.gallery-thumbs .swiper-slide-active {
+  color: #3ec4b5;
+  font-size: 16px;
+  font-family: "FFShamelFamily-SansOneBold";
+}
+.gallery-thumbs .swiper-slide-active .swiper-slide-container {
+  margin-right: 29px;
+}
 .bg-white {
   border-radius: 15px;
 }

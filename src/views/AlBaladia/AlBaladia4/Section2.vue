@@ -1,12 +1,20 @@
 <template>
   <div class="col-lg-6">
     <div class="d-flex align-items-center">
-      <h3 class="ms-4 divtitle">
-        ..لعرض أو تحميل الخطة الاستراتيجية، يرجى اختيار الخطة أدناه
+      <h3
+        class="ms-4 divtitle animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.4s"
+      >
+        لعرض أو تحميل الخطة الاستراتيجية، يرجى اختيار الخطة ..
       </h3>
     </div>
     <div class="row mt-5">
-      <div v-for="item in data" :key="item.id" class="col-md divbg2">
+      <div
+        v-for="item in data"
+        :key="item.id"
+        class="col-md divbg2 animate__animated animate__fadeInUp"
+        style="animation-duration: 1s; animation-delay: 0.5s"
+      >
         <div class="row">
           <div class="col d-flex mb-3">
             <span>

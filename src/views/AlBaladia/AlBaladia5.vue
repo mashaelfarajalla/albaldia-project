@@ -3,33 +3,67 @@
     <div class="bg section index container1 padding">
       <div class="container">
         <div class="row">
-          <h3 class="text-center">الهيكلية الإدارية لبلدية غزة</h3>
+          <h3
+            class="text-center animate__animated animate__fadeInUp"
+            style="animation-duration: 1s; animation-delay: 0.1s"
+          >
+            الهيكلية الإدارية لبلدية غزة
+          </h3>
           <div class="tf-tree cs-tree">
             <ul>
               <li class="">
-                <span class="tf-nc topchild">رئاسة البلدية</span>
+                <span
+                  class="tf-nc topchild animate__animated animate__fadeInUp"
+                  style="animation-duration: 1s; animation-delay: 0.3s"
+                  >رئاسة البلدية</span
+                >
                 <ul class="without-children">
                   <li>
-                    <span class="tf-nc">وحدة المستشار القانوني</span>
+                    <span
+                      class="tf-nc animate__animated animate__fadeInUp"
+                      style="animation-duration: 1s; animation-delay: 0.4s"
+                      >وحدة المستشار القانوني</span
+                    >
                   </li>
                   <li>
-                    <span class="tf-nc">دائرة الرقابة العامة</span>
+                    <span
+                      class="tf-nc animate__animated animate__fadeInUp"
+                      style="animation-duration: 1s; animation-delay: 0.4s"
+                      >دائرة الرقابة العامة</span
+                    >
                   </li>
                 </ul>
                 <ul class="without-children2">
                   <li class="tfnc1">
-                    <span class="tf-nc span">دائرة خدمات الجمهور</span>
+                    <span
+                      class="tf-nc span animate__animated animate__fadeInUp"
+                      style="animation-duration: 1s; animation-delay: 0.5s"
+                      >دائرة خدمات الجمهور</span
+                    >
                     <ul>
                       <li>
-                        <span class="tf-nc"
+                        <span
+                          class="tf-nc animate__animated animate__fadeInUp"
+                          style="animation-duration: 1s; animation-delay: 0.6s"
                           >الإدارة العامة للشؤون الإدارية</span
                         >
                         <ul class="ulchild">
                           <li>
-                            <span class="tf-nc"
+                            <span
+                              class="tf-nc animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.7s;
+                              "
                               >الإدارة العامة للصحة والبيئة</span
                             >
-                            <a class="iconadd">
+                            <a
+                              class="iconadd animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.8s;
+                              "
+                            >
                               <i class="fa-solid fa-plus"></i>
                             </a>
                             <ul class="none">
@@ -50,10 +84,21 @@
                             </ul>
                           </li>
                           <li>
-                            <span class="tf-nc"
+                            <span
+                              class="tf-nc animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.7s;
+                              "
                               >الإدارة العامة للمراكز الثقافية
                             </span>
-                            <a class="iconadd">
+                            <a
+                              class="iconadd animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.8s;
+                              "
+                            >
                               <i class="fa-solid fa-plus"></i>
                             </a>
                             <ul class="none">
@@ -68,13 +113,28 @@
                         </ul>
                       </li>
                       <li>
-                        <span class="tf-nc">الإدارة العامة للشؤون المالية</span>
+                        <span
+                          class="tf-nc animate__animated animate__fadeInUp"
+                          style="animation-duration: 1s; animation-delay: 0.6s"
+                          >الإدارة العامة للشؤون المالية</span
+                        >
                         <ul class="ulchild">
                           <li>
-                            <span class="tf-nc"
+                            <span
+                              class="tf-nc animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.7s;
+                              "
                               >الإدارة العامة للهندسة والتخطيط</span
                             >
-                            <a class="iconadd">
+                            <a
+                              class="iconadd animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.8s;
+                              "
+                            >
                               <i class="fa-solid fa-plus"></i>
                             </a>
                             <ul class="none">
@@ -83,8 +143,21 @@
                             </ul>
                           </li>
                           <li>
-                            <span class="tf-nc">الإدارة العامة للتنظيم </span>
-                            <a class="iconadd">
+                            <span
+                              class="tf-nc animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.7s;
+                              "
+                              >الإدارة العامة للتنظيم
+                            </span>
+                            <a
+                              class="iconadd animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.8s;
+                              "
+                            >
                               <i class="fa-solid fa-plus"></i>
                             </a>
                             <ul class="none">
@@ -95,13 +168,28 @@
                         </ul>
                       </li>
                       <li>
-                        <span class="tf-nc">الإدارة العامة للخدمات</span>
+                        <span
+                          class="tf-nc animate__animated animate__fadeInUp"
+                          style="animation-duration: 1s; animation-delay: 0.6s"
+                          >الإدارة العامة للخدمات</span
+                        >
                         <ul class="ulchild">
                           <li>
-                            <span class="tf-nc"
+                            <span
+                              class="tf-nc animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.7s;
+                              "
                               >الإدارة العامة للمياه والصرف الصحي</span
                             >
-                            <a class="iconadd">
+                            <a
+                              class="iconadd animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.8s;
+                              "
+                            >
                               <i class="fa-solid fa-plus"></i>
                             </a>
                             <ul class="none">
@@ -110,10 +198,21 @@
                             </ul>
                           </li>
                           <li>
-                            <span class="tf-nc"
+                            <span
+                              class="tf-nc animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.7s;
+                              "
                               >دائرة العلاقات العامة والإعلام</span
                             >
-                            <a class="iconadd">
+                            <a
+                              class="iconadd animate__animated animate__fadeInUp"
+                              style="
+                                animation-duration: 1s;
+                                animation-delay: 0.8s;
+                              "
+                            >
                               <i class="fa-solid fa-plus"></i>
                             </a>
                             <ul class="none">

@@ -27,11 +27,22 @@
         :modules="modules"
         class="mySwiper"
       >
-        <swiper-slide v-for="item in data" :key="item.id">
+        <swiper-slide
+          v-for="item in data"
+          :key="item.id"
+          class="animate__animated animate__fadeInUp"
+          style="animation-duration: 1s; animation-delay: 0.2s"
+        >
           <div class="card">
-            <div class="btn-play">
+            <a
+              class="btn-play"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              @click="getdata(item.src)"
+            >
               <i class="fa-solid fa-play"></i>
-            </div>
+            </a>
+
             <img :src="item.image" class="card-img-top" alt="..." />
             <div class="card-body">
               <p class="card-text">
@@ -42,11 +53,13 @@
         </swiper-slide>
       </swiper>
     </div>
+    <popupvideo :datassrc="data2" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import popupvideo from "./poupvideo.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation } from "swiper";
 
@@ -59,22 +72,29 @@ export default {
   data() {
     return {
       data: [],
+      data2: "",
     };
+  },
+  methods: {
+    getdata(item) {
+      this.data2 = item;
+      console.log(this.data2);
+    },
   },
   components: {
     Swiper,
     SwiperSlide,
+    popupvideo,
   },
   setup() {
     return {
       modules: [Navigation],
     };
   },
+
   async mounted() {
     let result = await axios.get("http://localhost:3000/MediaCenetr22");
-
     this.data = result.data;
-    console.log(result.data);
   },
 };
 </script>
@@ -118,7 +138,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
+
 .btn-play::after {
   height: 77px;
   width: 77px;
@@ -135,5 +157,34 @@ i.fa-solid.fa-play {
   color: white;
   font-size: 25px;
   z-index: 1;
+}
+.popup-video {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  /* display: flex; */
+  display: none;
+
+  /* align-items: center; */
+  justify-items: center;
+}
+.popup-video iframe {
+  width: 750px;
+  height: 700px;
+  transform: translate(-50%, 50%);
+}
+.popup-video span {
+  font-size: 50px;
+  position: absolute;
+  top: 101px;
+  right: 114px;
+  color: white;
+  z-index: 100;
+  cursor: pointer;
+  font-weight: bolder;
 }
 </style>

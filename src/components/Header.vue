@@ -613,7 +613,7 @@ export default {
     height: 90px;
     margin-bottom: 0px;
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
   }
   header img {
     width: 80px;
@@ -622,6 +622,8 @@ export default {
     position: absolute;
     /* left: 50%; */
     left: 48%;
+    /* z-index: 1; */
+    top: 0;
   }
 
   header a {
