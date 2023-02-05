@@ -26,18 +26,12 @@
           :key="item.id"
           class="mb-4 d-flex active"
           :id="item.tab"
-          data-bs-toggle="modal"
-          :data-bs-target="item.target"
-          type="button"
-          role="tab"
-          :aria-controls="item.controls"
-          aria-selected="true"
           data-lat="31.5075659339788"
           data-lng="34.464420823310356"
         >
           <span class="circle">{{ item.id }}</span>
           <div class="me-2">
-            <span class="spantitle1">{{ item.title }}</span>
+            <span class="spantitle1 amap">{{ item.title }}</span>
             <span class="spanp me-2"
               >معلومات
               <svg
@@ -81,6 +75,7 @@
 <script>
 import axios from "axios";
 import DataModel from "./Modal.vue";
+import "./map";
 
 export default {
   components: { DataModel },

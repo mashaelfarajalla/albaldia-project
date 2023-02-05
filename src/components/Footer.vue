@@ -2,17 +2,17 @@
   <MainSection>
     <footer class="d-none d-lg-block">
       <div class="footernav">
-        <div>
-          <div class="footerdiv d-flex justify-content-start">
-            <router-link
-              v-for="item in footer"
-              :key="item.id"
-              :to="{ name: `${item.name}` }"
-              class="footerlink"
-            >
-              {{ item.title }}
-            </router-link>
-          </div>
+        <div id="myDIV" class="footerdiv d-flex justify-content-start">
+          <router-link
+            :to="{ name: `${item.name}` }"
+            v-for="(item, index) in footer"
+            :key="item.id"
+            @click="isActive = item"
+            class="footerlink"
+            :class="{ active: isActive == item }"
+          >
+            {{ item.title }}
+          </router-link>
         </div>
       </div>
     </footer>
@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import "./Footer.js";
+
 import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
 import { useStore } from "../store";
@@ -34,6 +36,8 @@ export default {
   data() {
     return {
       footer: [],
+      footerlink: [],
+      isActive: false,
     };
   },
 
@@ -42,7 +46,7 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
-    console.log(this.store.path);
+    this.isActive = true;
   },
 };
 </script>
@@ -90,10 +94,13 @@ footer {
 }
 
 .footerlink:hover,
-.footerlink.router-link-exact-active {
+.footerlink.active {
   color: #ffffff;
   background-position: right;
   border-left: 1px solid #3ec4b5;
 }
-/* .footerlink.router-link-exact-active  */
+/* .footerlink .router-link-exact-active {
+  color: #ffffff;
+  text-decoration: none;
+} */
 </style>

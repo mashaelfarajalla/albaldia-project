@@ -576,7 +576,7 @@ export default {
     var dropdown = document.getElementsByClassName("dropDown");
     var routerlinka = document.getElementsByClassName("routerlinka");
     var ul = document.getElementsByClassName("ul");
-    console.log(ul);
+    // console.log(ul);
     var i;
     //let result = await axios.get("http://localhost:3000/SideBar");
     // console.log(result.data[0]);

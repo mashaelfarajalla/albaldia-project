@@ -79,7 +79,7 @@ export default {
   async mounted() {
     let result2 = await axios.get("http://localhost:3000/SocialMedai");
     this.socialmedai = result2.data;
-    console.log(this.store.indexhome);
+    // console.log(this.store.indexhome);
   },
 };
 </script>
