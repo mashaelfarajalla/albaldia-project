@@ -4,8 +4,8 @@
 
 
 
-.swiper-button-next,
-.swiper-button-prev {
+.mySwiperdetails2 .swiper-button-next,
+.mySwiperdetails2 .swiper-button-prev {
     top: -63px;
     color: #A5A5A5;
     margin-left: 0px;
@@ -17,13 +17,13 @@
     width: 54px;
     height: 54px;
     border-radius: 50%;
-    border: 1px solid #A5A5A5;
+    border: 1px solid #A5A5A5 !important;
     background: transparent !important;
 }
 
-.swiper-rtl .swiper-button-prev,
-.swiper-button-prev.swiper-button-disabled {
-    left: 85px !important;
+.mySwiperdetails2.swiper-rtl .swiper-button-prev,
+.mySwiperdetails2 .swiper-button-prev.swiper-button-disabled {
+    left: 160px !important;
     right: auto !important;
 }
 

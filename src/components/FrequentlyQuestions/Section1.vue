@@ -91,9 +91,13 @@
 </template>
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import Section2 from "./Section2.vue";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-import { Pagination } from "swiper";
+import Section2 from "./Section2.vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import axios from "axios";
 
 export default {
@@ -118,13 +122,13 @@ export default {
   },
   setup() {
     return {
-      pagination: {
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      },
-      modules: [Pagination],
+      // pagination: {
+      //   clickable: true,
+      //   renderBullet: function (index, className) {
+      //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+      //   },
+      // },
+      modules: [Navigation, Pagination, Scrollbar, A11y],
     };
   },
   async mounted() {

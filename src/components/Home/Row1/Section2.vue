@@ -114,7 +114,8 @@ export default {
 .Ddiv {
   /* padding: 20px 13px 23px 13px; */
   background: white;
-  padding: 18px 24px;
+  padding: 15px 22px;
+  margin-bottom: 10px;
 }
 
 .section .Ddiv p {

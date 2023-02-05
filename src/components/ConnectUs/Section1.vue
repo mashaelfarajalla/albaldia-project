@@ -114,6 +114,22 @@ export default {
   .center {
     justify-content: center;
   }
+  .bg3 {
+    top: 34%;
+    right: 17%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg3 {
+    top: 34%;
+    right: 17%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bg3 {
+    top: 24%;
+    right: 9%;
+  }
 }
 
 .div1 h3 {
@@ -165,7 +181,7 @@ p span {
 
 .bg3 {
   position: absolute;
-  top: 34%;
-  right: 17%;
+  /* top: 34%;
+  right: 17%; */
 }
 </style>

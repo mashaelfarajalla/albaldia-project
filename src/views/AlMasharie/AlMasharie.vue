@@ -52,6 +52,7 @@
           style="animation-duration: 1s; animation-delay: 0.4s"
         >
           <swiper
+            class="mySwiperdetails2"
             :modules="modules"
             :slidesPerView="1"
             :space-between="30"

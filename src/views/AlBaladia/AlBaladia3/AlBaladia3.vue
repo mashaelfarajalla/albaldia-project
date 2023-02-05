@@ -113,6 +113,15 @@ export default {
 </script>
 
 <style scoped>
+/* @media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+} */
+@media screen and (max-width: 767px) {
+  ul li {
+    margin: 9px;
+  }
+}
 ul li {
   list-style-type: none;
   display: inline-block;

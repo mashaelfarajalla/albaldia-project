@@ -48,7 +48,11 @@ export default {
 <style scoped>
 @media screen and (min-width: 992px) {
   .mtcol12 {
-    margin-top: 35px;
+    margin-top: 17px;
+  }
+  .box {
+    top: 43%;
+    right: 8%;
   }
 }
 
@@ -56,23 +60,30 @@ export default {
   .mtcol12 {
     margin-top: 70px;
   }
+  .box {
+    top: 30%;
+    right: 10%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .mtcol12 {
     margin-top: 70px;
   }
+  .box {
+    top: 30%;
+    right: 10%;
+  }
 }
 .w-100 {
-  height: 285px;
+  height: 281px;
 }
 .box {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 30%;
-  right: 6%;
-  align-items: center;
-  justify-content: center;
+
+  /* align-items: center; */
+  /* justify-content: center;*/
 }
 
 .h5 {

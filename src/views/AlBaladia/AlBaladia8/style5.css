@@ -1,0 +1,14 @@
+.mySwiperdetails.swiper-rtl .swiper-button-next {
+    left: 10px !important;
+}
+
+.mySwiperdetails.swiper-rtl .swiper-button-prev {
+    left: auto;
+    right: 10px !important;
+}
+
+.mySwiperdetails .swiper-button-next,
+.mySwiperdetails .swiper-button-prev {
+    color: #392C23 !important;
+    border: 0 !important;
+}

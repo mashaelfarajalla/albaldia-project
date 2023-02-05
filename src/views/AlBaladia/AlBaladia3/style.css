@@ -19,3 +19,7 @@
 .vc-day-content {
     font-size: 16px !important;
 }
+
+span.vc-day-content.vc-focusable {
+    padding: 16px 0px 0 20px;
+}

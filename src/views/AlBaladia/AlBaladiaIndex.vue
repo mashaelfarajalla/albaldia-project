@@ -80,6 +80,21 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 992px) {
+  ul li a {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  ul li a {
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  ul li a {
+    margin: 0 10px;
+  }
+}
 ul li {
   list-style-type: none;
   display: inline-block;
@@ -89,7 +104,6 @@ ul li a {
   color: #392c23;
   font-size: 16px;
   text-decoration: none;
-  margin: 0 5px;
 }
 
 ul {

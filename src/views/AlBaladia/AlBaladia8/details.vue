@@ -255,7 +255,11 @@
               class="col-md-12 col-lg-4 divbackround animate__animated animate__fadeInUp"
               style="animation-duration: 1s; animation-delay: 0.7s"
             >
-              <swiper :navigation="true" :modules="modules" class="mySwiper">
+              <swiper
+                :navigation="true"
+                :modules="modules"
+                class="mySwiperdetails"
+              >
                 <swiper-slide v-for="item in data.children2" :key="item.id">
                   <div class="div">
                     <div>
@@ -279,17 +283,13 @@
 
 <script>
 import MainSection from "@/components/MainSection";
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
+import "./style5.css";
 
-// Import Swiper styles
-import "swiper/css";
+// import "swiper/css";
 
 import "swiper/css/navigation";
 
-// import "./style.css";
-
-// import required modules
 import { Navigation } from "swiper";
 import axios from "axios";
 export default {

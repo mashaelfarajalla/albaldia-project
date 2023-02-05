@@ -31,12 +31,22 @@
           <div class="col-12">
             <span
               class="animate__animated animate__fadeInUp"
-              style="animation-duration: 1s; animation-delay: 0.4s"
+              style="
+                animation-duration: 1s;
+                animation-delay: 0.4s;
+                color: #cf2a45;
+              "
               >ديسمبر 26, 2021</span
             >
             <p
               class="animate__animated animate__fadeInUp"
-              style="animation-duration: 1s; animation-delay: 0.4s"
+              style="
+                animation-duration: 1s;
+                animation-delay: 0.4s;
+                color: #392c23;
+                font-size: 16px;
+                font-family: FFShamelFamily-SansOneBold;
+              "
             >
               مجلس بلدية غزة يناقش مع نشطاء شباب جهود دعم المبادرات الشبابية
               (عنوان القرار الصادر يوضع هنا)

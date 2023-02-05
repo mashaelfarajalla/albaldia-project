@@ -2,8 +2,8 @@
   <MainSection>
     <div class="bg section index container1 padding">
       <div class="container">
-        <div class="row">
-          <div class="col-5">
+        <div class="row justify-content-between">
+          <div class="col-lg-4">
             <h3
               class="animate__animated animate__fadeInUp"
               style="animation-duration: 1s; animation-delay: 0.1s"
@@ -48,19 +48,21 @@
               >
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-lg-7">
             <div class="row masonry" data-masonry='{"percentPosition":true}'>
               <div
                 v-for="item in data.children"
                 :key="item.id"
-                class="bg-white col-6 divcol-6 animate__animated animate__fadeInUp"
+                class="col-md-6 animate__animated animate__fadeInUp"
                 style="animation-duration: 1s"
                 :style="`animation-delay:${item.time}s`"
               >
-                <span>{{ item.number }}</span>
-                <div>
-                  <p class="ptitle">{{ item.title }}</p>
-                  <p>{{ item.details }}</p>
+                <div class="divcol-6">
+                  <span>{{ item.number }}</span>
+                  <div>
+                    <h2 class="ptitle">{{ item.title }}</h2>
+                    <p>{{ item.details }}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -96,15 +98,20 @@ export default {
 
 <style scoped>
 .divcol-6 {
+  background-color: #fff;
   border: 1px dashed #d6d6d6;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding: 24px;
+  /* border: 1px dashed #d6d6d6;
   padding: 32px;
   height: min-content;
   border-radius: 20px;
   margin-bottom: 20px;
-  break-inside: avoid;
+  break-inside: avoid; */
   /* margin-right: 5px; */
   /* height: 300px; */
-  width: 50%;
+  /* width: 48%; */
 }
 
 span {
@@ -126,7 +133,7 @@ span {
 }
 .ptitle {
   color: #cf2a45;
-  font-size: 16px;
+  font-size: 18px;
 }
 .pbody {
   color: #392c23;

@@ -86,12 +86,18 @@ export default {
   .circle2 {
     width: 88px;
   }
+  .noneimg {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .circle2 {
     width: 95px;
   }
+  /* .noneimg {
+    display: none;
+  } */
 }
 
 p.p {
