@@ -1,17 +1,25 @@
+var map;
+// var elevator;
+// var myOptions = {
+//   zoom: 6,
+//   center: new google.maps.LatLng(46.87916, -3.3291),
+//   mapTypeId: "terrain",
+// };
+// map = new google.maps.Map($("#map")[0], myOptions);
+
 function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
     center: { lat: -33.9, lng: 151.2 },
   });
-
   setMarkers(map);
 }
 const beaches = [
   ["Bondi Beach", 31.5075659339788, 34.464420823310356],
-  ["Coogee Beach", -33.923036, 151.259052, 5],
-  ["Cronulla Beach", -34.028249, 151.157507, 3],
-  ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
-  ["Maroubra Beach", -33.950198, 151.259302, 1],
+  ["Coogee Beach", 31.5316946, 34.4678445, 5],
+  ["Cronulla Beach", 31.5316946, 34.4678445, 3],
+  ["Manly Beach", 31.5316946, 34.4678445, 2],
+  ["Maroubra Beach", 31.5316946, 34.4678445, 1],
 ];
 
 function setMarkers(map) {
@@ -26,12 +34,12 @@ function setMarkers(map) {
     new google.maps.Marker({
       position: { lat: beach[1], lng: beach[2] },
       map,
-      // icon: image,
       shape: shape,
       title: beach[0],
       zIndex: beach[3],
     });
   }
+
   var a = document.getElementsByClassName("amap");
   console.log(a);
   var i;
@@ -41,20 +49,16 @@ function setMarkers(map) {
   }
 }
 
-function drop() {
+function drop(e) {
   console.log("click");
-  // map.setZoom(9);
+  console.log(map);
+  // console.log(e.target);
+  var latlng = new google.maps.LatLng(31.5075659339788, 34.464420823310356);
+  // mmm.panTo(latng);
+  // console.log(mmm);
+  map.setZoom(10);
+  // mmm.setZoom(9);
 }
-
-// var a = document.getElementsByClassName("amap");
-// console.log(a);
-// var i;
-
-// for (i = 0; i < a.length; i++) {
-//   a[i].addEventListener("click", function () {
-//     console.log("click");
-//   });
-// }
 
 window.initMap = initMap;
 setTimeout(() => {

@@ -24,14 +24,14 @@
         <a
           v-for="item in data"
           :key="item.id"
-          class="mb-4 d-flex active"
+          class="mb-4 d-flex active amap"
           :id="item.tab"
-          data-lat="31.5075659339788"
-          data-lng="34.464420823310356"
+          :data-lat="item.lat"
+          :data-lng="item.lng"
         >
           <span class="circle">{{ item.id }}</span>
           <div class="me-2">
-            <span class="spantitle1 amap">{{ item.title }}</span>
+            <span class="spantitle1">{{ item.title }}</span>
             <span class="spanp me-2"
               >معلومات
               <svg
