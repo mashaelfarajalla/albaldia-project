@@ -15,7 +15,7 @@
           <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
           <button
             type="button"
-            class="btn-close"
+            class="btn-closei"
             data-bs-dismiss="modal"
             aria-label="Close"
           >

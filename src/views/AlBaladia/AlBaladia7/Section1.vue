@@ -1,7 +1,7 @@
 <template>
   <MainSection>
     <div class="bg section index container1">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-lg-4 backround">
             <h3>مقار ومرافق البلدية</h3>
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-          <Section2 :datasetion="data" />
+          <Section2 :datasetion="data" /> -->
         </div>
       </div>
     </div>

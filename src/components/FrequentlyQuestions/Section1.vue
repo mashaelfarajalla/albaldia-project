@@ -73,7 +73,7 @@
           style="animation-duration: 1s; animation-delay: 0.1s"
         >
           <p
-            class="animate__animated animate__fadeInUp"
+            class="animate__animated animate__fadeInUp pswiper"
             style="animation-duration: 1s; animation-delay: 0.2s"
             v-for="item in list"
             :key="item.id"
@@ -115,9 +115,7 @@ export default {
   },
   methods: {
     getdata(item) {
-      // this.data2 = this.data[id - 1];
       this.data2 = item;
-      console.log(this.data2);
     },
   },
   setup() {
@@ -134,7 +132,6 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/Questions");
     this.data = result.data[0];
-    console.log(result.data[0].pag1);
     this.getdata(result.data[0].pag1[0]);
   },
 };

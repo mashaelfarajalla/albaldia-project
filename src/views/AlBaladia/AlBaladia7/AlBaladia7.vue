@@ -1,7 +1,7 @@
 <template>
   <MainSection>
     <div class="bg section index container1">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <Section1 />
           <Section2 />

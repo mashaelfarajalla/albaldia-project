@@ -77,8 +77,8 @@
                 </svg>
               </span>
             </div>
-            <div class="line"></div>
-            <span>{{ item.time }}</span>
+            <div class="line mt-2"></div>
+            <span class="mt-3">{{ item.time }}</span>
             <h5>{{ item.paragraph }}</h5>
           </div>
         </div>

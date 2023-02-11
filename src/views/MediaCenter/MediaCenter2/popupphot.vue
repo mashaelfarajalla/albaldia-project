@@ -11,7 +11,7 @@
         <div class="modal-header">
           <button
             type="button"
-            class="btn-close"
+            class="btn-closei"
             data-bs-dismiss="modal"
             aria-label="Close"
           >
