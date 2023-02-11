@@ -74,7 +74,7 @@ ul li a {
   color: #392c23;
   font-size: 16px;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 15px;
 }
 
 ul {

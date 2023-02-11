@@ -70,6 +70,9 @@ export default {
 </script>
 
 <style>
+/* ul li a {
+  margin: 0 10px !important;
+} */
 @media screen and (min-width: 992px) {
   .divbgimg {
     height: 402px;

@@ -181,6 +181,10 @@ export default {
 </script>
 
 <style scoped>
+.swiper-slide.swiper-slide-visible.swiper-slide-thumb-active {
+  border: 8px solid #3ec4b5;
+}
+
 @media screen and (min-width: 992px) {
   .gallery-top .swiper-slide.swiper-slide-active {
     width: 690px !important;

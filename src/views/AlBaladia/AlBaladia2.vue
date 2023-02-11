@@ -318,6 +318,33 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 992px) {
+  .gallery-thumbs .swiper-slide-active::before {
+    left: 46%;
+    top: 204%;
+  }
+  .gallery-thumbs .swiper-slide-active::after {
+    top: 242%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .gallery-thumbs .swiper-slide-active::before {
+    left: 46%;
+    top: 204%;
+  }
+  .gallery-thumbs .swiper-slide-active::after {
+    top: 242%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gallery-thumbs .swiper-slide-active::before {
+    left: 36%;
+    top: 151%;
+  }
+  .gallery-thumbs .swiper-slide-active::after {
+    top: 177%;
+  }
+}
 /* .history-slider */
 .gallery-thumbs .swiper-slide-active::before {
   content: "";
@@ -332,10 +359,6 @@ export default {
   outline-style: solid;
   outline-color: white;
   outline-width: 2px;
-  /* right: -38px; */
-  /* right: 30px; */
-  left: 46%;
-  top: 204%;
   transition: 0.2s ease-in;
   cursor: pointer;
 }
@@ -344,9 +367,7 @@ export default {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 242%;
   left: 50%;
-  /* right: 40px; */
   transform: translate(0%, -50%);
   width: 4px;
   height: 80px !important;

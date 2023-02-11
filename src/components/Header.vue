@@ -256,21 +256,21 @@
             ></i>
           </div>
         </a>
-        <ul v-show="showicon" class="align-items-center justify-content-start">
-          <router-link
-            v-for="i in item.iconMun"
-            :key="i.id"
-            :to="{ name: `${i.name}` }"
-            class="header-link routerlinka py-3"
-            title=""
-            data-bs-toggle="tooltip"
-            data-bs-placement="right"
-            data-bs-original-title="Dashboard"
-          >
-            <span class="mx-2">
-              <img :src="i.icon" />
-            </span>
-          </router-link>
+        <ul v-show="showicon" class="row align-items-center">
+          <li class="col-2" v-for="i in item.iconMun" :key="i.id">
+            <router-link
+              :to="{ name: `${i.name}` }"
+              class="header-link routerlinka py-3"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Dashboard"
+            >
+              <span class="mx-3">
+                <img :src="i.icon" />
+              </span>
+            </router-link>
+          </li>
         </ul>
       </li>
       <div class="g-col g-col-md-4">
@@ -635,6 +635,10 @@ export default {
   }
 }
 @media screen and (max-width: 767px) {
+  .spanmargn {
+    margin-right: 2.5rem !important;
+    margin-left: 1.5rem !important;
+  }
   header {
     width: 100%;
     display: flex;

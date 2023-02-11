@@ -74,7 +74,7 @@
                 </li> -->
             </ul>
           </div>
-          <div class="row mt-3 rowchalider2">
+          <div class="row mt-3 rowchalider2" style="padding: 0;">
             <div class="tab-content" id="pills-tabContent">
               <div
                 v-for="item in data"
@@ -86,6 +86,7 @@
                 :aria-labelledby="item.id"
               >
                 <swiper
+                id="swiper"
                 style="background-color: #f3f2f2"
                   :slidesPerView="1"
                   :breakpoints="{
@@ -111,7 +112,7 @@
                   class="mySwiper"
                 >
                   <swiper-slide v-for="item in body" :key="item.id">
-                    <div class="col bg-white2">
+                    <div class="col bg-white2 ">
                       <p>{{ item.p }}</p>
                     </div>
                   </swiper-slide>
@@ -197,7 +198,7 @@
                   </swiper-slide> -->
                 </swiper>
 
-                 <div class="row rowchild mt-5" style="padding-right: 45px">
+          <div class="row rowchild mt-5" style="padding-right: 45px">
             <div class="col-auto" style="padding: 0 25px">
               <p class="pperant">الوثائق المطلوبة</p>
               <p class="pchild">
@@ -290,16 +291,29 @@ export default {
       modules: [FreeMode, Pagination],
     };
   },
+
   async mounted() {
     let result = await axios.get("http://localhost:3000/AlKhadamat2");
     this.data = result.data;
     this.data2 = result.data.children;
-    console.log(this.data);
-  },
+  }
 };
 </script>
 
 <style scoped>
+
+.swiper-slide:first-child{
+  margin-right: 20px;
+}
+.swiper-slide.swiper-slide {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide-active .bg-white2{
+ background-color: #3ec4b5;
+  color: white;
+}
 .rowchild .col-auto:last-child {
   border-left: 0px;
 }
@@ -320,16 +334,13 @@ ul li a.active .circle7 img {
   filter: invert(92%) sepia(100%) saturate(1%) hue-rotate(36deg)
     brightness(104%) contrast(102%);
 }
-.rowchalider2 .swiper-slide:nth-child(3) .bg-white2 {
-  background-color: #3ec4b5;
-  color: white;
-}
+
 .bg-white2:hover {
   cursor: pointer;
   background-color: #3ec4b5;
   color: white;
 }
-.rowchalider2 .swiper-slide:nth-child(3)::after {
+.swiper-slide-active .bg-white2::after {
   content: "";
   position: absolute;
   width: 0;
@@ -357,8 +368,8 @@ ul li a.active .circle7 img {
   .row.mt-5.rowchalider2 {
     padding: 35px 0 0;
   }
-  .rowchalider2 .swiper-slide:nth-child(3)::after {
-    top: 71%;
+  .swiper-slide-active .bg-white2::after {
+       top: 80%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -368,7 +379,7 @@ ul li a.active .circle7 img {
   .swiper {
     height: 110px;
   }
-  .rowchalider2 .swiper-slide:nth-child(3)::after {
+  .swiper-slide-active .bg-white2::after {
     top: 76%;
   }
 }
@@ -379,7 +390,7 @@ ul li a.active .circle7 img {
   .swiper {
     height: 110px;
   }
-  .rowchalider2 .swiper-slide:nth-child(3)::after {
+  .swiper-slide-active .bg-white2::after {
     bottom: 5px;
   }
   .m {
@@ -406,9 +417,9 @@ ul li a.active .circle7 img {
   border-radius: 50%;
   border: 1px solid;
 }
-.col .row div div:first-child .circle7.active {
+/* .col .row div div:first-child .circle7.active {
   background-color: #3ec4b5;
-}
+} */
 
 .bg-white2 {
   background: white;

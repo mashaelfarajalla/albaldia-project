@@ -128,7 +128,7 @@
 import MainSection from "@/components/MainSection.vue";
 import phote from "./phote.vue";
 import videosection from "./video.vue";
-import '../../AlMasharie/style.css'
+import "../../AlMasharie/style.css";
 
 export default {
   components: { MainSection, phote, videosection },
@@ -145,7 +145,7 @@ ul li a {
   color: #392c23;
   font-size: 16px;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 15px;
 }
 
 .divborder {

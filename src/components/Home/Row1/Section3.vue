@@ -51,7 +51,7 @@ export default {
     margin-top: 17px;
   }
   .box {
-    top: 43%;
+    top: 35%;
     right: 8%;
   }
 }

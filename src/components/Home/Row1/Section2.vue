@@ -114,7 +114,7 @@ export default {
 .Ddiv {
   /* padding: 20px 13px 23px 13px; */
   background: white;
-  padding: 15px 22px;
+  padding: 15px 15px;
   margin-bottom: 10px;
 }
 
