@@ -1,33 +1,49 @@
 <template>
-  <div class="col-lg-8 p-0">
+  <div class="col-lg-8 p-0" style="position: relative">
     <div id="map" style="width: 100%; height: 100%"></div>
 
-    <!-- <div id="map"></div> -->
-
-    <!-- <GMapMap
-      :center="{ lat: 51.093048, lng: 6.84212 }"
-      :zoom="7"
-      map-type-id="terrain"
-      style="width: 50vw; height: 900px"
-    >
-    </GMapMap> -->
-
-    <!-- <iframe
-      class="w-100"
-      style="height: 100%; border: 0"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17144.822589732106!2d34.46148842959341!3d31.497680928967775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2s!4v1672862146731!5m2!1sar!2s"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe> -->
+    <DataModel />
+    <div class="dropdown">
+      <button
+        class="btn dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        المقار والمرافق
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">1</a></li>
+        <li><a class="dropdown-item" href="#">2</a></li>
+        <li><a class="dropdown-item" href="#">3 </a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import DataModel from "./Modal.vue";
+
 import "./map";
 export default {
+  props: ["datasetion"],
+  components: {
+    DataModel,
+  },
   data() {
     return {
+      // markers: [
+      //   {
+      //     position: {
+      //       lat: 31.5075659339788,
+      //       lng: 34.464420823310356,
+      //     },
+      //     position: {
+      //       lat: 31.5075659339788,
+      //       lng: 34.464420823310356,
+      //     },
+      //   },
+      // ],
       // center: { lat: 51.093048, lng: 6.84212 },
     };
   },
@@ -77,6 +93,18 @@ export default {
 </script>
 
 <style scoped>
+.dropdown .dropdown-toggle {
+  background-color: #3ec4b5 !important;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px 8px;
+  font-family: "FFShamelFamily-SansOneBold";
+}
+.dropdown {
+  position: absolute;
+  bottom: 50px;
+  right: 66px;
+}
 #map {
   height: 100%;
   width: 100%;

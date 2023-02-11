@@ -14,9 +14,9 @@ createApp(App)
   .use(pinia)
   // .use(VueGoogleMaps, {
   //   load: {
-  //     key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback",
+  //     key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
+  //     // language: 'de',
   //   },
-  //   autobindAllEvents: true,
   // })
   .use(VCalendar, {})
   .use(router)

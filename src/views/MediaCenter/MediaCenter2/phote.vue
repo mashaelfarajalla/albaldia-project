@@ -25,8 +25,9 @@
                 <img :src="item.image" class="card-img-top" alt="..." />
                 <a
                   class="iconphto"
+                  id="exampleModalLabelphoto"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#exampleModalphoto"
                   @click="getdata(section1)"
                 >
                   <svg
@@ -109,9 +110,10 @@
               <div class="card">
                 <img :src="item.image" class="card-img-top" alt="..." />
                 <a
+                  id="exampleModalLabelphoto"
                   class="iconphto"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#exampleModalphoto"
                   @click="getdata(section2)"
                 >
                   <svg
@@ -194,9 +196,10 @@
               <div class="card">
                 <img :src="item.image" class="card-img-top" alt="..." />
                 <a
+                  id="exampleModalLabelphoto"
                   class="iconphto"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#exampleModalphoto"
                   @click="getdata(section3)"
                 >
                   <svg

@@ -44,7 +44,7 @@
                 class="btn buttom animate__animated animate__fadeInUp"
                 style="animation-duration: 1s; animation-delay: 0.5s"
               >
-                >تقديم للخدمة</bottom
+                تقديم للخدمة</bottom
               >
             </div>
           </div>

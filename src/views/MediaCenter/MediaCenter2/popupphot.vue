@@ -1,14 +1,12 @@
 <template>
   <div
     class="modal fade"
-    id="exampleModal"
+    id="exampleModalphoto"
     tabindex="-1"
-    aria-labelledby="exampleModalLabel"
+    aria-labelledby="exampleModalLabelphoto"
     aria-hidden="true"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
   >
-    <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
           <button
@@ -16,52 +14,40 @@
             class="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
-          ></button>
+          >
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
         </div>
         <div class="modal-body">
-          <div class="swiper-container gallery-top">
+          <div class="swiper-container gallery-top btnswipercontainer">
             <div class="swiper-wrapper">
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-2.jpg);
-                "
+                style="background-image: url('/image/img33.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-2.jpg);
-                "
+                style="background-image: url('/image/img22.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-3.jpg);
-                "
+                style="background-image: url('/image/MaskGroup1.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-4.jpg);
-                "
+                style="background-image: url('/image/img33.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-5.jpg);
-                "
+                style="background-image: url('/image/Map.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-6.jpg);
-                "
+                style="background-image: url('/image/img22.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-7.jpg);
-                "
+                style="background-image: url('/image/img22.png')"
               ></div>
               <div
                 class="swiper-slide"
@@ -91,45 +77,33 @@
             <div class="swiper-wrapper">
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-2.jpg);
-                "
+                style="background-image: url('/image/img33.png')"
               ></div>
               <div
                 class="swiper-slide"
                 style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-2.jpg);
+                  background-image: url('/image/img22.png'));
                 "
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-3.jpg);
-                "
+                style="background-image: url('/image/MaskGroup1.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-4.jpg);
-                "
+                style="background-image: url('/image/img33.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-5.jpg);
-                "
+                style="background-image: url('/image/Map.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-6.jpg);
-                "
+                style="background-image: url('/image/img22.png')"
               ></div>
               <div
                 class="swiper-slide"
-                style="
-                  background-image: url(https://swiperjs.com/demos/images/nature-7.jpg);
-                "
+                style="background-image: url('/image/img22.png')"
               ></div>
               <div
                 class="swiper-slide"
@@ -158,6 +132,7 @@
 </template>
 
 <script>
+import "./stylebtn.css";
 export default {
   props: ["dataphot"],
   mounted() {
@@ -171,7 +146,26 @@ export default {
       watchSlidesProgress: true,
     });
     var galleryTop = new Swiper(".gallery-top", {
-      spaceBetween: 10,
+      // spaceBetween: 10,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        900: {
+          slidesPerView: 1,
+          spaceBetween: 500,
+        },
+      },
+
       loop: true,
       loopedSlides: 5, //looped slides should be the same
       navigation: {
@@ -187,7 +181,32 @@ export default {
 </script>
 
 <style scoped>
-div#exampleModal {
+@media screen and (min-width: 992px) {
+  .gallery-top .swiper-slide.swiper-slide-active {
+    width: 690px !important;
+    margin: 0 447px !important;
+  }
+
+  .swiper-wrapper {
+    align-items: end;
+  }
+}
+@media screen and (max-width: 767px) {
+}
+
+i.fa-regular.fa-circle-xmark {
+  font-size: 35px;
+  color: white;
+}
+.modal-body {
+  padding-bottom: 0;
+}
+.gallery-thumbs .swiper-slide.swiper-slide {
+  height: 100px !important;
+  width: 110.5px !important;
+}
+
+div#exampleModalphoto {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 

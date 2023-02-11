@@ -1,15 +1,10 @@
 <template>
-  <div
-    class="modal fade"
-    :id="modeldata.controls"
-    tabindex="-1"
-    :aria-labelledby="modeldata.tab"
-    aria-hidden="true"
-  >
+  <div id="exampleModelMap" class="modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
           <button
+            id="closeModel"
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
@@ -19,21 +14,37 @@
         <div class="modal-body">
           <div class="row justify-content-between">
             <div class="col-lg-7" style="padding-right: 40px">
-              <h5 class="modal-title">{{ modeldata.title }}</h5>
+              <!-- <h5 class="modal-title">{{ modeldata.title }}</h5> -->
+              <h5 class="modal-title">مركز رشاد الشوا الثقافي</h5>
               <p>
-                {{ modeldata.p1 }}
+                <!-- {{ modeldata.p1 }} -->
+                يعتبر مبنى الهندسة والتخطيط في مدينة غزه أول مركز ثقافي يبني في
+                فلسطين, و قد تم إتمام الـعمل في المبني عام 1988م, هذا وبعد مرور
+                عشرة سـنوات مـنذ البدء في البــناء وذلـك نتيجة للعراقيل و
+                الصـعوبات الجمة التي وضعتها إدارة الاحتلال الإســرائيلـية لعرقلة
+                تكملة هذا المشروع وبعد مجهود جبار تخطي كل العقبات من اجـل تحقيق
+                هذا الحـلم
               </p>
               <p>
-                {{ modeldata.p2 }}
+                <!-- {{ modeldata.p2 }} -->
+                وقد رشح المبني في عام 1992م للحصول علي جائزة ( الأغا خان للإبداع
+                في الهندسة المعمارية ) يتكون مبنى مركز رشاد الشوا الثقافي من
+                ثلاثة طوابق حيث يوجد في الطابق الأول ثلاث قاعات متعددة الاستخدام
+                و قاعة معرض تستخدم هذه القاعات
               </p>
             </div>
             <div class="col-lg-5">
-              <img :src="modeldata.iamge" class="img-fluid" />
+              <!-- <img :src="modeldata.iamge" class="img-fluid" /> -->
+              <img src="/image/Image35.png" class="img-fluid" />
             </div>
             <div class="row colrow" style="padding-right: 40px">
               <div class="col-sm-12 col">
                 <p>
-                  {{ modeldata.p3 }}
+                  <!-- {{ modeldata.p3 }} -->
+                  وقد رشح المبني في عام 1992م للحصول علي جائزة ( الأغا خان
+                  للإبداع في الهندسة المعمارية ) يتكون مبنى مركز رشاد الشوا
+                  الثقافي من ثلاثة طوابق حيث يوجد في الطابق الأول ثلاث قاعات
+                  متعددة الاستخدام و قاعة معرض تستخدم هذه القاعات
                 </p>
               </div>
             </div>

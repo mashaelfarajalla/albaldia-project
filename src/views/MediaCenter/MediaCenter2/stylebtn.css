@@ -1,0 +1,30 @@
+.btnswipercontainer .swiper-button-prev {
+    right: 70px !important;
+    left: auto !important;
+}
+
+.btnswipercontainer .swiper-button-next,
+.btnswipercontainer .swiper-button-prev {
+
+    /* top: -63px;*/
+    top: 50% !important;
+    color: #ffffff;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-size: 1rem;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 0 !important;
+    background: transparent !important;
+
+}
+
+.modal-header .btn-close {
+    color: #ffffff !important;
+    margin: calc(1.5 * var(--bs-modal-header-padding-y)) calc(7.5 * var(--bs-modal-header-padding-x)) calc(-0.5 * var(--bs-modal-header-padding-y)) auto !important;
+
+}

@@ -35,9 +35,10 @@
         >
           <div class="card">
             <a
+              id="exampleModalLabelvideo"
               class="btn-play"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-target="#exampleModalvideo"
               @click="getdata(item.src)"
             >
               <i class="fa-solid fa-play"></i>

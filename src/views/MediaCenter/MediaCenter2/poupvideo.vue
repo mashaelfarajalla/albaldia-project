@@ -2,23 +2,25 @@
   <!-- Modal -->
   <div
     class="modal fade"
-    id="exampleModal"
+    id="exampleModalvideo"
     tabindex="-1"
-    aria-labelledby="exampleModalLabel"
+    aria-labelledby="exampleModalLabelvideo"
     aria-hidden="true"
     data-bs-backdrop="static"
     data-bs-keyboard="false"
   >
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
-          ></button>
+          >
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
         </div>
         <div class="modal-body">
           <iframe
@@ -42,7 +44,16 @@ export default {
 </script>
 
 <style scoped>
-div#exampleModal {
+.modal-header .btn-close {
+  margin: calc(1.5 * var(--bs-modal-header-padding-y))
+    calc(7.5 * var(--bs-modal-header-padding-x))
+    calc(-0.5 * var(--bs-modal-header-padding-y)) auto !important;
+}
+i.fa-regular.fa-circle-xmark {
+  font-size: 35px;
+  color: white;
+}
+div#exampleModalvideo {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
@@ -57,10 +68,13 @@ div#exampleModal {
 }
 
 .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  width: 700px;
+  width: 100%;
 }
 .modal-body iframe {
-  width: 100%;
+  width: 50%;
 }
 </style>

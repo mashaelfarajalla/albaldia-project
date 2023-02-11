@@ -7,7 +7,8 @@
         { "id": 3,"name":"ConnectUs" , "title": "تواصل معنا" ,"icon":"/image/icons8telephone.svg"},
         { "id": 4, "name":"FrequentlyQuestions","title": "الاسئلة الشائعة" ,"icon":"/image/icons8help.svg" }
       ],
-      "albaladiaindex":[
+      "albaladiaindex":
+      [
       { "id": 1,"name":"AlBaladiaIndex"  ,"title": "الرئيسية" , "icon":"/image/icons8_goal.svg" },
       { "id": 2,"name":"AlBaladia2"  ,"title": "الخلفية التاريخية" , "icon":"/image/icons8_time_machine_1.svg" },
       { "id": 3,"name":"AlBaladia3"  ,"title": "المجلس البلدي" , "icon":"/image/icons8_management.svg" },
@@ -996,7 +997,7 @@
  
   ],
   "AlKhadamat2":[
-    {"id":1 , "icon":"/image/icons8_all_out.svg" ,"title":"جميع الخدمات" ,
+    {"id":1 ,"active":"active", "target":"tab1", "icon":"/image/icons8_all_out.svg" ,"title":"جميع الخدمات" ,
     "children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
@@ -1007,7 +1008,7 @@
       {"id":7 , "title":"فحص عداد مياه"},
       {"id":8 , "title":"فحص عداد مياه"}
       ]},
-       {"id":2 , "icon":"/image/icons8_construction.svg" , "title":"جميع البناء" ,"children":[
+       {"id":2 ,"target":"tab2", "icon":"/image/icons8_construction.svg" , "title":"جميع البناء" ,"children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
       {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},
@@ -1017,7 +1018,7 @@
       {"id":7 , "title":"فحص عداد مياه"},
       {"id":8 , "title":"فحص عداد مياه"}
       ]},
-        {"id":3 , "icon":"/image/icons8_water.svg" , "title":"جميع المياة" ,"children":[
+        {"id":3 ,"target":"tab3" ,"icon":"/image/icons8_water.svg" , "title":"جميع المياة" ,"children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
       {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},
@@ -1027,7 +1028,7 @@
       {"id":7 , "title":"فحص عداد مياه"},
       {"id":8 , "title":"فحص عداد مياه"}
       ]},
-        {"id":4 , "icon":"/image/icons8_electricity.svg" ,"title":"جميع الكهرباء" , "children":[
+        {"id":4 ,"target":"tab4" ,"icon":"/image/icons8_electricity.svg" ,"title":"جميع الكهرباء" , "children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
       {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},
@@ -1038,7 +1039,8 @@
       {"id":8 , "title":"فحص عداد مياه"}
       ]}
       ,
-        {"id":5 , "icon":"/image/icons8_pipelines.svg" ,"title":"جميع الصرف الصحي" , "children":[
+    
+        {"id":6 ,"target":"tab6" ,"icon":"/image/icons8_environmental_planning.svg" ,"title":"التخطيط الحضري" , "children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
       {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},
@@ -1048,7 +1050,7 @@
       {"id":7 , "title":"فحص عداد مياه"},
       {"id":8 , "title":"فحص عداد مياه"}
       ]},
-        {"id":6 , "icon":"/image/icons8_environmental_planning.svg" ,"title":"التخطيط الحضري" , "children":[
+      {"id":7 ,"target":"tab7" ,"icon":"/image/icons8_paint_palette.svg" ,"title":"خدمات الحرف" , "children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
       {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},
@@ -1058,17 +1060,7 @@
       {"id":7 , "title":"فحص عداد مياه"},
       {"id":8 , "title":"فحص عداد مياه"}
       ]},
-          {"id":7 , "icon":"/image/icons8_paint_palette.svg" ,"title":"خدمات الحرف" , "children":[
-      {"id":1 , "title":"اشتراك مياه جديد"},
-      {"id":2 , "title":"اشتراك مياه فرعي"},
-      {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},
-      {"id":4 , "title":"تغيير اسم منتفع"},
-      {"id":5 , "title":"تغيير خط مياه تالف"},
-      {"id":6 , "title":"زيادة قطر خط مياه"},
-      {"id":7 , "title":"فحص عداد مياه"},
-      {"id":8 , "title":"فحص عداد مياه"}
-      ]},
-      {"id":8 , "icon":"/image/icons8_service_1.svg" ,"title":"خدمات أخري" , "children":[
+      {"id":8 ,"target":"tab8", "icon":"/image/icons8_service_1.svg" ,"title":"خدمات أخري" , "children":[
       {"id":1 , "title":"اشتراك مياه جديد"},
       {"id":2 , "title":"اشتراك مياه فرعي"},
       {"id":3 , "title":"تنازل عن اشتراك مياه (تغيير اسم مشترك"},

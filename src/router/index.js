@@ -9,7 +9,7 @@ import AlBaladia3 from "../views/AlBaladia/AlBaladia3/AlBaladia3";
 import AlBaladia4 from "../views/AlBaladia/AlBaladia4/AlBaladia4.vue";
 import AlBaladia5 from "../views/AlBaladia/AlBaladia5.vue";
 import AlBaladia6 from "../views/AlBaladia/AlBaladia6/AlBaladia6";
-import AlBaladia7 from "../views/AlBaladia/AlBaladia7/AlBaladia7";
+import AlBaladia7 from "../views/AlBaladia/AlBaladia7/Section1";
 import AlBaladia8 from "../views/AlBaladia//AlBaladia8/AlBaladia8";
 import details from "../views/AlBaladia//AlBaladia8/details";
 import AlMadinaIndex from "../views/AlMadina/AlMadinaIndex.vue";
@@ -23,7 +23,7 @@ import detailsAlmadina from "../views/AlMadina/AlMadina6/details";
 import details2Almadina from "../views/AlMadina/AlMadina6/details22";
 
 import AlKhadamat from "../views/AlKhadamat/AlKhadamatIndex/AlKhadamatIndex";
-import AlKhadamat2 from "../views/AlKhadamat/AlKadamat2/AlKadamat2.vue";
+import AlKhadamat2 from "../views/AlKhadamat/AlKadamat2/alkadamat22.vue";
 
 import DetailsAlKhadmat from "../views/AlKhadamat/AlKhadamatIndex/DetailsAlKhadmat";
 import AlMasharie from "../views/AlMasharie/AlMasharie.vue";

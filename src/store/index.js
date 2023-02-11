@@ -8,6 +8,8 @@ export const useStore = defineStore("main", {
     sidebar: [],
     indexhome: [],
     show: true,
+    active: false,
+    name: "",
   }),
 
   actions: {

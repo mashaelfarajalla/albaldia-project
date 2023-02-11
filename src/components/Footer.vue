@@ -3,16 +3,16 @@
     <footer class="d-none d-lg-block">
       <div class="footernav">
         <div id="myDIV" class="footerdiv d-flex justify-content-start">
-          <router-link
-            :to="{ name: `${item.name}` }"
+          <div
             v-for="(item, index) in footer"
             :key="item.id"
-            @click="isActive = item"
             class="footerlink"
-            :class="{ active: isActive == item }"
+            :class="{ active: store.path == item.name.toLowerCase() }"
           >
-            {{ item.title }}
-          </router-link>
+            <router-link :to="{ name: `${item.name}` }">
+              {{ item.title }}
+            </router-link>
+          </div>
         </div>
       </div>
     </footer>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import "./Footer.js";
+// import "./Footer.js";
 
 import MainSection from "@/components/MainSection.vue";
 import axios from "axios";
@@ -46,7 +46,12 @@ export default {
   async mounted() {
     let result = await axios.get("http://localhost:3000/Footer");
     this.footer = result.data;
-    this.isActive = true;
+    // if (this.store.path === "almadinaindex") {
+    //   (this.isActive = true), console.log("true");
+    // } else {
+    //   console.log("false");
+    // }
+    // this.isActive = true;
   },
 };
 </script>
@@ -92,13 +97,22 @@ footer {
   background-position: left;
   text-decoration: none;
 }
+.footerlink a {
+  color: #392c23;
+  text-decoration: none;
+}
 
 .footerlink:hover,
 .footerlink.active {
-  color: #ffffff;
   background-position: right;
   border-left: 1px solid #3ec4b5;
 }
+.footerlink:hover a,
+.footerlink.active a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* .footerlink .router-link-exact-active {
   color: #ffffff;
   text-decoration: none;
