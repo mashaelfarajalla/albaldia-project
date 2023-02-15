@@ -4,22 +4,24 @@
     style="z-index: var(--z-fixed)"
   >
     <ul class="nav nav-pills nav-flush flex-sm-row flex-lg-column text-center">
-      <li v-for="item in store.sidebar" :key="item.id" class="nav-item">
-        <router-link
-          exact
-          :to="{ name: `${item.name}` }"
-          aria-current="page"
-          title=""
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-          data-bs-original-title="Home"
-        >
+      <router-link
+        v-for="item in store.sidebar"
+        :key="item.id"
+        exact
+        :to="{ name: `${item.name}` }"
+        aria-current="page"
+        title=""
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        data-bs-original-title="Home"
+      >
+        <li class="nav-item">
           <img :src="item.icon" />
           <div class="tooltip2">
             <p>{{ item.title }}</p>
           </div>
-        </router-link>
-      </li>
+        </li>
+      </router-link>
     </ul>
 
     <div
@@ -119,8 +121,8 @@ export default {
     opacity: 1;
   }
 
-  nav ul li .router-link-exact-active,
-  nav ul li:hover {
+  nav ul .router-link-exact-active li,
+  nav ul a:hover {
     height: 87px;
     width: 100%;
   }
@@ -212,16 +214,16 @@ nav ul li a {
   justify-content: center;
 }
 
-nav ul li a img {
+nav ul a li img {
   filter: invert(16%) sepia(14%) saturate(1055%) hue-rotate(341deg)
     brightness(62%) contrast(92%);
 }
-nav ul li .router-link-exact-active,
-nav ul li:hover {
+nav ul .router-link-exact-active li,
+nav ul a:hover li {
   background-color: #f3f2f2;
 }
 nav ul li:hover img,
-nav ul li .router-link-exact-active img {
+nav ul .router-link-exact-active li img {
   filter: invert(28%) sepia(42%) saturate(5614%) hue-rotate(335deg)
     brightness(84%) contrast(92%);
 }

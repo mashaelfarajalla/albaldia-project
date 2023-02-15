@@ -15,7 +15,7 @@
           class="row animate__animated animate__fadeInLeftBig"
           style="animation-duration: 1s; animation-delay: 0.3s"
         >
-          <div class="swiper-container gallery-top">
+          <div class="swiper-container gallery-top1">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="swiper-slide-container">
@@ -158,7 +158,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <div class="swiper-slide-container">
                   <div class="row">
                     <div class="col-lg-6">
@@ -197,18 +197,15 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
-            <!-- Add Arrows -->
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
           </div>
         </div>
         <div
           class="row mt-5 animate__animated animate__fadeInLeftBig"
           style="animation-duration: 1s; animation-delay: 0.5s"
         >
-          <div class="swiper-container gallery-thumbs">
+          <div class="swiper-container gallery-thumbs1">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="swiper-slide-container">نشأة البلدية</div>
@@ -231,12 +228,12 @@
               <div class="swiper-slide">
                 <div class="swiper-slide-container">1961 - 1956</div>
               </div>
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <div class="swiper-slide-container">Slide 8</div>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-slide-container">Slide 9</div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -254,9 +251,7 @@ export default {
   },
 
   mounted() {
-    console.log("swiper");
-
-    var galleryTop = new Swiper(".gallery-top", {
+    var galleryTop1 = new Swiper(".gallery-top1", {
       // spaceBetween: 0,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -284,7 +279,7 @@ export default {
       loop: true,
       loopedSlides: 4,
     });
-    var galleryThumbs = new Swiper(".gallery-thumbs", {
+    var galleryThumbs1 = new Swiper(".gallery-thumbs1", {
       spaceBetween: 0,
       // centeredSlides: true,
       slidesPerView: "auto",
@@ -311,42 +306,42 @@ export default {
         },
       },
     });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+    galleryTop1.controller.control = galleryThumbs1;
+    galleryThumbs1.controller.control = galleryTop1;
   },
 };
 </script>
 
 <style scoped>
 @media screen and (min-width: 992px) {
-  .gallery-thumbs .swiper-slide-active::before {
+  .gallery-thumbs1 .swiper-slide-active::before {
     left: 46%;
     top: 204%;
   }
-  .gallery-thumbs .swiper-slide-active::after {
+  .gallery-thumbs1 .swiper-slide-active::after {
     top: 242%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .gallery-thumbs .swiper-slide-active::before {
+  .gallery-thumbs1 .swiper-slide-active::before {
     left: 46%;
     top: 204%;
   }
-  .gallery-thumbs .swiper-slide-active::after {
+  .gallery-thumbs1 .swiper-slide-active::after {
     top: 242%;
   }
 }
 @media screen and (max-width: 767px) {
-  .gallery-thumbs .swiper-slide-active::before {
+  .gallery-thumbs1 .swiper-slide-active::before {
     left: 36%;
     top: 151%;
   }
-  .gallery-thumbs .swiper-slide-active::after {
+  .gallery-thumbs1 .swiper-slide-active::after {
     top: 177%;
   }
 }
 /* .history-slider */
-.gallery-thumbs .swiper-slide-active::before {
+.gallery-thumbs1 .swiper-slide-active::before {
   content: "";
   position: absolute;
   width: 22px;
@@ -363,7 +358,7 @@ export default {
   cursor: pointer;
 }
 
-.gallery-thumbs .swiper-slide-active::after {
+.gallery-thumbs1 .swiper-slide-active::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -390,7 +385,7 @@ p {
 .lineswiper {
   border-bottom: 1px solid #d6d6d6;
 }
-.gallery-thumbs {
+.gallery-thumbs1 {
   border-bottom: 1px solid #d6d6d6;
 }
 
@@ -422,31 +417,31 @@ p {
   align-items: center;
 }
 
-.gallery-top {
+.gallery-top1 {
   height: 80%;
   width: 100%;
 }
-.gallery-thumbs {
+.gallery-thumbs1 {
   height: 20%;
   box-sizing: border-box;
   padding: 10px 0;
 }
-.gallery-thumbs .swiper-slide {
+.gallery-thumbs1 .swiper-slide {
   cursor: pointer;
   width: 15%;
   height: 100%;
   opacity: 0.4;
 }
-.gallery-top .swiper-slide img {
+.gallery-top1 .swiper-slide img {
   opacity: 0.4;
 }
-.gallery-top .swiper-slide-active img {
+.gallery-top1 .swiper-slide-active img {
   opacity: 1;
 }
 /* .gallery-thumbs .swiper-slide-container {
   min-width: 205px !important;
 } */
-.gallery-thumbs .swiper-slide-active {
+.gallery-thumbs1 .swiper-slide-active {
   opacity: 1;
   color: #3ec4b5;
   margin-top: -30px;

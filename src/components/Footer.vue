@@ -3,16 +3,15 @@
     <footer class="d-none d-lg-block">
       <div class="footernav">
         <div id="myDIV" class="footerdiv d-flex justify-content-start">
-          <div
-            v-for="(item, index) in footer"
+          <router-link
+            v-for="item in footer"
             :key="item.id"
             class="footerlink"
             :class="{ active: store.path == item.name.toLowerCase() }"
+            :to="{ name: `${item.name}` }"
           >
-            <router-link :to="{ name: `${item.name}` }">
-              {{ item.title }}
-            </router-link>
-          </div>
+            {{ item.title }}
+          </router-link>
         </div>
       </div>
     </footer>
@@ -104,14 +103,16 @@ footer {
 
 .footerlink:hover,
 .footerlink.active {
+  color: #ffffff;
+  text-decoration: none;
   background-position: right;
   border-left: 1px solid #3ec4b5;
 }
-.footerlink:hover a,
+/* .footerlink:hover a,
 .footerlink.active a {
   color: #ffffff;
   text-decoration: none;
-}
+} */
 
 /* .footerlink .router-link-exact-active {
   color: #ffffff;

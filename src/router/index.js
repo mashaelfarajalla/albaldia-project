@@ -41,26 +41,37 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Home",
+    },
   },
   {
     path: "/mobileapplication",
     name: "MobileApplication",
     component: MobileApplication,
+    meta: {
+      title: "MobileApplication",
+    },
   },
   {
     path: "/connect-us",
     name: "ConnectUs",
     component: ConnectUs,
+    meta: {
+      title: "ConnectUs",
+    },
   },
   {
     path: "/frequentlyquestions",
     name: "FrequentlyQuestions",
     component: FrequentlyQuestions,
+    meta: {
+      title: "FrequentlyQuestions",
+    },
   },
   {
     // path: "/modal/:id",
     path: "/modal",
-
     name: "Modal",
     component: Modal,
   },
@@ -68,56 +79,83 @@ const routes = [
     path: "/SideBar/albaladiaindex",
     name: "AlBaladiaIndex",
     component: AlBaladiaIndex,
+    meta: {
+      title: "AlBaladia",
+    },
   },
 
   {
     path: "/SideBar/albaladiaindex/albaladia2",
     name: "AlBaladia2",
     component: AlBaladia2,
+    meta: {
+      title: "AlBaladia-background-history",
+    },
   },
   {
     path: "/SideBar/albaladiaindex/albaladia3",
     name: "AlBaladia3",
     component: AlBaladia3,
+    meta: {
+      title: "AlBaladia",
+    },
   },
 
   {
     path: "/SideBar/albaladiaindex/albaladia4",
     name: "AlBaladia4",
     component: AlBaladia4,
+    meta: {
+      title: "AlBaladia",
+    },
   },
   {
     path: "/SideBar/albaladiaindex/albaladia5",
     name: "AlBaladia5",
     component: AlBaladia5,
+    meta: {
+      title: "AlBaladia",
+    },
   },
   {
     path: "/SideBar/albaladiaindex/albaladia6",
     name: "AlBaladia6",
     component: AlBaladia6,
+    meta: {
+      title: "AlBaladia",
+    },
   },
   {
     path: "/SideBar/albaladiaindex/albaladia7",
     name: "AlBaladia7",
     component: AlBaladia7,
+    meta: {
+      title: "AlBaladia",
+    },
   },
   {
     path: "/SideBar/albaladiaindex/albaladia8",
     name: "AlBaladia8",
     component: AlBaladia8,
+    meta: {
+      title: "AlBaladia",
+    },
   },
 
   {
     path: "/SideBar/albaladiaindex/details/:id",
     name: "details",
     component: details,
+    meta: {
+      title: "AlBaladia",
+    },
   },
   {
     path: "/SideBar/almadinaindex",
     name: "AlMadinaIndex",
     component: AlMadinaIndex,
     meta: {
-      title: "AlMadinaIndex",
+      title: "City",
     },
   },
   {
@@ -125,7 +163,7 @@ const routes = [
     name: "AlMadina2",
     component: AlMadina2,
     meta: {
-      title: "AlMadina2",
+      title: "City-gaza-histroy",
     },
   },
   {
@@ -133,7 +171,7 @@ const routes = [
     name: "AlMadina3",
     component: AlMadina3,
     meta: {
-      title: "AlMadina3",
+      title: "City-distance",
     },
   },
 
@@ -141,11 +179,17 @@ const routes = [
     path: "/SideBar/almadinaindex/almadina4",
     name: "AlMadina4",
     component: AlMadina4,
+    meta: {
+      title: "City-distance",
+    },
   },
   {
     path: "/SideBar/almadinaindex/almadina5",
     name: "AlMadina5",
     component: AlMadina5,
+    meta: {
+      title: "City-distance",
+    },
   },
 
   {
@@ -153,30 +197,25 @@ const routes = [
     name: "AlMadina6",
     component: AlMadina6,
     meta: {
-      title: "AlMadina3",
+      title: "City-",
     },
   },
-
-  // {
-  //   path: "/SideBar/almadinaindex/almadina6/detailsAlmadina/:id",
-  //   name: "detailsAlmadina",
-  //   component: detailsAlmadina,
-  // },
-  // {
-  //   path: "/SideBar/almadinaindex/almadina6/detailsAlmadina/:id/details2Almadina/:idd",
-  //   name: "details2Almadina",
-  //   component: details2Almadina,
-  // },
 
   {
     path: "/SideBar/almadinaindex/almadina6/:name",
     name: "detailsAlmadina",
     component: detailsAlmadina,
+    meta: {
+      title: "City-",
+    },
   },
   {
     path: "/SideBar/almadinaindex/almadina6/:name/:id",
     name: "details2Almadina",
     component: details2Almadina,
+    meta: {
+      title: "City-",
+    },
   },
 
   {
@@ -192,47 +231,71 @@ const routes = [
     path: "/SideBar/alkhadamat/detailsAlKhadmat/:id",
     name: "DetailsAlKhadmat",
     component: DetailsAlKhadmat,
+    meta: {
+      title: "AlKhadamat",
+    },
   },
 
   {
     path: "/SideBar/alkhadamat/alkhadamat2",
     name: "AlKhadamat2",
     component: AlKhadamat2,
+    meta: {
+      title: "AlKhadamat",
+    },
   },
 
   {
     path: "/SideBar/almasharie",
     name: "AlMasharie",
     component: AlMasharie,
+    meta: {
+      title: "AlMasharie",
+    },
   },
 
   {
     path: "/SideBar/almasharie/almasharie2",
     name: "AlMasharie2",
     component: AlMasharie2,
+    meta: {
+      title: "AlMasharie",
+    },
   },
 
   {
     path: "/SideBar/mediacenter",
     name: "MediaCenter",
     component: MediaCenter,
+    meta: {
+      title: "MediaCenter",
+    },
   },
 
   {
     path: "/SideBar/mediacenter/mediacenter2",
     name: "MediaCenter2",
     component: MediaCenter2,
+    meta: {
+      title: "MediaCenter",
+    },
   },
 
   {
     path: "/SideBar/mediacenter/mediacenter3",
     name: "MediaCenter3",
     component: MediaCenter3,
+    meta: {
+      title: "MediaCenter",
+    },
   },
   {
     path: "/SideBar/mediacenter/mediacenter4",
     name: "MediaCenter4",
     component: MediaCenter4,
+    meta: {
+      title: "MediaCenter",
+    },
   },
 ];
 

@@ -90,7 +90,7 @@
 
           <div class="row mt-5">
             <div
-              class="col-md-12 col-lg-4 divbg animate__animated animate__fadeInUp"
+              class="col-lg-4 divbg animate__animated animate__fadeInUp"
               style="animation-duration: 1s; animation-delay: 0.5s"
             >
               <div class="d-flex align-items-center">
@@ -194,7 +194,7 @@
               </div>
             </div>
             <div
-              class="col-md-12 col-lg-4 divbg animate__animated animate__fadeInUp"
+              class="col-lg-4 divbg animate__animated animate__fadeInUp"
               style="animation-duration: 1s; animation-delay: 0.6s"
             >
               <div class="d-flex align-items-center">
@@ -252,7 +252,7 @@
               </div>
             </div>
             <div
-              class="col-md-12 col-lg-4 divbackround animate__animated animate__fadeInUp"
+              class="col-lg-4 divbackround animate__animated animate__fadeInUp"
               style="animation-duration: 1s; animation-delay: 0.7s"
             >
               <swiper
@@ -320,6 +320,14 @@ export default {
 
 <style scoped>
 @media screen and (min-width: 992px) {
+  .col-lg-4 {
+    /* flex: 0 0 auto; */
+    width: 31.333333% !important;
+  }
+  .divbackround,
+  .divbg {
+    margin: 0 10px;
+  }
   .padding2 {
     padding: 0 3rem 32px;
   }
